@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+main {
+    display: flex;
+
+    .content {
+        height: 100vh;
+        width: 100%;
+        overflow-y: auto;
+    }
+}
+
+.navbar {
+    width: 300px;
+    padding: 32px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        .text {
+            margin-left: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .nav-section {
+        margin-top: 32px;
+    }
+
+    a {
+        font-size: 18px;
+        margin-top: 0.5rem;
+    }
+}
+
+.navbar #copyright {
+    margin-top: auto;
+}
+
+#landing {
+    height: 75%;
+    text-align: center;
+    background: #faf9f6;
+}
+
+#schedule {
+    background: #f8f0e3;
+
+    .concerts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+
+        .concert-card {
+            width: 300px;
+        }
+    }
+}
+
+.concert-description {
+    display: flex;
+    flex-direction: column;
+}
+
+#about {
+    background: #faf9f6;
+
+    .description {
+        margin-top: 16px;
+        display: flex;
+        gap: 32px;
+        align-items: center;
+
+        div {
+            width: 50%;
+        }
+    }
+}
+
+.content > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 128px 32px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1024px;
+}
