@@ -14,36 +14,85 @@ main {
 }
 
 .navbar {
+    @media (max-width: 600px) {
+        position: absolute;
+        bottom: 0;
+        height: initial;
+        width: 100%;
+        z-index: 1;
+
+        .navbar-contents {
+            align-items: end;
+            justify-content: end;
+
+            &.open {
+                display: flex;
+            }
+
+            &.closed {
+                display: none;
+            }
+        }
+
+        #copyright {
+            margin: 32px 0 16px;
+        }
+
+        .menu-button {
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+    }
+
+    @media (min-width: 601px) {
+        #copyright {
+            margin-top: auto;
+        }
+
+        .menu-button {
+            display: none;
+        }
+    }
+
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
     width: 300px;
     padding: 32px;
     height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-
-    .logo {
+    .navbar-contents {
+        height: 100%;
+        width: 100%;
         display: flex;
-        align-items: center;
+        flex-direction: column;
 
-        .text {
-            margin-left: 16px;
+        .logo {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+
+            .text {
+                margin-left: 16px;
+                display: flex;
+                flex-direction: column;
+            }
         }
-    }
 
-    .nav-section {
-        margin-top: 32px;
-    }
+        .nav-section {
+            margin-top: 32px;
+        }
 
-    a {
-        font-size: 18px;
-        margin-top: 0.5rem;
+        a {
+            font-size: 18px;
+            margin-top: 0.5rem;
+        }
     }
 }
 
-.navbar #copyright {
-    margin-top: auto;
+.mobile-nav-control {
+    @media (min-width: 601px) {
+        display: none;
+    }
 }
 
 #landing {
