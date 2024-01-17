@@ -14,7 +14,7 @@ main {
 }
 
 .navbar {
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         position: absolute;
         bottom: 0;
         height: initial;
@@ -45,7 +45,7 @@ main {
         }
     }
 
-    @media (min-width: 601px) {
+    @media (min-width: 769px) {
         #copyright {
             margin-top: auto;
         }
@@ -106,6 +106,7 @@ main {
 
     .concerts {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 32px;
 
@@ -124,13 +125,23 @@ main {
     background: #faf9f6;
 
     .description {
-        margin-top: 16px;
         display: flex;
-        gap: 32px;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
 
         div {
-            width: 50%;
+            width: 100%;
+            padding: 16px;
+
+            @media (min-width: 768px) {
+                width: 50%;
+            }
+
+            img {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 }
