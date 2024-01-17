@@ -99,7 +99,7 @@ export default function Schedule() {
                                     <DialogContent className="concert-description">
                                         <p>
                                             Please join us for a night of fun and music! We will be playing a variety of
-                                            music from movies, television, anime, and top pop songs!
+                                            music from movies, television, anime, and toppop songs!
                                         </p>
                                     </DialogContent>
                                     <DialogActions>

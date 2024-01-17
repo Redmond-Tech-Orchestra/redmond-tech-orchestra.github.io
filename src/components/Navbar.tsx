@@ -7,10 +7,10 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className={"navbar " + (open ? "open" : "closed")}>
+        <nav className={"navbar " + (open ? "open" : "closed")} onClick={() => open && setOpen(false)}>
             <div className={"navbar-contents " + (open ? "open" : "closed")}>
                 <div className="logo">
-                    <img src={logo} width={64} height={64} />
+                    <img src={logo} width={64} height={64} alt="" />
                     <div className="text">
                         <Title1>RTO</Title1>
                     </div>
