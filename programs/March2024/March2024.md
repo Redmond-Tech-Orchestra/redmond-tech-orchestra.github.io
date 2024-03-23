@@ -1,7 +1,4 @@
-
-<div style="text-align: center">
-
-![](../images/rto.png)
+![Redmond Tech Orchestra Logo](../images/rto.png)
 
 
 <h1 style="border-bottom: 0">Starting with Saint-Saëns</h1>
@@ -11,19 +8,18 @@ March 30<sup>th</sup>, 2024
 Carlson Theatre  
 Bellevue College
 
-<h2 style="text-align: center"> Program </h2>
+## Program
 
 Dmitri Shostakovich — Waltz No. 2  [4 min.]  
 Aaron Copland — "Hoe-down" from *Rodeo* [4 min.]  
 Camille Saint-Saëns — Bacchanale from *Samson and Delilah* [8 min.]  
 Camille Saint-Saëns — Danse Macabre [8 min.]  
 
-#### *Intermission*  
+### *Intermission*  
 
 Camille Saint-Saëns — Symphony No. 3 [40 min.]
-</div>
 
-<h2 style="text-align: center"> Program Notes </h2>
+## Program Notes
 
 Today, the Redmond Tech Orchestra is thrilled to present a program of musical masterpieces that showcase the breadth and depth of our art form.  
 
@@ -45,7 +41,7 @@ Finally, we conclude the program with one of Camille Saint-Saëns' most renowned
 
 Join us as we take you on a journey through the ages, exploring the beauty, passion, and creativity that only classical music can provide!
 
-<h2 style="text-align: center"> About the Orchestra </h2>
+## About the Orchestra
 
 Welcome to the Redmond Tech Orchestra (RTO), a revived initiative that brings together the musical talents of local tech employees!  
 
@@ -56,20 +52,16 @@ Founded by Peter Yang (conductor), Emily Jin (violin, bassoon), and Sicheng Zeng
 Our members possess diverse talents, such as Roxanne Kenison’s ability to play multiple instruments, including the clarinet, fiddle, and tenor saxophone, and Mirabai Smoot’s lifelong passion for the violin, which she began playing at just three years old.  
 
 We’d like to also highlight some of our talented soloists from today’s performance. Starting off, we have Cole Brooking, our low brass section leader! Cole recently celebrated his 15th anniversary at Microsoft and has a rich musical background. He picked up the trombone in middle school and played in various ensembles throughout college. You will hear him playing the trombone solos in Shostakovich’s Waltz No. 2 and Copland’s Hoe-down!
-<br/>
-<img src="../images/2.png" alt="Cole Brooking playing trombone." class="center">  
-<br/>
+
+![Cole Brooking playing trombone.](../images/2.png)
+
 Next, get ready to be captivated by Jennifer Williams' enchanting opening solo from the Bacchanale! Jennifer joined Microsoft in July 2023 after graduating from the University of Michigan and now works as a software engineer in the Microsoft News area. She began playing the oboe in middle school and continued performing in various orchestras and bands throughout high school and college.  
 
-<br/>
-<img src="../images/3.png" alt="Jennifer Williams playing oboe." class="center">  
-<br/>
+![Jennifer Williams playing oboe.](../images/3.png)
 
 Our ensemble members have dedicated themselves over the past few months to harmonize together as a brand new orchestra. Our performers are not only working hard as musicians, but also as leaders, organizers, and content creators. The commitment of our members truly made the music come alive.  
 
 Tonight’s concert marks the beginning of our musical journey as the Redmond Tech Orchestra, and we plan to expand our repertoire and recruit more musicians from the community. Thank you for joining us for our inaugural concert! We hope to create a memorable night that leaves a lasting impression!
-
-<div style="text-align: center">
 
 ## Support Us
 
@@ -78,147 +70,39 @@ Please support us by donating and following us on social media!
 ([PayPal](https://www.paypal.com/donate/?hosted_button_id=FMGNWMZECNGZE)) ([Venmo](https://www.venmo.com/u/redmondtechorchestra))  ([Facebook](https://www.facebook.com/profile.php?id=61557022596926))  ([Instagram](https://www.instagram.com/redmondtechorchestra))
 
 ![QR codes to Paypal and Venmo, accompanied with handles for Facebook (Redmond Tech Orchestra) and Instagram (@redmondtechorchestra)](../images/socials.png)
-</div>
-<div style="text-align: center" >
+
 
 ## Musician Roster
 
-<div class="row" style="display: block">
-<div class="column">
+| Instrument | Musicians |
+| --- | --- |
+| 1st Violin | Rachel Keirouz (concert master)<br/>Brandon Chen<br/>Jerry He<br/>Emily Jin<sup>\*</sup><br/>Sophie Zhao<sup>\*</sup>|
+| 2nd Violin | Mirabai Smoot<br/>Erica Choi<br/>Ryan Solorzano<br/>Gabriel Mallari<br/>Sophie Zhao<sup>\*</sup> |
+| Viola | Henry Wang<br/>Anita Ambalavanan<br/>Sean Park<br/>Jasmin Lim |
+| Cello | Rodrigo Ramirez<br/>Alaina Bossert<br/>Adrian Pang<br/>Rebecca Kreitinger |
+| Bass | Tanya Lai<br/>Joseph Haule |
+| Piano/Organ | Jada Campbell<br/>Sicheng Zeng<sup>\*</sup> |
+| Piccolo | Alex Ayala<sup>\*</sup><br/>Nandhini Lakuduva<sup>\*</sup>|
+| Flute | Sonya Lao<br/>Nandhini Lakuduva<sup>\*</sup><br/>Alex Ayala<sup>\*</sup><br/>Jennifer Lee<br/>Britania Reyes<br/>Jin Kim<br/>Yoona Oh<br/>Su Min Kim<br/>Sicheng Zeng<sup>\*</sup> |
+| Oboe | Jennifer Williams<br/>Sandy Moon|
+| Clarinet | Vicky Harp<br/>David Chen<br/>Kathleen Zhou |
+| Bass Clarinet | Joanna Chu  |
+| Bassoon | Emily Jin<sup>\*</sup> |
+| Alto Sax| Adithya Mukund<br/>John Storgion<br/>Zichang Su|
+| Tenor Sax | Ethan Wong<br/>Roxanne Kenison |
+| Horn |Caeli MacLennan<br/>Linda Brooking<br/>Jose Carpio  |
+| Trumpet |Sven Boemer<br/>Ayush Vikram<br/>Jessica Nguyen|
+| Trombone | Cole Brooking<br/>Kirsten Clemens<br/>Stefan Smolen |
+| Euphonium | Stephen Manz | 
+| Percussion | Matthew Kangas<br/>Cato Mar<br/>Enrique Saurez |
 
-#### 1st Violin
+\* Doubling on multiple instruments or parts  
 
-Rachel Keirouz  
-Brandon Chen  
-Jerry He  
-Emily Jin<sup>\*</sup>  
-Sophie Zhao<sup>\*</sup>
-
-#### 2nd Violin
-
-Mirabai Smoot  
-Erica Choi  
-Ryan Solorzano  
-Gabriel Mallari  
-Sophie Zhao<sup>\*</sup>  
-
-#### Viola
-
-Henry Wang  
-Anita Ambalavanan  
-Sean Park  
-Jasmin Lim  
-
-#### Cello
-
-Rodrigo Ramirez  
-Alaina Bossert  
-Adrian Pang  
-Rebecca Kreitinger  
-
-#### Bass
-
-Tanya Lai  
-Joseph Haule  
-
-#### Piano/Organ
-
-Jada Campbell  
-Sicheng Zeng<sup>\*</sup>  
-
-</div>
-<div class="column">
-
-#### Piccolo
-
-Alex Ayala<sup>\*</sup>  
-Nandhini Lakuduva<sup>\*</sup>  
-
-#### Flute
-
-Sonya Lao  
-Nandhini Lakuduva<sup>\*</sup>  
-Alex Ayala<sup>\*</sup>  
-Jennifer Lee  
-Britania Reyes  
-Jin Kim  
-Yoona Oh  
-Su Min Kim  
-Sicheng Zeng<sup>\*</sup>  
-
-#### Oboe
-
-Jennifer Williams  
-Sandy Moon  
-
-#### Clarinet
-
-Vicky Harp  
-David Chen  
-Kathleen Zhou  
-
-#### Bass Clarinet
-
-Joanna Chu  
-
-#### Bassoon
-
-Emily Jin<sup>\*</sup>  
-</div>
-<div class="column">
-
-#### Alto Sax
-
-Adithya Mukund  
-John Storgion  
-Zichang Su  
-
-#### Tenor Sax
-
-Ethan Wong  
-Roxanne Kenison  
-
-#### Horn
-
-Caeli MacLennan  
-Linda Brooking  
-Jose Carpio  
-
-#### Trumpet
-
-Sven Boemer  
-Ayush Vikram  
-Jessica Nguyen  
-
-#### Trombone
-
-Cole Brooking  
-Kirsten Clemens  
-Stefan Smolen  
-
-#### Euphonium
-
-Stephen Manz  
-
-#### Percussion
-
-Matthew Kangas  
-Cato Mar  
-Enrique Saurez  
-
-</div>
-</div>
-
-\* Doubling on multiple instruments or parts
-</div>
-
-<h2 style="text-align: center"> Looking Ahead</h2>
+## Looking Ahead
 
 Kick off your summer in style! We are thrilled to announce a preview of our next concert in approximately three months. Prepare to be captivated by the spellbinding notes of George Gershwin’s legendary **Rhapsody in Blue**, masterfully performed by Jada Campbell. Be ready to immerse yourself in the vibrant fusion of jazz and classical melodies with this piece!
 
-<br/>
-<img src="../images/4.png" alt="Jada Campbell looking down at the keys while playing piano." class="center">  
-<br/>
+![Jada Campbell looking down at the keys while playing piano.](../images/4.png)
 
 Continuing this musical journey, we invite you to embark on an auditory adventure with us. We will explore the groundbreaking works of George Gershwin, Aaron Copland, and Ferde Grofé – the pioneers who crafted the essence of classical American music in the early 20<sup>th</sup> century. Their timeless works continue to resonate with the soul of a nation, and we’re thrilled to bring them to life on our stage.
 
@@ -226,21 +110,3 @@ But the journey doesn’t end there. In a harmonious blend of tradition and tren
 
 We hope to share more details with you as soon as possible, but until then, please be sure to follow us for updates!
 
-
-<style>
-.column {
-  float: left;
-  width: 33.33%;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-</style>
