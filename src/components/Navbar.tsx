@@ -1,6 +1,6 @@
 import { Button, Link, Subtitle1, Title1 } from "@fluentui/react-components";
 
-import logo from "../assets/Moo.png";
+import logo from "../assets/logo.svg";
 import { useState } from "react";
 
 export default function Navbar() {
