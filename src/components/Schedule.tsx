@@ -19,7 +19,6 @@ import {
 
 import saintSaens from "../assets/saint-saens.jpg";
 import gershwin from "../assets/gershwin.jpg";
-import oshinoko from "../assets/oshinoko.jpg";
 
 export default function Schedule() {
     return (
@@ -28,7 +27,7 @@ export default function Schedule() {
             <div className="concerts mt-16">
                 <Card className="concert-card">
                     <CardHeader
-                        header={<Subtitle1>Organ Symphony</Subtitle1>}
+                        header={<Subtitle1>Starting with Saint-Saëns</Subtitle1>}
                         description={<Caption1>March, 30, 2024</Caption1>}
                     />
                     <CardPreview>
@@ -47,7 +46,6 @@ export default function Schedule() {
                                         <span>Waltz no. 2 from Suite for Jazz Orchestra no. 2</span>
                                         <br />
                                         <Subtitle2>Aaron Copland</Subtitle2>
-                                        <span>Buckaroo Holiday from Rodeo</span>
                                         <span>Hoe-down from Rodeo</span>
                                         <br />
                                         <Subtitle2>Camille Saint-Saëns</Subtitle2>
@@ -82,41 +80,8 @@ export default function Schedule() {
 
                 <Card className="concert-card">
                     <CardHeader
-                        header={<Subtitle1>Pops Concert</Subtitle1>}
+                        header={<Subtitle1>Gershwin Red and Blue!</Subtitle1>}
                         description={<Caption1>Summer 2024</Caption1>}
-                    />
-                    <CardPreview>
-                        <img src={oshinoko} alt="Poster of Idol from Oshi no ko" width={256} height={256} />
-                    </CardPreview>
-                    <CardFooter>
-                        <Dialog>
-                            <DialogTrigger disableButtonEnhancement>
-                                <Button>Details</Button>
-                            </DialogTrigger>
-                            <DialogSurface>
-                                <DialogBody>
-                                    <DialogTitle>Pops Concert</DialogTitle>
-                                    <DialogContent className="concert-description">
-                                        <p>
-                                            Please join us for a night of fun and music! We will be playing a variety of
-                                            music from movies, television, anime, and toppop songs!
-                                        </p>
-                                    </DialogContent>
-                                    <DialogActions>
-                                        <DialogTrigger disableButtonEnhancement>
-                                            <Button appearance="secondary">Close</Button>
-                                        </DialogTrigger>
-                                    </DialogActions>
-                                </DialogBody>
-                            </DialogSurface>
-                        </Dialog>
-                    </CardFooter>
-                </Card>
-
-                <Card className="concert-card">
-                    <CardHeader
-                        header={<Subtitle1>Gershwin Blues!</Subtitle1>}
-                        description={<Caption1>Fall 2024</Caption1>}
                     />
                     <CardPreview>
                         <img src={gershwin} alt="Portrait of George Gershwin" width={256} height={256} />
