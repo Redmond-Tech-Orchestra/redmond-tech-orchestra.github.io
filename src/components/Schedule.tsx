@@ -80,8 +80,8 @@ export default function Schedule() {
 
                 <Card className="concert-card">
                     <CardHeader
-                        header={<Subtitle1>Gershwin Red and Blue!</Subtitle1>}
-                        description={<Caption1>Summer 2024</Caption1>}
+                        header={<Subtitle1>Rhythm and Blues - A Musical Journey</Subtitle1>}
+                        description={<Caption1>July 18, 2024</Caption1>}
                     />
                     <CardPreview>
                         <img src={gershwin} alt="Portrait of George Gershwin" width={256} height={256} />
