@@ -28,7 +28,7 @@ export default function Schedule() {
                 <Card className="concert-card">
                     <CardHeader
                         header={<Subtitle1>Starting with Saint-Saëns</Subtitle1>}
-                        description={<Caption1>March, 30, 2024</Caption1>}
+                        description={<Caption1>March 30, 2024</Caption1>}
                     />
                     <CardPreview>
                         <img src={saintSaens} alt="Portrait of Camille Saint-Saëns" width={256} height={256} />
@@ -80,8 +80,8 @@ export default function Schedule() {
 
                 <Card className="concert-card">
                     <CardHeader
-                        header={<Subtitle1>Gershwin Red and Blue!</Subtitle1>}
-                        description={<Caption1>Summer 2024</Caption1>}
+                        header={<Subtitle1>Rhythm and Blues: A Musical Journey</Subtitle1>}
+                        description={<Caption1>July 18, 2024</Caption1>}
                     />
                     <CardPreview>
                         <img src={gershwin} alt="Portrait of George Gershwin" width={256} height={256} />
@@ -93,12 +93,25 @@ export default function Schedule() {
                             </DialogTrigger>
                             <DialogSurface>
                                 <DialogBody>
-                                    <DialogTitle>Gershwin Blues!</DialogTitle>
+                                    <DialogTitle>Rhythm and Blues: A Musical Journey</DialogTitle>
                                     <DialogContent className="concert-description">
-                                        <p>
-                                            Get ready for some Gershwin! For this concert will will be playing American
-                                            in Paris and Rhapsody in Blue!
-                                        </p>
+                                        <Subtitle2>Ferde Grofé</Subtitle2>
+                                        <span>Mississippi Suite</span>
+                                        <br />
+                                        <Subtitle2>Aaron Copland</Subtitle2>
+                                        <span>Buckaroo Holiday from “Rodeo”</span>
+                                        <br />
+                                        <Subtitle2>J.S. Bach</Subtitle2>
+                                        <span>“Air” from Orchestral Suite No. 3</span>
+                                        <br />
+                                        <Subtitle2>Red Velvet</Subtitle2>
+                                        <span>Feel My Rhythm</span>
+                                        <span>Birthday</span>
+                                        <br />
+                                        <Subtitle2>George Gershwin</Subtitle2>
+                                        <span>Rhapsody in Blue</span>
+                                        <span>An American in Paris</span>
+                                        <br />
                                     </DialogContent>
                                     <DialogActions>
                                         <DialogTrigger disableButtonEnhancement>
