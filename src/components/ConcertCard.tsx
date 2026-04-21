@@ -59,7 +59,7 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
           <img src={concert.poster} alt={`${concert.title} poster`} loading="lazy" />
         </button>
       ) : (
-        <div className="poster poster-placeholder" aria-hidden="true">
+        <div className="poster-placeholder" aria-hidden="true">
           <span>Poster coming soon</span>
         </div>
       )}
