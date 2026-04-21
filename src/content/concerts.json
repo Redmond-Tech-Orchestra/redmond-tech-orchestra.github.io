@@ -26,7 +26,7 @@
     "status": "past",
     "category": "masterworks",
     "poster": "/img/concerts/symphonic-fantasia.jpg",
-    "programUrl": "/programs/april-2026-programs.pdf",
+    "programUrl": "/concert-programs/april-2026-programs.pdf",
     "description": "Symphonic Fantasia paired Beethoven's Fifth with three works that featured in Disney's Fantasia: Dukas's La Péri Fanfare and The Sorcerer's Apprentice, Stravinsky's Firebird Suite, and Respighi's Pines of Rome. Big sounds, big pictures.",
     "program": [
       { "composer": "Paul Dukas", "pieces": ["La Péri: Fanfare", "The Sorcerer's Apprentice"] },
@@ -67,7 +67,7 @@
     "status": "past",
     "category": "masterworks",
     "poster": "/img/concerts/tchaik-night.png",
-    "programUrl": "/programs/november-2025-programs.pdf",
+    "programUrl": "/concert-programs/november-2025-programs.pdf",
     "description": "An all-Tchaikovsky evening (with a John Mackey curtain-raiser): the 1812 Overture, the fourth movement of the Serenade for Strings, and the Fifth Symphony. Cannons not included; everything else delivered as written.",
     "program": [
       { "composer": "John Mackey", "pieces": ["Redline Tango"] },
@@ -84,7 +84,7 @@
     "category": "chamber",
     "poster": "/img/concerts/chamber-spotlight.png",
     "recordingsUrl": "https://youtu.be/yT7Rq5bTpLQ?si=sv3hFKJvbHCTOWYG",
-    "programUrl": "/programs/july-2025-chamber-concert-program.png",
+    "programUrl": "/concert-programs/july-2025-chamber-concert-program.png",
     "description": "Our first concert built around RTO's chamber ensembles: small groups, classical repertoire, close enough that you can hear the bows on the strings."
   },
   {
@@ -97,7 +97,7 @@
     "category": "masterworks",
     "poster": "/img/concerts/broadway-hollywood.jpg",
     "recordingsUrl": "https://youtu.be/U4f-xHoqxPw?si=HyOQzMsqTQEOe7U5",
-    "programUrl": "/programs/july-2025-program.pdf",
+    "programUrl": "/concert-programs/july-2025-program.pdf",
     "description": "An evening of music from movies and musicals — the kind of program where everyone in the audience recognizes at least one cue.",
     "program": [
       { "composer": "John Williams", "pieces": ["Theme from Jurassic Park", "Battle of the Heroes"] },
@@ -137,7 +137,7 @@
     "category": "masterworks",
     "poster": "/img/concerts/rach-fest.jpg",
     "recordingsUrl": "https://www.youtube.com/watch?v=o-5L38WpNhM&list=PLbQZTncyg_tWmsSz_KdbrvxvvfnGwfvVg",
-    "programUrl": "/programs/rach-fest.pdf",
+    "programUrl": "/concert-programs/rach-fest.pdf",
     "description": "An evening of Tchaikovsky and Rachmaninoff featuring two of Rachmaninoff's biggest piano works: the Rhapsody on a Theme of Paganini and the Second Piano Concerto. Tchaikovsky's Slavonic March opens the night.",
     "program": [
       { "composer": "Pyotr Ilyich Tchaikovsky", "pieces": ["Slavonic March, Op. 31"] },
@@ -154,7 +154,7 @@
     "category": "masterworks",
     "poster": "/img/concerts/harmony-in-motion.jpg",
     "recordingsUrl": "https://www.youtube.com/watch?v=J6h51igafk8&list=PLbQZTncyg_tVECgs4E-0drMuCjcvXazN7",
-    "programUrl": "/programs/harmony-in-motion.pdf",
+    "programUrl": "/concert-programs/harmony-in-motion.pdf",
     "description": "Dvořák's New World Symphony and Carnival Overture, plus Joe Hisaishi's Symphonic Variation \"Merry-go-round\" — a Studio Ghibli detour in the middle of two crowd-favorite Dvořáks.",
     "program": [
       { "composer": "Joe Hisaishi", "pieces": ["Symphonic Variation \"Merry-go-round\""] },
@@ -206,7 +206,7 @@
     "category": "masterworks",
     "poster": "/img/concerts/saint-saens.png",
     "recordingsUrl": "https://www.youtube.com/watch?v=2Mpi6w_ghXM&list=PLbQZTncyg_tV1YJAh0rV-Fl4w4YKGt0vi",
-    "programUrl": "/programs/march-2024-program.pdf",
+    "programUrl": "/concert-programs/march-2024-program.pdf",
     "description": "Our first concert. We pulled together musicians from across the Seattle tech community, picked some Saint-Saëns, and hoped people would show up. They did.",
     "program": [
       { "composer": "Dmitri Shostakovich", "pieces": ["Waltz No. 2"] },
