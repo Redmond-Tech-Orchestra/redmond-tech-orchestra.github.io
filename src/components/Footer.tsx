@@ -18,35 +18,38 @@ export default function Footer() {
           <h4>{site.orgName}</h4>
           <p style={{ margin: 0 }}>A community orchestra in Redmond, WA.</p>
         </div>
-        <div>
+        <nav aria-label="Footer">
           <h4>Links</h4>
-          <div className="links">
-            <Link to="/contact">Contact</Link>
-            <Link to="/donate">Donate</Link>
-            <a href={site.bylawsUrl} target="_blank" rel="noopener noreferrer">
-              Bylaws
-            </a>
-          </div>
-        </div>
-        <div>
+          <ul className="links">
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/donate">Donate</Link></li>
+            <li>
+              <a href={site.bylawsUrl} target="_blank" rel="noopener noreferrer">
+                Bylaws
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav aria-label="Social media">
           <h4>Follow</h4>
-          <div className="social-links">
+          <ul className="social-links">
             {socialLinks.map(({ key, label, url, Icon }) =>
               url ? (
-                <a
-                  key={key}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  title={label}
-                >
-                  <Icon />
-                </a>
+                <li key={key}>
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    title={label}
+                  >
+                    <Icon />
+                  </a>
+                </li>
               ) : null
             )}
-          </div>
-        </div>
+          </ul>
+        </nav>
         <div className="legal">
           &copy; {site.foundingYear}&ndash;{year} {site.orgName} &middot; {site.nonprofitNote}
         </div>

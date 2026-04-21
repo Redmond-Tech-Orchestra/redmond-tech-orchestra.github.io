@@ -30,17 +30,17 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
         <div className="title-block">
           <h3 itemProp="name">{concert.title}</h3>
           {Array.isArray(concert.dateDisplay) ? (
-            <span className="date date--multi" itemProp="startDate" content={concert.date}>
+            <time className="date date--multi" dateTime={concert.date} itemProp="startDate">
               {concert.dateDisplay.map((d, i) => (
                 <span key={i} className="date-line">{d}</span>
               ))}
-            </span>
+            </time>
           ) : (
             <time className="date" dateTime={concert.date} itemProp="startDate">
               {concert.dateDisplay}
             </time>
           )}
-          <span
+          <address
             className="venue"
             itemProp="location"
             itemScope
@@ -63,7 +63,7 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
             ) : (
               <meta itemProp="address" content={venueDisplay} />
             )}
-          </span>
+          </address>
         </div>
 
         <p className="description" itemProp="description">

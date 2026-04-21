@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import site from "../content/site.json";
+import { usePageMeta } from "../hooks/usePageTitle";
 
 export default function Donate() {
+  usePageMeta({
+    title: "Donate",
+    description:
+      "Support the Redmond Tech Orchestra. Donations to our 501(c)(3) nonprofit are tax-deductible and help us keep concerts free and accessible.",
+    path: "/donate",
+  });
   return (
     <>
       <PageHero title="Support our growth" />

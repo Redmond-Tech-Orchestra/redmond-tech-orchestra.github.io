@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
+import { SectionEyebrow } from "../components/SectionEyebrow";
 import about from "../content/about.json";
+import { usePageMeta } from "../hooks/usePageTitle";
 
 export default function About() {
+  usePageMeta({
+    title: "About",
+    description:
+      "Founded in 2024 by musicians working in tech, the Redmond Tech Orchestra is a community orchestra dedicated to making orchestral music accessible across the Eastside of Seattle.",
+    path: "/about",
+  });
   const [lead, ...rest] = about.intro;
   return (
     <>
@@ -10,7 +18,7 @@ export default function About() {
       <section className="block">
         <div className="container about-grid">
           <div>
-            <p className="section-eyebrow section-eyebrow--inline">Our Story</p>
+            <SectionEyebrow>Our Story</SectionEyebrow>
             <p className="about-lead">{lead}</p>
             {rest.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
@@ -29,21 +37,21 @@ export default function About() {
 
       <section className="block alt">
         <div className="container">
-          <h2 className="section-eyebrow">What sets us apart</h2>
-          <div className="highlights">
+          <SectionEyebrow>What sets us apart</SectionEyebrow>
+          <ul className="highlights">
             {about.highlights.map((h) => (
-              <div className="highlight-card" key={h.title}>
+              <li className="highlight-card" key={h.title}>
                 <h3>{h.title}</h3>
                 <p style={{ margin: 0 }}>{h.body}</p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
       <section className="block">
         <div className="container">
-          <h2 className="section-eyebrow">Meet the Team</h2>
+          <SectionEyebrow>Meet the Team</SectionEyebrow>
           <div className="team-grid">
             {about.team.map((member) => (
               <article className="team-card" key={member.name}>
@@ -61,7 +69,7 @@ export default function About() {
 
       <section className="block alt">
         <div className="container">
-          <h2 className="section-eyebrow">Meet the Members</h2>
+          <SectionEyebrow>Meet the Members</SectionEyebrow>
           <div className="quote-grid">
             {about.memberQuotes.map((q) => (
               <figure className="quote-card" key={q.name}>

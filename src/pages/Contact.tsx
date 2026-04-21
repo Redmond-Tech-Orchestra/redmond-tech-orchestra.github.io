@@ -1,9 +1,16 @@
 import { useState, type FormEvent } from "react";
 import PageHero from "../components/PageHero";
+import { usePageMeta } from "../hooks/usePageTitle";
 
 const TOPICS = ["General inquiry", "Joining the orchestra", "Sponsorship", "Press / media", "Other"];
 
 export default function Contact() {
+  usePageMeta({
+    title: "Contact",
+    description:
+      "Get in touch with the Redmond Tech Orchestra about joining, sponsorship, press inquiries, or anything else.",
+    path: "/contact",
+  });
   const [submitted, setSubmitted] = useState(false);
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {

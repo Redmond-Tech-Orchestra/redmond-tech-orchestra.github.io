@@ -6,11 +6,42 @@ import concertsData from "../content/concerts.json";
 import venuesData from "../content/venues.json";
 import type { Concert, Venue } from "../content/types";
 import { TicketIcon } from "../components/Icons";
+import { SectionEyebrow } from "../components/SectionEyebrow";
+import { usePageMeta } from "../hooks/usePageTitle";
 
 const concerts = concertsData as Concert[];
 const venues = venuesData as Record<string, Venue>;
 
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  name: "Redmond Tech Orchestra",
+  alternateName: "RTO",
+  description:
+    "A community orchestra of working tech professionals based in Redmond, Washington. We perform free and low-cost concerts across the Eastside.",
+  foundingDate: "2024",
+  foundingLocation: { "@type": "Place", name: "Redmond, Washington" },
+  areaServed: { "@type": "Place", name: "Greater Seattle / Eastside, Washington" },
+  logo: "https://www.redmondtechorchestra.org/img/logo.png",
+  image: "https://www.redmondtechorchestra.org/img/heroes/home-hero.jpg",
+  url: "https://www.redmondtechorchestra.org/",
+  nonprofitStatus: "Nonprofit501c3",
+  sameAs: [
+    "https://www.instagram.com/redmondtechorchestra/",
+    "https://www.facebook.com/people/Redmond-Tech-Orchestra/61557022596926/",
+    "https://www.youtube.com/@RedmondTechOrchestra",
+    "https://www.tiktok.com/@redmondtechorch",
+  ],
+};
+
 export default function Home() {
+  usePageMeta({
+    title: "Home",
+    description:
+      "Classical music, modern community. The Redmond Tech Orchestra is a 501(c)(3) community orchestra of working tech professionals on the Eastside of Seattle.",
+    path: "/",
+    image: "https://www.redmondtechorchestra.org/img/heroes/home-hero.jpg",
+  });
   const upcoming = concerts.find((c) => c.status === "upcoming");
   const upcomingVenue = upcoming?.venueId ? venues[upcoming.venueId] : undefined;
   const upcomingVenueName = upcoming?.venue ?? upcomingVenue?.name ?? "";
@@ -22,6 +53,10 @@ export default function Home() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
       <div className="hero-photo" role="img" aria-label="Redmond Tech Orchestra performing" />
 
       <section className="hero-intro">
@@ -44,7 +79,7 @@ export default function Home() {
 
       <section className="block">
         <div className="container intro-block">
-          <p className="section-eyebrow section-eyebrow--inline">{home.intro.eyebrow}</p>
+          <SectionEyebrow>{home.intro.eyebrow}</SectionEyebrow>
           <h2>{home.intro.heading}</h2>
           {home.intro.body.map((p, i) => (
             <p key={i} className="intro-body">{p}</p>
@@ -111,16 +146,16 @@ export default function Home() {
 
       <section className="block">
         <div className="container">
-          <h2 className="section-eyebrow">About the Orchestra</h2>
+          <SectionEyebrow>About the Orchestra</SectionEyebrow>
           <p className="section-lead">{about.intro[1]}</p>
-          <div className="highlights">
+          <ul className="highlights">
             {about.highlights.map((h) => (
-              <div className="highlight-card" key={h.title}>
+              <li className="highlight-card" key={h.title}>
                 <h3>{h.title}</h3>
                 <p style={{ margin: 0 }}>{h.body}</p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
           <div className="text-center mt-2">
             <Link to="/about" className="btn btn-ghost">
               Meet the Orchestra

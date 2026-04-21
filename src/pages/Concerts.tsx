@@ -1,9 +1,11 @@
 import PageHero from "../components/PageHero";
 import ConcertCard from "../components/ConcertCard";
+import { SectionEyebrow } from "../components/SectionEyebrow";
 import concertsData from "../content/concerts.json";
 import venuesData from "../content/venues.json";
 import site from "../content/site.json";
 import type { Concert, Venue } from "../content/types";
+import { usePageMeta } from "../hooks/usePageTitle";
 
 const concerts = concertsData as Concert[];
 const venues = venuesData as Record<string, Venue>;
@@ -59,6 +61,12 @@ function buildEventJsonLd(c: Concert) {
 }
 
 export default function Concerts() {
+  usePageMeta({
+    title: "Concerts",
+    description:
+      "Upcoming and past Redmond Tech Orchestra concerts. Free and low-cost orchestral performances across Redmond, Bellevue, and the greater Eastside.",
+    path: "/concerts",
+  });
   const sorted = [...concerts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
@@ -103,15 +111,15 @@ function ConcertSection({
 }) {
   return (
     <div className="concert-section">
-      <h2 className="section-eyebrow">{title}</h2>
-      <div className="concert-list">
+      <SectionEyebrow>{title}</SectionEyebrow>
+      <ul className="concert-list">
         {concerts.map((c, i) => (
-          <div key={c.id}>
+          <li key={c.id}>
             {i > 0 && <hr className="concert-divider" />}
             <ConcertCard concert={c} />
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

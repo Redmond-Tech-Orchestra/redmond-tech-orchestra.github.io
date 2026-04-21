@@ -11,7 +11,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container">
         <Link to="/" className="brand" onClick={close}>
-          <img src="/img/logo.png" alt="" className="brand-mark-img" width={40} height={40} />
+          <img src="/img/logo.png" alt="Redmond Tech Orchestra" className="brand-mark-img" width={40} height={40} />
           <span>{site.orgName}</span>
         </Link>
         <button
