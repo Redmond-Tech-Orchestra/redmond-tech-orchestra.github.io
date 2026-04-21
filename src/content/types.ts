@@ -40,6 +40,7 @@ export type SiteContent = {
     youtube: string | null;
     instagram: string | null;
     facebook: string | null;
+    tiktok: string | null;
   };
   nav: { label: string; to: string }[];
 };

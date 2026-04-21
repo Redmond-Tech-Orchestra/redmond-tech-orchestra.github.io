@@ -3,13 +3,16 @@ import PageHero from "../components/PageHero";
 import about from "../content/about.json";
 
 export default function About() {
+  const [lead, ...rest] = about.intro;
   return (
     <>
-      <PageHero title="About RTO" />
+      <PageHero title="About" backgroundImage="/img/hero-orchestra.jpg" />
       <section className="block">
         <div className="container about-grid">
           <div>
-            {about.intro.map((paragraph, i) => (
+            <p className="section-eyebrow section-eyebrow--inline">Our Story</p>
+            <p className="about-lead">{lead}</p>
+            {rest.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
             ))}
             <div className="mt-2">
@@ -19,14 +22,14 @@ export default function About() {
             </div>
           </div>
           <div>
-            <img src="/img/hero-flute.jpg" alt="An RTO musician playing the flute." />
+            <img src="/img/about-moomie.jpg" alt="Moomie, an RTO musician." />
           </div>
         </div>
       </section>
 
       <section className="block alt">
         <div className="container">
-          <h2>What sets us apart</h2>
+          <h2 className="section-eyebrow">What sets us apart</h2>
           <div className="highlights">
             {about.highlights.map((h) => (
               <div className="highlight-card" key={h.title}>

@@ -7,9 +7,10 @@
   "donateUrl": "https://www.paypal.com/donate/?hosted_button_id=FMGNWMZECNGZE",
   "bylawsUrl": "/bylaws.pdf",
   "social": {
+    "instagram": "https://www.instagram.com/redmondtechorchestra/",
+    "facebook": "https://www.facebook.com/people/Redmond-Tech-Orchestra/61557022596926/",
     "youtube": "https://www.youtube.com/@RedmondTechOrchestra",
-    "instagram": null,
-    "facebook": null
+    "tiktok": "https://www.tiktok.com/@redmondtechorch"
   },
   "nav": [
     { "label": "Home", "to": "/" },
