@@ -1,12 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
+// Custom domain (CNAME) — site lives at root, so base = "/"
 export default defineConfig({
   plugins: [react()],
-  server: {
-    watch: {
-        usePolling: true
-    }
-  }
-})
+  base: "/",
+  server: { port: 3000, strictPort: true },
+});

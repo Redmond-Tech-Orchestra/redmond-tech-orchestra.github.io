@@ -1,20 +1,22 @@
-import { FluentProvider, webLightTheme } from "@fluentui/react-components";
-import Navbar from "./components/Navbar";
-import Landing from "./components/Landing";
-import Schedule from "./components/Schedule";
-import About from "./components/About";
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function App() {
-    return (
-        <FluentProvider theme={webLightTheme}>
-            <main>
-                <Navbar />
-                <div className="content">
-                    <Landing />
-                    <Schedule />
-                    <About />
-                </div>
-            </main>
-        </FluentProvider>
-    );
+  const { pathname } = useLocation();
+  // Scroll to top on route change (HashRouter doesn't trigger native scroll restoration).
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return (
+    <>
+      <Header />
+      <main id="main">
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  );
 }
