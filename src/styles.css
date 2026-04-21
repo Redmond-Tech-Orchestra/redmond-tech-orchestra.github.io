@@ -388,10 +388,14 @@ section.block h2.section-eyebrow { margin-bottom: 4rem; }
 }
 .concert-item {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
   padding: 4rem 0;
+}
+/* Landscape photos read better at 50/50 instead of 2:1. */
+.concert-item--landscape {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 .concert-item .details {
   display: flex;
@@ -427,11 +431,42 @@ section.block h2.section-eyebrow { margin-bottom: 4rem; }
   object-fit: contain;
   object-position: top;
 }
+/* Landscape and square images use their natural aspect ratio in the image
+   column rather than being letterboxed into the portrait poster slot. */
+.concert-item--landscape .poster img,
+.concert-item--square .poster img {
+  aspect-ratio: auto;
+  object-fit: cover;
+}
 .concert-item .title-block h3 {
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   margin: 0 0 0.4em;
   line-height: 1.1;
 }
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.45em 0.85em 0.4em;
+  border-radius: 999px;
+  margin-bottom: 0.6em;
+  border: 1px solid currentColor;
+  background: rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+}
+/* When the title-block has a pill, hoist the poster up so the image's top edge
+   aligns with the title's cap height instead of the pill's top edge. */
+.concert-item:has(.category-pill) .poster {
+  margin-top: calc(0.72rem + 0.85em + 0.6em);  /* pill font-size + padding + margin-bottom */
+}
+.category-pill--masterworks { color: #e9c46a; }
+.category-pill--chamber     { color: #b39ddb; }
+.category-pill--community   { color: #6fcf97; }
+.category-pill--session     { color: #4dd0e1; }
 .concert-item .title-block .date {
   font-size: 1.4rem;
   color: var(--text);

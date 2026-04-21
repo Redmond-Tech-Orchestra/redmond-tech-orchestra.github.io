@@ -46,5 +46,29 @@
     "addressRegion": "WA",
     "postalCode": "98007",
     "addressCountry": "US"
+  },
+  "marymoor-station": {
+    "name": "Marymoor Village Garage",
+    "streetAddress": "17520 NE 70th St",
+    "addressLocality": "Redmond",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "addressCountry": "US"
+  },
+  "crossroads-community-center": {
+    "name": "Crossroads Community Center",
+    "streetAddress": "16000 NE 10th St",
+    "addressLocality": "Bellevue",
+    "addressRegion": "WA",
+    "postalCode": "98008",
+    "addressCountry": "US"
+  },
+  "freeway-park": {
+    "name": "Freeway Park",
+    "streetAddress": "700 Seneca St",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "postalCode": "98101",
+    "addressCountry": "US"
   }
 }

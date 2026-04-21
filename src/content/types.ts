@@ -12,6 +12,8 @@ export type Venue = {
   addressCountry: string;
 };
 
+export type ConcertCategory = "masterworks" | "chamber" | "community" | "session";
+
 export type Concert = {
   id: string;
   title: string;
@@ -20,8 +22,10 @@ export type Concert = {
   venue?: string;         // optional override; otherwise derived from venues[venueId].name
   venueId?: string;       // key into venues.json
   status: "upcoming" | "past";
+  category?: ConcertCategory;  // defaults to "masterworks"
   description: string;
   poster?: string;        // path under /img/concerts/...
+  posterOrientation?: "portrait" | "landscape" | "square";  // defaults to "portrait"
   ticketsUrl?: string;
   recordingsUrl?: string;
   programUrl?: string;

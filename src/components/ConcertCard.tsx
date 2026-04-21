@@ -1,9 +1,24 @@
 import { useState } from "react";
-import type { Concert, Venue } from "../content/types";
+import type { Concert, ConcertCategory, Venue } from "../content/types";
 import venuesData from "../content/venues.json";
 import Lightbox from "./Lightbox";
 
 const venues = venuesData as Record<string, Venue>;
+
+const CATEGORY_LABEL: Record<ConcertCategory, string> = {
+  masterworks: "Masterworks",
+  chamber: "Chamber",
+  community: "Community",
+  session: "Recording Session",
+};
+
+function CategoryPill({ category }: { category: ConcertCategory }) {
+  return (
+    <span className={`category-pill category-pill--${category}`}>
+      {CATEGORY_LABEL[category]}
+    </span>
+  );
+}
 
 type Props = {
   concert: Concert;
@@ -17,7 +32,12 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   return (
     <article
-      className={"concert-item" + (isPast ? " past" : "")}
+      className={
+        "concert-item" +
+        (isPast ? " past" : "") +
+        (concert.category ? ` concert-item--${concert.category}` : "") +
+        ` concert-item--${concert.posterOrientation ?? "portrait"}`
+      }
       itemScope
       itemType="https://schema.org/MusicEvent"
     >
@@ -28,6 +48,7 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
       />
       <div className="details">
         <div className="title-block">
+          {concert.category && <CategoryPill category={concert.category} />}
           <h3 itemProp="name">{concert.title}</h3>
           {Array.isArray(concert.dateDisplay) ? (
             <time className="date date--multi" dateTime={concert.date} itemProp="startDate">
@@ -179,8 +200,10 @@ export function ConcertProgram({ program }: { program?: Concert["program"] }) {
 
 // Use the last surname for the composer label (matches Figma style).
 // Strips "/ arr. ..." suffixes and preserves known two-word surnames.
+// For comma-separated multi-composer credits, returns the full string unchanged.
 function shortComposer(name: string): string {
   const main = name.split("/")[0].trim();
+  if (main.includes(",")) return main;
   const knownTwoWord = ["Lloyd Webber", "Saint-Saëns"];
   for (const k of knownTwoWord) {
     if (main.includes(k)) return k;
