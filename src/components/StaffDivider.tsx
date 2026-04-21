@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
 
 /**
  * Decorative music-staff divider used by the section eyebrow.
@@ -216,12 +216,23 @@ const CLEF_TO_KEYSIG_GAP_SP = 0.7;
 const TIMESIG_LEADING_GAP_SP = 0.2; // gap before time sig (Harmonia uses 0.3 sp; tightened slightly to balance the now-tighter clef→keysig gap)
 
 /**
- * ViewBox width of the opening ornament (clef + key sig + time sig).
+ * Maximum viewBox width of the opening ornament (clef + key sig + time sig).
  * Sized to comfortably fit the widest combination (4 accidentals + 2-digit
- * time signature) while still anchoring to the left edge via
- * `preserveAspectRatio="xMinYMid meet"`.
+ * time signature). The actual rendered viewBox width is computed per-instance
+ * based on which elements are included in the responsive variant; see
+ * `OpeningOrnament` below.
  */
 const OPENING_BOX_WIDTH = 60;
+
+/** Trailing breathing room after the final ornament element, in staff spaces. */
+const OPENING_TRAILING_PAD_SP = 0.5;
+
+/**
+ * Approximate advance width of the common/cut time-signature glyph in staff
+ * spaces. Bravura's `timeSigCommon` and `timeSigCutCommon` glyphs both span
+ * roughly 1.6 sp horizontally; this is used only for fit calculations.
+ */
+const TIME_SIG_SYMBOL_WIDTH_SP = 1.6;
 
 /**
  * Final-barline geometry, from Bravura `engravingDefaults`.
@@ -338,22 +349,21 @@ function renderTimeSigFraction(timeSig: { count: number; unit: number }, x: numb
   };
 }
 
-function OpeningOrnament() {
+type OpeningOrnamentProps = {
+  /**
+   * Available width for the ornament, expressed in svg-px (i.e. viewBox units
+   * for an SVG that is `VIEWBOX_HEIGHT` tall). Pass `Infinity` to always render
+   * the full variant; the ornament will degrade by dropping the key signature,
+   * then the time signature, then the clef itself when space is tight.
+   */
+  availableSvgPx: number;
+};
+
+function OpeningOrnament({ availableSvgPx }: OpeningOrnamentProps) {
   // Pick a random clef, key sig, and time sig once per component instance.
   const clef = useMemo(() => pickWeightedClef(), []);
   const keySig = useMemo(() => KEY_SIGS[Math.floor(Math.random() * KEY_SIGS.length)]!, []);
   const timeSig = useMemo(() => TIME_SIGS[Math.floor(Math.random() * TIME_SIGS.length)]!, []);
-
-  // Layout in svg-px, advancing left-to-right (mirrors Harmonia's
-  // `render_measure.rs` call sequence with explicit leading pads):
-  //   clef glyph at clefX (left-anchored)
-  //   keysig starts at clefX + clef.advanceSp + CLEF_TO_KEYSIG_GAP_SP
-  //     first accidental left-edge at keySigX + 0.5sp (internal leading pad)
-  //     N accidentals at 1.1sp step, then 1.0sp internal trailing pad
-  //   time sig glyph at keySigEnd + 0.3sp (caller-applied gap)
-  //     first digit left-edge at timeSigX + 0.5sp (internal leading pad)
-  const clefX = OPENING_LEFT_PAD_SP * STAFF_SPACE;
-  const keySigX = clefX + (clef.advanceSp + CLEF_TO_KEYSIG_GAP_SP) * STAFF_SPACE;
 
   const accidentalCount = Math.abs(keySig.fifths);
   const accidentalGlyph = keySig.fifths > 0 ? SHARP_GLYPH : FLAT_GLYPH;
@@ -363,20 +373,82 @@ function OpeningOrnament() {
   const accidentalLeadingPad = ACCIDENTAL_LEADING_PAD_SP * STAFF_SPACE;
   const accidentalTrailingPad = ACCIDENTAL_TRAILING_PAD_SP * STAFF_SPACE;
 
-  // Distance consumed by the key signature itself (0 if no accidentals).
+  // Width consumed by the key-signature run (0 if no accidentals).
   const keySigConsumed =
     accidentalCount > 0
       ? accidentalLeadingPad + accidentalCount * accidentalStep + accidentalTrailingPad
       : 0;
 
-  const timeSigX = keySigX + keySigConsumed + TIMESIG_LEADING_GAP_SP * STAFF_SPACE;
+  // Width consumed by the time signature, including its internal leading pad.
+  const timeSigConsumed =
+    TIME_SIG_LEADING_PAD_SP * STAFF_SPACE +
+    (timeSig.kind === "fraction"
+      ? Math.max(String(timeSig.count).length, String(timeSig.unit).length) *
+        TIME_SIG_DIGIT_STEP_SP *
+        STAFF_SPACE
+      : TIME_SIG_SYMBOL_WIDTH_SP * STAFF_SPACE);
+
+  // ── Responsive variant selection ─────────────────────────────────────────
+  // Compute the right-edge x of each candidate variant in svg-px and pick the
+  // most-detailed variant that fits within `availableSvgPx`. Variants are
+  // ordered from richest to plainest, matching the user-requested degradation:
+  // full → drop key sig → drop time sig → drop clef → bare staff.
+  const clefX = OPENING_LEFT_PAD_SP * STAFF_SPACE;
+  const clefRight = clefX + clef.advanceSp * STAFF_SPACE;
+  const trailingPad = OPENING_TRAILING_PAD_SP * STAFF_SPACE;
+
+  const widthClefOnly = clefRight + trailingPad;
+  const widthClefTime =
+    clefRight + TIMESIG_LEADING_GAP_SP * STAFF_SPACE + timeSigConsumed + trailingPad;
+  const widthFull =
+    clefRight +
+    CLEF_TO_KEYSIG_GAP_SP * STAFF_SPACE +
+    keySigConsumed +
+    TIMESIG_LEADING_GAP_SP * STAFF_SPACE +
+    timeSigConsumed +
+    trailingPad;
+
+  let includeKeySig = accidentalCount > 0;
+  let includeTimeSig = true;
+  let includeClef = true;
+  let chosenWidth: number;
+  if (widthFull <= availableSvgPx) {
+    chosenWidth = widthFull;
+  } else if (widthClefTime <= availableSvgPx) {
+    includeKeySig = false;
+    chosenWidth = widthClefTime;
+  } else if (widthClefOnly <= availableSvgPx) {
+    includeKeySig = false;
+    includeTimeSig = false;
+    chosenWidth = widthClefOnly;
+  } else {
+    includeKeySig = false;
+    includeTimeSig = false;
+    includeClef = false;
+    chosenWidth = 0;
+  }
+
+  // If nothing fits, render nothing — the parent's <StaffLines/> still draws
+  // bare lines across the full container width.
+  if (!includeClef) return null;
+
+  // Layout positions (only meaningful when their elements are rendered).
+  const keySigX = clefRight + CLEF_TO_KEYSIG_GAP_SP * STAFF_SPACE;
+  const timeSigX = includeKeySig
+    ? keySigX + keySigConsumed + TIMESIG_LEADING_GAP_SP * STAFF_SPACE
+    : clefRight + TIMESIG_LEADING_GAP_SP * STAFF_SPACE;
+
+  // Cap the viewBox width at OPENING_BOX_WIDTH so the SVG never renders wider
+  // than its CSS aspect-ratio fallback would imply.
+  const viewBoxWidth = Math.min(chosenWidth, OPENING_BOX_WIDTH);
 
   return (
     <svg
       className="staff-divider__ornament"
       role="presentation"
       preserveAspectRatio="xMinYMid meet"
-      viewBox={`0 0 ${OPENING_BOX_WIDTH} ${VIEWBOX_HEIGHT}`}
+      viewBox={`0 0 ${viewBoxWidth} ${VIEWBOX_HEIGHT}`}
+      style={{ aspectRatio: `${viewBoxWidth} / ${VIEWBOX_HEIGHT}` }}
     >
       {/* Clef */}
       <text
@@ -393,8 +465,9 @@ function OpeningOrnament() {
 
       {/* Key signature accidentals — left-anchored at keySigX + 0.5sp + i*1.1sp,
           matching Harmonia's render_key_signature. Positions are clef-aware
-          (treble/bass/C tables); tenor C clef adds a per-clef vertical shift. */}
-      {Array.from({ length: accidentalCount }, (_, i) => {
+          (treble/bass/C tables); tenor C clef adds a per-clef vertical shift.
+          Suppressed when the responsive variant drops the key signature. */}
+      {includeKeySig && Array.from({ length: accidentalCount }, (_, i) => {
         const x = keySigX + accidentalLeadingPad + i * accidentalStep;
         const positionHalfSpaces = accidentalBasePositions[i]! + clef.staffPositionShiftHalfSpaces;
         const y = TOP_LINE_Y + positionHalfSpaces * STAFF_SPACE * 0.5;
@@ -417,8 +490,9 @@ function OpeningOrnament() {
       {/* Time signature: common/cut symbols span the full staff (bbox ≈ ±1.5sp
           around baseline). Place alphabetic baseline at the middle line so the
           glyph centers vertically on the staff. Use the same 0.5sp internal
-          leading pad as the fraction renderer. */}
-      {timeSig.kind === "common" || timeSig.kind === "cut" ? (
+          leading pad as the fraction renderer. Suppressed when the responsive
+          variant drops the time signature. */}
+      {!includeTimeSig ? null : timeSig.kind === "common" || timeSig.kind === "cut" ? (
         <text
           x={timeSigX + TIME_SIG_LEADING_PAD_SP * STAFF_SPACE}
           y={MIDDLE_LINE_Y}
@@ -455,10 +529,38 @@ function FinalBarlineOrnament() {
 }
 
 export function StaffDivider({ side }: Props) {
+  const ref = useRef<HTMLSpanElement>(null);
+  // Initialize with Infinity so the first paint renders the full ornament; the
+  // layout effect will immediately measure and downgrade if needed. This keeps
+  // SSR/hydration-style first paints visually rich on wide viewports while
+  // still adapting on narrow ones before the user is likely to notice.
+  const [availableSvgPx, setAvailableSvgPx] = useState<number>(Infinity);
+
+  useLayoutEffect(() => {
+    if (side !== "left") return;
+    const el = ref.current;
+    if (!el) return;
+    const measure = () => {
+      const rect = el.getBoundingClientRect();
+      if (rect.height <= 0) return;
+      // Convert measured CSS px → svg-px using the staff's intrinsic viewBox
+      // height. This matches the units used by OpeningOrnament's width math.
+      setAvailableSvgPx((rect.width * VIEWBOX_HEIGHT) / rect.height);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [side]);
+
   return (
-    <span className="staff-divider" data-side={side} aria-hidden="true">
+    <span ref={ref} className="staff-divider" data-side={side} aria-hidden="true">
       <StaffLines />
-      {side === "left" ? <OpeningOrnament /> : <FinalBarlineOrnament />}
+      {side === "left" ? (
+        <OpeningOrnament availableSvgPx={availableSvgPx} />
+      ) : (
+        <FinalBarlineOrnament />
+      )}
     </span>
   );
 }

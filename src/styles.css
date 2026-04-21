@@ -780,8 +780,11 @@ select option { background: var(--bg-solid); color: var(--text); }
 .staff-divider[data-side="left"] .staff-divider__ornament {
   left: 0;
   /* Explicit aspect-ratio fallback for browsers that don't compute SVG
-     intrinsic width from viewBox + height alone. Matches the OPENING_BOX_WIDTH
-     × VIEWBOX_HEIGHT in StaffDivider.tsx (60 × 17). */
+     intrinsic width from viewBox + height alone. The component sets a more
+     specific inline `aspect-ratio` per-instance once it has measured the
+     available space and chosen a responsive variant; this static value is
+     just the worst-case fallback (full ornament: clef + 4 accidentals + 2-digit
+     time signature, matching OPENING_BOX_WIDTH × VIEWBOX_HEIGHT = 60 × 17). */
   aspect-ratio: 60 / 17;
 }
 .staff-divider[data-side="right"] .staff-divider__ornament {
