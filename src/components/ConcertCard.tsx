@@ -1,7 +1,9 @@
 import { useState } from "react";
-import type { Concert } from "../content/types";
-import { TicketIcon, DocumentIcon, VideoIcon } from "./Icons";
+import type { Concert, Venue } from "../content/types";
+import venuesData from "../content/venues.json";
 import Lightbox from "./Lightbox";
+
+const venues = venuesData as Record<string, Venue>;
 
 type Props = {
   concert: Concert;
@@ -10,17 +12,63 @@ type Props = {
 
 export default function ConcertCard({ concert, showProgram = true }: Props) {
   const isPast = concert.status === "past";
+  const venue = concert.venueId ? venues[concert.venueId] : undefined;
+  const venueDisplay = concert.venue ?? venue?.name ?? "";
   const [lightboxOpen, setLightboxOpen] = useState(false);
   return (
-    <article className={"concert-item" + (isPast ? " past" : "")}>
+    <article
+      className={"concert-item" + (isPast ? " past" : "")}
+      itemScope
+      itemType="https://schema.org/MusicEvent"
+    >
+      <meta itemProp="eventStatus" content="https://schema.org/EventScheduled" />
+      <meta
+        itemProp="eventAttendanceMode"
+        content="https://schema.org/OfflineEventAttendanceMode"
+      />
       <div className="details">
         <div className="title-block">
-          <h3>{concert.title}</h3>
-          <span className="date">{concert.dateDisplay}</span>
-          <span className="venue">{concert.venue}</span>
+          <h3 itemProp="name">{concert.title}</h3>
+          {Array.isArray(concert.dateDisplay) ? (
+            <span className="date date--multi" itemProp="startDate" content={concert.date}>
+              {concert.dateDisplay.map((d, i) => (
+                <span key={i} className="date-line">{d}</span>
+              ))}
+            </span>
+          ) : (
+            <time className="date" dateTime={concert.date} itemProp="startDate">
+              {concert.dateDisplay}
+            </time>
+          )}
+          <span
+            className="venue"
+            itemProp="location"
+            itemScope
+            itemType="https://schema.org/Place"
+          >
+            <span itemProp="name">{venueDisplay}</span>
+            {venue ? (
+              <span
+                itemProp="address"
+                itemScope
+                itemType="https://schema.org/PostalAddress"
+                style={{ display: "none" }}
+              >
+                <span itemProp="streetAddress">{venue.streetAddress}</span>
+                <span itemProp="addressLocality">{venue.addressLocality}</span>
+                <span itemProp="addressRegion">{venue.addressRegion}</span>
+                <span itemProp="postalCode">{venue.postalCode}</span>
+                <span itemProp="addressCountry">{venue.addressCountry}</span>
+              </span>
+            ) : (
+              <meta itemProp="address" content={venueDisplay} />
+            )}
+          </span>
         </div>
 
-        <p className="description">{concert.description}</p>
+        <p className="description" itemProp="description">
+          {concert.description}
+        </p>
 
         {showProgram && concert.program && concert.program.length > 0 && (
           <div className="repertoire">
@@ -32,18 +80,31 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
 
         <div className="actions">
           {concert.ticketsUrl && (
-            <a className="btn" href={concert.ticketsUrl} target="_blank" rel="noopener noreferrer">
-              <TicketIcon /> Get Tickets
+            <a
+              className="btn"
+              href={concert.ticketsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              itemProp="offers"
+              itemScope
+              itemType="https://schema.org/Offer"
+            >
+              <meta itemProp="url" content={concert.ticketsUrl} />
+              <meta
+                itemProp="availability"
+                content="https://schema.org/InStock"
+              />
+              Get Tickets
             </a>
           )}
           {concert.programUrl && (
-            <a className="btn btn-outline" href={concert.programUrl} target="_blank" rel="noopener noreferrer">
-              <DocumentIcon /> Program
+            <a className="btn-ghost" href={concert.programUrl} target="_blank" rel="noopener noreferrer">
+              View Program
             </a>
           )}
           {concert.recordingsUrl && (
-            <a className="btn" href={concert.recordingsUrl} target="_blank" rel="noopener noreferrer">
-              <VideoIcon /> Recordings
+            <a className="btn-ghost" href={concert.recordingsUrl} target="_blank" rel="noopener noreferrer">
+              Watch Recordings
             </a>
           )}
         </div>
@@ -56,7 +117,12 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
           onClick={() => setLightboxOpen(true)}
           aria-label={`View ${concert.title} poster full size`}
         >
-          <img src={concert.poster} alt={`${concert.title} poster`} loading="lazy" />
+          <img
+            src={concert.poster}
+            alt={`${concert.title} poster`}
+            loading="lazy"
+            itemProp="image"
+          />
         </button>
       ) : (
         <div className="poster-placeholder" aria-hidden="true">

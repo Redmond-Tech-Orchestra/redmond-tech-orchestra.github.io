@@ -41,3 +41,29 @@ export function VideoIcon({ className }: IconProps) {
     </span>
   );
 }
+
+export function MenuIcon({ className }: IconProps) {
+  return (
+    <span className={"btn-icon " + (className ?? "")} aria-hidden="true">
+      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M2.75 5.5h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Zm0 3.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Zm0 3.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  );
+}
+
+export function CloseIcon({ className }: IconProps) {
+  return (
+    <span className={"btn-icon " + (className ?? "")} aria-hidden="true">
+      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M4.21 4.39 4.29 4.3a1 1 0 0 1 1.32-.08l.1.08L10 8.59l4.29-4.3a1 1 0 1 1 1.42 1.42L11.41 10l4.3 4.29a1 1 0 0 1 .08 1.32l-.08.1a1 1 0 0 1-1.32.08l-.1-.08L10 11.41l-4.29 4.3a1 1 0 0 1-1.42-1.42L8.59 10l-4.3-4.29a1 1 0 0 1-.08-1.32l.08-.1Z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  );
+}

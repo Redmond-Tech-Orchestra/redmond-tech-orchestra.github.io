@@ -35,11 +35,12 @@ ul { margin: 0 0 1em; padding-left: 1.25rem; }
   --line: rgba(255, 255, 255, 0.12);
   --line-strong: rgba(255, 255, 255, 0.24);
   --text: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.72);
-  --text-dim: rgba(255, 255, 255, 0.55);
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --text-dim: rgba(255, 255, 255, 0.65);
   --accent: #036ac4;
   --accent-bright: #2b8fe6;
-  --gold: #c9a44a;
+  --gold: #e0bf6d;
+  --gold-dim: rgba(224, 191, 109, 0.5);
 }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
@@ -83,11 +84,14 @@ ul { margin: 0 0 1em; padding-left: 1.25rem; }
   background: none;
   border: 1px solid var(--line-strong);
   color: var(--text);
-  padding: 0.4rem 0.75rem;
+  padding: 0.4rem 0.55rem;
   border-radius: 6px;
   cursor: pointer;
   font: inherit;
+  line-height: 0;
 }
+.nav-toggle .btn-icon { width: 1.5rem; height: 1.5rem; margin: 0; }
+.nav-toggle .btn-icon svg { width: 100%; height: 100%; display: block; }
 .site-nav ul {
   list-style: none;
   margin: 0; padding: 0;
@@ -130,33 +134,33 @@ ul { margin: 0 0 1em; padding-left: 1.25rem; }
 }
 
 /* ---------- Buttons ---------- */
-.btn {
+.btn,
+.btn-ghost {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--accent);
-  color: #ffffff;
-  padding: 0.55rem 1rem;
+  background: transparent;
+  color: var(--gold);
+  padding: 0.55rem 1.1rem;
   border-radius: 4px;
   font-weight: 500;
   font-size: 1rem;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--gold);
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
   text-decoration: none;
   line-height: 1.2;
 }
-.btn:hover {
-  background: var(--accent-bright);
-  border-color: var(--accent-bright);
+.btn:hover,
+.btn-ghost:hover {
+  background: rgba(224, 191, 109, 0.12);
+  border-color: #f0d188;
+  color: #f0d188;
   text-decoration: none;
-  color: #fff;
 }
 .btn-outline {
-  background: transparent;
-  color: #fff;
+  /* legacy alias — same styling as .btn (hollow gold) */
 }
-.btn-outline:hover { background: var(--accent); }
 .btn-icon {
   width: 18px;
   height: 18px;
@@ -280,7 +284,6 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
   align-items: start;
   padding: 4rem 0;
 }
-.concert-item:first-child { padding-top: 0; }
 .concert-item .details {
   display: flex;
   flex-direction: column;
@@ -326,6 +329,9 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
   display: block;
   margin-bottom: 0.15em;
 }
+.concert-item .title-block .date--multi .date-line {
+  display: block;
+}
 .concert-item .title-block .venue {
   font-size: 1rem;
   color: var(--text-muted);
@@ -359,9 +365,11 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
 .concert-item .actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.75rem;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
+.btn-ghost { /* legacy alias — same styling as .btn */ }
 
 .concert-divider {
   border: none;
@@ -375,10 +383,6 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 3rem 0;
-  }
-  .concert-item .poster {
-    max-width: 240px;
-    order: -1;
   }
   .repertoire {
     grid-template-columns: minmax(110px, 30%) 1fr;
@@ -481,20 +485,61 @@ select option { background: var(--bg-solid); color: var(--text); }
   font-size: 1.1rem;
   max-width: 640px;
 }
+.page-hero--image {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 1.5rem;
+  text-align: left;
+  background-size: cover;
+  background-position: var(--hero-focal, 70% 30%);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  isolation: isolate;
+  border-bottom: none;
+}
+.page-hero--image::before {
+  content: none;
+}
+.page-hero--image .container { position: relative; width: 100%; text-align: left; }
+.page-hero--image h1 {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  text-align: left;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    0 4px 16px rgba(0, 0, 0, 0.55);
+}
+.page-hero--image p {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 36rem;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+}
 
 /* ---------- Section eyebrow heading (Upcoming / Past) ---------- */
 .section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--gold);
-  margin: 0 0 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--line);
-  text-align: left;
+  margin: 0 0 4rem;
+  text-align: center;
 }
-.concert-section--spaced { margin-top: 4rem; }
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.concert-section--spaced { margin-top: 0; }
 
 /* ---------- Home intro block ---------- */
 .intro-block {

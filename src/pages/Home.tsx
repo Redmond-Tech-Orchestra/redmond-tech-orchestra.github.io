@@ -21,9 +21,6 @@ export default function Home() {
             <Link to="/concerts" className="btn">
               Upcoming Concerts
             </Link>
-            <Link to="/about" className="btn btn-outline">
-              About RTO
-            </Link>
           </div>
         </div>
       </section>
