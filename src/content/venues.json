@@ -1,0 +1,74 @@
+{
+  "rpac": {
+    "name": "Redmond Performing Arts Center",
+    "streetAddress": "17272 NE 104th St",
+    "addressLocality": "Redmond",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "addressCountry": "US"
+  },
+  "meydenbauer": {
+    "name": "Meydenbauer Center Theatre",
+    "streetAddress": "11100 NE 6th St",
+    "addressLocality": "Bellevue",
+    "addressRegion": "WA",
+    "postalCode": "98004",
+    "addressCountry": "US"
+  },
+  "overlake-christian": {
+    "name": "Overlake Christian Church",
+    "streetAddress": "9900 Willows Rd NE",
+    "addressLocality": "Redmond",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "addressCountry": "US"
+  },
+  "lwhs": {
+    "name": "Lake Washington High School Theatre",
+    "streetAddress": "12033 NE 80th St",
+    "addressLocality": "Kirkland",
+    "addressRegion": "WA",
+    "postalCode": "98033",
+    "addressCountry": "US"
+  },
+  "kpc": {
+    "name": "Kirkland Performance Center",
+    "streetAddress": "350 Kirkland Ave",
+    "addressLocality": "Kirkland",
+    "addressRegion": "WA",
+    "postalCode": "98033",
+    "addressCountry": "US"
+  },
+  "carlson": {
+    "name": "Carlson Theatre",
+    "streetAddress": "3000 Landerholm Cir SE",
+    "addressLocality": "Bellevue",
+    "addressRegion": "WA",
+    "postalCode": "98007",
+    "addressCountry": "US"
+  },
+  "marymoor-station": {
+    "name": "Marymoor Village Garage",
+    "streetAddress": "17520 NE 70th St",
+    "addressLocality": "Redmond",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "addressCountry": "US"
+  },
+  "crossroads-community-center": {
+    "name": "Crossroads Community Center",
+    "streetAddress": "16000 NE 10th St",
+    "addressLocality": "Bellevue",
+    "addressRegion": "WA",
+    "postalCode": "98008",
+    "addressCountry": "US"
+  },
+  "freeway-park": {
+    "name": "Freeway Park",
+    "streetAddress": "700 Seneca St",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "postalCode": "98101",
+    "addressCountry": "US"
+  }
+}

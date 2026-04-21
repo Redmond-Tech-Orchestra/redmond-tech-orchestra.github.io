@@ -1,27 +1,27 @@
 {
   "intro": [
-    "The Redmond Tech Orchestra (RTO) is a community orchestra based in Redmond, Washington. We are a nonprofit organization dedicated to fostering a vibrant cultural environment, supporting musical education, and ensuring that the joy of orchestral performances is accessible to all.",
-    "Founded by a couple of musicians working in tech, we are on a mission to provide opportunities for working adults to continue playing their instrument and sharing their love of music with the community.",
-    "We perform a wide variety of music, from classical to modern film scores. Come join RTO at one of our concerts throughout the year, and be amazed at our musicians' talent!"
+    "The Redmond Tech Orchestra (RTO) is a community orchestra based in Redmond, Washington — a 501(c)(3) nonprofit run by working professionals who happen to also be musicians.",
+    "We started in 2024 with a small group of tech workers who wanted somewhere to keep playing after college. The first concert had a borrowed venue and a lot of nervous energy. We've been rehearsing weekly ever since, and put on several concerts a year around the Eastside.",
+    "Our programs run from standard orchestral repertoire (Beethoven, Tchaikovsky, Dvořák) to film scores and the occasional K-pop arrangement. Most concerts are free or low-cost so anyone in the community can come hear live orchestral music — not just folks who already buy season tickets."
   ],
   "highlights": [
     {
       "title": "Community-Driven",
-      "body": "Working professionals and lifelong musicians coming together to make music in the heart of the Eastside tech community."
+      "body": "Working professionals and lifelong musicians who get together each week to make music together."
     },
     {
       "title": "Wide Repertoire",
-      "body": "From Beethoven and Tchaikovsky to John Williams and Joe Hisaishi — programs that move audiences of all backgrounds."
+      "body": "Programs spanning Beethoven and Tchaikovsky through John Williams and Joe Hisaishi. If it's good music, we'll play it."
     },
     {
       "title": "Open to All",
-      "body": "Concerts throughout the Puget Sound area, often free or low-cost, so the joy of orchestral music is accessible to everyone."
+      "body": "Concerts throughout the Puget Sound area, usually free or low-cost. No dress code, no insider knowledge required."
     }
   ],
   "team": [
     {
       "name": "Peter Yang",
-      "role": "President",
+      "role": "Music Director & President",
       "image": "/img/team/peter.jpg",
       "bio": "Peter is a conductor and arranger who also performs as a double bassist with multiple local ensembles. Since beginning to learn bass in 2011, he has played in orchestral, wind, and string settings. In high school, he was selected for district honor band and performed at Carnegie Hall with his school symphony orchestra. Today, he focuses on reimagining the orchestral experience for modern audiences by curating programs that pair classical repertoire with music people already know and love. His goal is to make the concert hall feel more accessible, engaging, and relevant to a broader community."
     },

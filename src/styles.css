@@ -1,6 +1,33 @@
 /* ---------- Reset & base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+  padding: 0.6rem 1rem;
+  background: var(--gold);
+  color: #1a0f00;
+  font-weight: 600;
+  z-index: 1000;
+  border-radius: 0 0 4px 0;
+  transition: transform 0.15s ease;
+}
+.skip-link:focus { transform: translateY(0); outline: none; }
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 body {
   margin: 0;
   font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -12,6 +39,7 @@ body {
   min-height: 100vh;
 }
 img { max-width: 100%; display: block; }
+address { font-style: normal; }
 a { color: var(--accent-bright); text-decoration: none; }
 a:hover { color: #5fadf0; text-decoration: underline; }
 h1, h2, h3, h4 {
@@ -35,11 +63,12 @@ ul { margin: 0 0 1em; padding-left: 1.25rem; }
   --line: rgba(255, 255, 255, 0.12);
   --line-strong: rgba(255, 255, 255, 0.24);
   --text: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.72);
-  --text-dim: rgba(255, 255, 255, 0.55);
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --text-dim: rgba(255, 255, 255, 0.78);
   --accent: #036ac4;
   --accent-bright: #2b8fe6;
-  --gold: #c9a44a;
+  --gold: #e0bf6d;
+  --gold-dim: rgba(224, 191, 109, 0.5);
 }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
@@ -83,11 +112,14 @@ ul { margin: 0 0 1em; padding-left: 1.25rem; }
   background: none;
   border: 1px solid var(--line-strong);
   color: var(--text);
-  padding: 0.4rem 0.75rem;
+  padding: 0.4rem 0.55rem;
   border-radius: 6px;
   cursor: pointer;
   font: inherit;
+  line-height: 0;
 }
+.nav-toggle .btn-icon { width: 1.5rem; height: 1.5rem; margin: 0; }
+.nav-toggle .btn-icon svg { width: 100%; height: 100%; display: block; }
 .site-nav ul {
   list-style: none;
   margin: 0; padding: 0;
@@ -130,33 +162,30 @@ ul { margin: 0 0 1em; padding-left: 1.25rem; }
 }
 
 /* ---------- Buttons ---------- */
-.btn {
+.btn,
+.btn-ghost {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--accent);
-  color: #ffffff;
-  padding: 0.55rem 1rem;
+  background: transparent;
+  color: var(--gold);
+  padding: 0.55rem 1.1rem;
   border-radius: 4px;
   font-weight: 500;
   font-size: 1rem;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--gold);
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
   text-decoration: none;
   line-height: 1.2;
 }
-.btn:hover {
-  background: var(--accent-bright);
-  border-color: var(--accent-bright);
+.btn:hover,
+.btn-ghost:hover {
+  background: rgba(224, 191, 109, 0.12);
+  border-color: #f0d188;
+  color: #f0d188;
   text-decoration: none;
-  color: #fff;
 }
-.btn-outline {
-  background: transparent;
-  color: #fff;
-}
-.btn-outline:hover { background: var(--accent); }
 .btn-icon {
   width: 18px;
   height: 18px;
@@ -166,26 +195,67 @@ ul { margin: 0 0 1em; padding-left: 1.25rem; }
 .btn-icon svg { width: 100%; height: 100%; fill: currentColor; }
 
 /* ---------- Hero ---------- */
-.hero {
-  position: relative;
-  min-height: 70vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: #fff;
-  padding: 6rem 1.5rem;
-  background:
-    linear-gradient(rgba(10, 5, 24, 0.6), rgba(10, 5, 24, 0.85)),
-    url("/img/hero-orchestra.jpg") center/cover no-repeat;
+.hero-photo {
+  width: 100%;
+  height: clamp(320px, 55vh, 640px);
+  background: url("/img/heroes/home-hero.jpg") center/cover no-repeat;
 }
-.hero h1 { color: #fff; margin-bottom: 0.5em; }
-.hero p { font-size: 1.2rem; max-width: 640px; margin: 0 auto 1.75em; color: var(--text-muted); }
-.hero .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.hero-intro {
+  padding: 2.5rem 1.5rem 2.5rem;
+}
+.hero-intro .hero-inner {
+  text-align: left;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2.5rem;
+}
+.hero-intro .hero-copy { min-width: 0; }
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 0 0 1rem;
+}
+.hero-intro h1 {
+  color: var(--text);
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  max-width: 22ch;
+}
+.hero-subhead {
+  font-size: 1.1rem;
+  max-width: 60ch;
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.hero-intro .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+.hero-intro .actions .btn { white-space: nowrap; text-align: center; }
+@media (max-width: 760px) {
+  .hero-intro .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .hero-intro .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 /* ---------- Sections ---------- */
-section.block { padding: 5rem 0; }
-section.block.tight { padding: 3rem 0; }
+#main { display: flex; flex-direction: column; gap: 6rem; padding-bottom: 6rem; }
+section.block { padding: 0; }
 section.block h2 { text-align: center; margin-bottom: 0.5em; }
+section.block h2.section-eyebrow { margin-bottom: 6rem; }
 .section-lead {
   text-align: center;
   max-width: 720px;
@@ -195,19 +265,9 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
 }
 
 /* ---------- Featured concert (home) ---------- */
-.featured-concert {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 3rem;
-  align-items: start;
-}
-.featured-poster {
-  display: block;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-.featured-poster img { width: 100%; height: auto; display: block; }
+/* Hero "Upcoming Concerts" CTA scrolls to #next-concert. Offset the scroll
+   target so the sticky navbar (~64px tall) doesn't hide the section top. */
+#next-concert { scroll-margin-top: 80px; }
 
 .poster-placeholder {
   display: grid;
@@ -231,56 +291,139 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
   font-weight: 500;
 }
 .poster-placeholder span { padding: 1rem; text-align: center; }
-.featured-body { display: grid; gap: 1rem; align-content: start; }
-.featured-concert .meta {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.8rem;
-  color: var(--gold);
-  font-weight: 600;
-}
-.featured-concert h3 { font-size: 2.25rem; margin: 0; line-height: 1.1; }
-.featured-concert .when-where {
+/* Italic muted note shown in place of a "Get Tickets" button when an
+   upcoming concert hasn't published a ticket sales URL yet. */
+.tickets-pending {
+  margin: 0;
+  font-style: italic;
   color: var(--text-muted);
-  font-size: 1.05rem;
-}
-.featured-concert .when-where .date { font-size: 1.5rem; color: var(--text); display: block; }
-.featured-concert .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
-@media (max-width: 760px) {
-  .featured-concert { grid-template-columns: 1fr; gap: 1.5rem; }
-  .featured-poster { max-width: 280px; }
+  line-height: 1.4;
 }
 
 /* ---------- Highlights ---------- */
 .highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
-  margin-top: 1.5rem;
+}
+
+/* ---------- Video highlights (YouTube grid) ---------- */
+.video-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.video-highlight {
+  flex: 1 1 280px;
+  max-width: 360px;
+}
+.video-highlight a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.video-highlight .video-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #000;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.video-highlight .video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video-highlight .video-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.75rem;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.video-highlight a:hover .video-thumb,
+.video-highlight a:focus-visible .video-thumb {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.video-highlight a:hover .video-play,
+.video-highlight a:focus-visible .video-play {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.video-highlight h3 {
+  margin: 0.85rem 0 0;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--text);
+  font-weight: 600;
 }
 .highlight-card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 1.75rem;
+  padding: 2rem 1.75rem 1.75rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.highlight-card h3 { margin-bottom: 0.5em; font-size: 1.2rem; }
-.highlight-card p { color: var(--text-muted); margin: 0; }
+.highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+.highlight-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+.highlight-card h3 {
+  margin: 0 0 0.5em;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+.highlight-card p { color: var(--text-muted); margin: 0; line-height: 1.6; }
 
 /* ---------- Concert list (Figma layout) ---------- */
 .concert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 .concert-item {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
   padding: 4rem 0;
 }
-.concert-item:first-child { padding-top: 0; }
+/* Landscape photos read better at 50/50 instead of 2:1. */
+.concert-item--landscape {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
 .concert-item .details {
   display: flex;
   flex-direction: column;
@@ -315,16 +458,50 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
   object-fit: contain;
   object-position: top;
 }
+/* Landscape and square images use their natural aspect ratio in the image
+   column rather than being letterboxed into the portrait poster slot. */
+.concert-item--landscape .poster img,
+.concert-item--square .poster img {
+  aspect-ratio: auto;
+  object-fit: cover;
+}
 .concert-item .title-block h3 {
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   margin: 0 0 0.4em;
   line-height: 1.1;
 }
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.45em 0.85em 0.4em;
+  border-radius: 999px;
+  margin-bottom: 0.6em;
+  border: 1px solid currentColor;
+  background: rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+}
+/* When the title-block has a pill, hoist the poster up so the image's top edge
+   aligns with the title's cap height instead of the pill's top edge. */
+.concert-item:has(.category-pill) .poster {
+  margin-top: calc(0.72rem + 0.85em + 0.6em);  /* pill font-size + padding + margin-bottom */
+}
+.category-pill--masterworks { color: #e9c46a; }
+.category-pill--chamber     { color: #b39ddb; }
+.category-pill--community   { color: #6fcf97; }
+.category-pill--session     { color: #4dd0e1; }
 .concert-item .title-block .date {
   font-size: 1.4rem;
   color: var(--text);
   display: block;
   margin-bottom: 0.15em;
+}
+.concert-item .title-block .date--multi .date-line {
+  display: block;
 }
 .concert-item .title-block .venue {
   font-size: 1rem;
@@ -359,9 +536,11 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
 .concert-item .actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.75rem;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
+.btn-ghost { /* legacy alias — same styling as .btn */ }
 
 .concert-divider {
   border: none;
@@ -376,10 +555,6 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
     gap: 1.5rem;
     padding: 3rem 0;
   }
-  .concert-item .poster {
-    max-width: 240px;
-    order: -1;
-  }
   .repertoire {
     grid-template-columns: minmax(110px, 30%) 1fr;
     font-size: 0.95rem;
@@ -390,16 +565,17 @@ section.block h2 { text-align: center; margin-bottom: 0.5em; }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
 }
-.about-grid p { color: var(--text-muted); font-size: 1.05rem; }
+.about-grid p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; }
 .about-grid img {
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 760px) {
-  .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 
 /* ---------- Forms ---------- */
@@ -457,7 +633,32 @@ select option { background: var(--bg-solid); color: var(--text); }
 .site-footer h4 { color: #fff; margin: 0 0 0.5em; font-size: 1rem; }
 .site-footer a { color: var(--text-muted); }
 .site-footer a:hover { color: #fff; }
-.site-footer .links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.site-footer .links { list-style: none; padding: 0; margin: 0; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.site-footer .social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.site-footer .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--text-muted);
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.site-footer .social-links a:hover {
+  color: var(--gold);
+  border-color: var(--gold-dim);
+  background: rgba(224, 191, 109, 0.08);
+}
+.site-footer .social-links .btn-icon { width: 1.1rem; height: 1.1rem; }
 .site-footer .legal {
   border-top: 1px solid var(--line);
   margin-top: 2rem;
@@ -481,24 +682,118 @@ select option { background: var(--bg-solid); color: var(--text); }
   font-size: 1.1rem;
   max-width: 640px;
 }
+.page-hero--image {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 1.5rem;
+  text-align: left;
+  background-size: cover;
+  background-position: var(--hero-focal, 70% 30%);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  isolation: isolate;
+  border-bottom: none;
+}
+.page-hero--image::before {
+  content: none;
+}
+.page-hero--image .container { position: relative; width: 100%; text-align: left; }
+.page-hero--image h1 {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  text-align: left;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    0 4px 16px rgba(0, 0, 0, 0.55);
+}
+.page-hero--image p {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 36rem;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+}
 
 /* ---------- Section eyebrow heading (Upcoming / Past) ---------- */
+@font-face {
+  font-family: "Bravura Text";
+  src: url("/fonts/BravuraText.woff2") format("woff2");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
 .section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 0.85rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--gold);
-  margin: 0 0 2rem;
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid var(--line);
-  text-align: left;
+  margin: 0 0 4rem;
+  text-align: center;
 }
-.concert-section--spaced { margin-top: 4rem; }
+.section-eyebrow__text { flex: 0 0 auto; white-space: nowrap; }
+.staff-divider {
+  /* The staff-space (1 sp) is the primary geometric unit, exactly matching
+     SMuFL conventions and Harmonia's `sp` parameter. The 5-line staff height
+     follows from it: 4 spaces between 5 lines, plus 1 device pixel for the
+     bottom line stroke. Tune the visual size of the divider by changing
+     ONLY this one variable; everything else (clef size, accidentals, time
+     sig, line spacing) scales proportionally because both child SVGs use
+     `height: 100%` against the same viewBox heights. */
+  --staff-space: 8px;
+  position: relative;
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  height: calc(var(--staff-space) * 4 + 1px);
+  /* Solid (fully opaque) color for both staff lines and ornament. We pull
+     back from pure #ffffff to a slightly cooler off-white so thin shapes on
+     the saturated dark plum gradient don't bloom from simultaneous contrast,
+     but we keep it FULLY OPAQUE — any alpha < 1.0 causes visible stacking
+     where the clef ink crosses the staff lines (the overlap accumulates to
+     a brighter patch). There is no actual glow filter on the divider. */
+  color: #d8d4e6;
+}
+.staff-divider__lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.staff-divider__ornament {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  /* Width is auto-derived from the SVG's viewBox aspect ratio so the ornament
+     scales uniformly with the staff height. This is what guarantees the clef
+     baseline lands on the bottom staff line at any --staff-space value. */
+  width: auto;
+  overflow: visible;
+}
+.staff-divider[data-side="left"] .staff-divider__ornament {
+  left: 0;
+  /* Explicit aspect-ratio fallback for browsers that don't compute SVG
+     intrinsic width from viewBox + height alone. Matches the OPENING_BOX_WIDTH
+     × VIEWBOX_HEIGHT in StaffDivider.tsx (60 × 17). */
+  aspect-ratio: 60 / 17;
+}
+.staff-divider[data-side="right"] .staff-divider__ornament {
+  right: 0;
+  /* Matches the BARLINE_BOX_WIDTH × VIEWBOX_HEIGHT in StaffDivider.tsx
+     (4.24 × 17). */
+  aspect-ratio: 4.24 / 17;
+}
+.concert-section--spaced { margin-top: 0; }
 
 /* ---------- Home intro block ---------- */
 .intro-block {
-  max-width: 760px;
   text-align: center;
 }
 .intro-block h2 { margin-bottom: 1.5rem; }
@@ -507,28 +802,47 @@ select option { background: var(--bg-solid); color: var(--text); }
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.25rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
+.intro-body:last-child { margin-bottom: 0; }
 
 /* ---------- Team / member cards (About) ---------- */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+  max-width: 880px;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .team-grid { grid-template-columns: 1fr; }
 }
 .team-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 1.75rem;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.team-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
 }
 .team-photo {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  margin-bottom: 1.25rem;
-  border: 2px solid var(--line-strong);
+  margin: 0 auto 1.25rem;
+  display: block;
+  border: 2px solid var(--gold);
+  padding: 3px;
+  background: var(--surface);
 }
 .team-card h3 {
   margin: 0 0 0.25rem;
@@ -536,9 +850,9 @@ select option { background: var(--bg-solid); color: var(--text); }
 }
 .team-role {
   color: var(--gold);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -546,15 +860,17 @@ select option { background: var(--bg-solid); color: var(--text); }
   color: var(--text-muted);
   margin: 0;
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.65;
+  text-align: left;
 }
 
 .quote-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 .quote-card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -563,6 +879,12 @@ select option { background: var(--bg-solid); color: var(--text); }
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.quote-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
 }
 .member-photo {
   width: 100%;
@@ -573,22 +895,36 @@ select option { background: var(--bg-solid); color: var(--text); }
   margin-bottom: 0.5rem;
 }
 .quote-card blockquote {
+  position: relative;
   margin: 0;
+  padding: 0.5rem 0 0 2.5rem;
   color: var(--text);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.65;
   font-style: italic;
-  position: relative;
-  padding-left: 1rem;
-  border-left: 3px solid var(--accent);
+  border: 0;
+}
+.quote-card blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.5;
+  font-style: normal;
 }
 .quote-card figcaption {
   display: flex;
   flex-direction: column;
   color: var(--text-muted);
   font-size: 0.9rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--line);
 }
-.quote-card figcaption strong { color: var(--text); font-weight: 600; }
+.quote-card figcaption strong { color: var(--text); font-weight: 600; font-size: 1rem; }
 
 /* ---------- Lightbox ---------- */
 .lightbox {

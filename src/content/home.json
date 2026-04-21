@@ -1,13 +1,40 @@
 {
+  "hero": {
+    "eyebrow": "Meet the Redmond Tech Orchestra",
+    "headline": "Classical music, modern community.",
+    "subhead": "We are dedicated to fostering a vibrant cultural environment, supporting musical education, and ensuring that the joy of orchestral performances is accessible to all."
+  },
   "intro": {
-    "heading": "Join us in celebrating music in the Puget Sound area.",
+    "eyebrow": "Our Mission",
+    "heading": "Bringing live orchestral music to the Eastside.",
     "body": [
-      "The Redmond Tech Orchestra (RTO) has been instrumental in enriching the arts community in the greater Puget Sound area. Founded by a couple of musicians working in tech, we are on a mission to provide opportunities for working adults to continue playing their instrument and sharing their love of music with the community.",
-      "Come join RTO at one of our concerts throughout the year, and be amazed at our musicians' talent!"
+      "We rehearse weekly and play several concerts a year — symphonies and overtures alongside film scores, video game music, and the occasional K-pop arrangement.",
+      "Concerts are free or low-cost on purpose. Bring a friend, bring your family, and we'll see you there."
     ],
     "cta": {
-      "label": "Want to hear us perform?",
+      "label": "See Upcoming Concerts",
       "to": "/concerts"
     }
+  },
+  "highlights": {
+    "eyebrow": "Highlights",
+    "videos": [
+      {
+        "id": "h2bj1r9NE_w",
+        "title": "Frieren & Violet Evergarden — Evan Call Orchestral Suite"
+      },
+      {
+        "id": "wRIXCVQVINs",
+        "title": "Tchaik Night (Full Concert)"
+      },
+      {
+        "id": "Amu5UD6Q9bg",
+        "title": "Rachmaninoff Piano Concerto No. 2 — Jada Campbell"
+      },
+      {
+        "id": "lqztAwtqVpA",
+        "title": "Carnival Overture — Antonín Dvořák"
+      }
+    ]
   }
 }

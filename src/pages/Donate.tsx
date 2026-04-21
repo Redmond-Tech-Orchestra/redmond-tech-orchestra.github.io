@@ -1,17 +1,24 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import site from "../content/site.json";
+import { usePageMeta } from "../hooks/usePageTitle";
 
 export default function Donate() {
+  usePageMeta({
+    title: "Donate",
+    description:
+      "Support the Redmond Tech Orchestra. Donations to our 501(c)(3) nonprofit are tax-deductible and help us keep concerts free and accessible.",
+    path: "/donate",
+  });
   return (
     <>
       <PageHero title="Support our growth" />
       <section className="block">
         <div className="container" style={{ maxWidth: 720 }}>
           <p>
-            Join us on our mission to support musical education and ensure that the joy of orchestral
-            performances is accessible to all. Your donation goes a long way towards supporting the local
-            music & arts communities.
+            Donations help us pay for venues, sheet music rentals, instrument repairs, and the
+            other quietly expensive things that go into putting on a concert. They're how we keep
+            tickets free or low-cost.
           </p>
           <p>
             RTO is a registered 501(c)(3) nonprofit organization. Donations are tax-deductible to the full

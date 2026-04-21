@@ -1,15 +1,16 @@
 {
   "orgName": "Redmond Tech Orchestra",
   "shortName": "RTO",
-  "tagline": "We are dedicated to fostering a vibrant cultural environment, supporting musical education, and ensuring that the joy of orchestral performances is accessible to all.",
+  "tagline": "A 501(c)(3) community orchestra of working musicians performing free and low-cost concerts around Redmond and the greater Seattle area.",
   "foundingYear": 2024,
   "nonprofitNote": "A registered 501(c)(3) nonprofit organization. Donations are tax-deductible to the full extent of the law.",
   "donateUrl": "https://www.paypal.com/donate/?hosted_button_id=FMGNWMZECNGZE",
   "bylawsUrl": "/bylaws.pdf",
   "social": {
+    "instagram": "https://www.instagram.com/redmondtechorchestra/",
+    "facebook": "https://www.facebook.com/people/Redmond-Tech-Orchestra/61557022596926/",
     "youtube": "https://www.youtube.com/@RedmondTechOrchestra",
-    "instagram": null,
-    "facebook": null
+    "tiktok": "https://www.tiktok.com/@redmondtechorch"
   },
   "nav": [
     { "label": "Home", "to": "/" },

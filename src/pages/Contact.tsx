@@ -1,9 +1,16 @@
 import { useState, type FormEvent } from "react";
 import PageHero from "../components/PageHero";
+import { usePageMeta } from "../hooks/usePageTitle";
 
 const TOPICS = ["General inquiry", "Joining the orchestra", "Sponsorship", "Press / media", "Other"];
 
 export default function Contact() {
+  usePageMeta({
+    title: "Contact",
+    description:
+      "Get in touch with the Redmond Tech Orchestra about joining, sponsorship, press inquiries, or anything else.",
+    path: "/contact",
+  });
   const [submitted, setSubmitted] = useState(false);
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -17,7 +24,7 @@ export default function Contact() {
     <>
       <PageHero
         title="Contact Us"
-        subtitle="Questions, feedback, or interested in joining? We'd love to hear from you."
+        subtitle="If you have feedback, questions, or any other inquiries, please use the contact form to reach out to us. A member of our team will get back to you shortly."
       />
       <section className="block">
         <div className="container">

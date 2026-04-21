@@ -1,46 +1,57 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
+import { SectionEyebrow } from "../components/SectionEyebrow";
 import about from "../content/about.json";
+import { usePageMeta } from "../hooks/usePageTitle";
 
 export default function About() {
+  usePageMeta({
+    title: "About",
+    description:
+      "Founded in 2024 by musicians working in tech, the Redmond Tech Orchestra is a community orchestra dedicated to making orchestral music accessible across the Eastside of Seattle.",
+    path: "/about",
+  });
   return (
     <>
-      <PageHero title="About RTO" />
+      <PageHero title="About" backgroundImage="/img/hero-orchestra.jpg" />
       <section className="block">
-        <div className="container about-grid">
-          <div>
-            {about.intro.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
-            <div className="mt-2">
-              <Link to="/concerts" className="btn">
-                View Upcoming Concerts
-              </Link>
+        <div className="container">
+          <SectionEyebrow>Our Story</SectionEyebrow>
+          <div className="about-grid">
+            <div>
+              {about.intro.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+              <div className="mt-2">
+                <Link to="/concerts" className="btn">
+                  View Upcoming Concerts
+                </Link>
+              </div>
+            </div>
+            <div>
+              <img src="/img/about-moomie.jpg" alt="Moomie, an RTO musician." />
             </div>
           </div>
-          <div>
-            <img src="/img/hero-flute.jpg" alt="An RTO musician playing the flute." />
-          </div>
-        </div>
-      </section>
-
-      <section className="block alt">
-        <div className="container">
-          <h2>What sets us apart</h2>
-          <div className="highlights">
-            {about.highlights.map((h) => (
-              <div className="highlight-card" key={h.title}>
-                <h3>{h.title}</h3>
-                <p style={{ margin: 0 }}>{h.body}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
       <section className="block">
         <div className="container">
-          <h2 className="section-eyebrow">Meet the Team</h2>
+          <SectionEyebrow>What sets us apart</SectionEyebrow>
+          <ul className="highlights">
+            {about.highlights.map((h) => (
+              <li className="highlight-card" key={h.title}>
+                <h3>{h.title}</h3>
+                <p style={{ margin: 0 }}>{h.body}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="block">
+        <div className="container">
+          <SectionEyebrow>Meet the Team</SectionEyebrow>
           <div className="team-grid">
             {about.team.map((member) => (
               <article className="team-card" key={member.name}>
@@ -56,9 +67,9 @@ export default function About() {
         </div>
       </section>
 
-      <section className="block alt">
+      <section className="block">
         <div className="container">
-          <h2 className="section-eyebrow">Meet the Members</h2>
+          <SectionEyebrow>Meet the Members</SectionEyebrow>
           <div className="quote-grid">
             {about.memberQuotes.map((q) => (
               <figure className="quote-card" key={q.name}>
