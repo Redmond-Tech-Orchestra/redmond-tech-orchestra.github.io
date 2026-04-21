@@ -170,21 +170,62 @@ ul { margin: 0 0 1em; padding-left: 1.25rem; }
 .btn-icon svg { width: 100%; height: 100%; fill: currentColor; }
 
 /* ---------- Hero ---------- */
-.hero {
-  position: relative;
-  min-height: 70vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: #fff;
-  padding: 6rem 1.5rem;
-  background:
-    linear-gradient(rgba(10, 5, 24, 0.45), rgba(10, 5, 24, 0.8)),
-    url("/img/heroes/home-hero.jpg") center/cover no-repeat;
+.hero-photo {
+  width: 100%;
+  height: clamp(320px, 55vh, 640px);
+  background: url("/img/heroes/home-hero.jpg") center/cover no-repeat;
 }
-.hero h1 { color: #fff; margin-bottom: 0.5em; }
-.hero p { font-size: 1.2rem; max-width: 640px; margin: 0 auto 1.75em; color: var(--text-muted); }
-.hero .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.hero-intro {
+  padding: 2.5rem 1.5rem 2.5rem;
+}
+.hero-intro .hero-inner {
+  max-width: 1100px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2.5rem;
+}
+.hero-intro .hero-copy { min-width: 0; }
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 0 0 1rem;
+}
+.hero-intro h1 {
+  color: var(--text);
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  max-width: 22ch;
+}
+.hero-subhead {
+  font-size: 1.1rem;
+  max-width: 60ch;
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.hero-intro .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+.hero-intro .actions .btn { white-space: nowrap; text-align: center; }
+@media (max-width: 760px) {
+  .hero-intro .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .hero-intro .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 /* ---------- Sections ---------- */
 section.block { padding: 5rem 0; }
@@ -248,8 +289,13 @@ section.block h2.section-eyebrow { margin-bottom: 4rem; }
 .featured-concert .when-where {
   color: var(--text-muted);
   font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
-.featured-concert .when-where .date { font-size: 1.5rem; color: var(--text); display: block; }
+.featured-concert .when-where .date { font-size: 1.4rem; color: var(--text); display: block; line-height: 1.2; }
+.featured-concert .when-where .venue { margin-top: 0.4rem; }
+.featured-description { color: var(--text-muted); margin: 0; line-height: 1.55; }
 .featured-concert .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
 @media (max-width: 760px) {
   .featured-concert { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -437,8 +483,16 @@ section.block h2.section-eyebrow { margin-bottom: 4rem; }
   content: "";
   display: inline-block;
   width: 2.5rem;
-  height: 1px;
-  background: var(--gold);
+  height: 17px;
+  background-image:
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold));
+  background-size: 100% 1px;
+  background-position: 0 0, 0 4px, 0 8px, 0 12px, 0 16px;
+  background-repeat: no-repeat;
   margin-left: 0.85rem;
   align-self: center;
   flex: none;
@@ -604,8 +658,16 @@ select option { background: var(--bg-solid); color: var(--text); }
 .section-eyebrow::after {
   content: "";
   flex: 1;
-  height: 1px;
-  background: var(--line);
+  height: 17px;
+  background-image:
+    linear-gradient(var(--line), var(--line)),
+    linear-gradient(var(--line), var(--line)),
+    linear-gradient(var(--line), var(--line)),
+    linear-gradient(var(--line), var(--line)),
+    linear-gradient(var(--line), var(--line));
+  background-size: 100% 1px;
+  background-position: 0 0, 0 4px, 0 8px, 0 12px, 0 16px;
+  background-repeat: no-repeat;
 }
 .concert-section--spaced { margin-top: 0; }
 
