@@ -9,7 +9,7 @@
     ],
     "venueId": "rpac",
     "status": "upcoming",
-    "description": "A Shakespeare-inspired program bringing the Bard's most beloved stories to life through the orchestra — from Mendelssohn's enchanted forest to Walton's heroic battlefield to Prokofiev's star-crossed lovers.",
+    "description": "A program of music inspired by Shakespeare: Mendelssohn's A Midsummer Night's Dream, Walton's Henry V Suite, and the second Romeo & Juliet suite from Prokofiev. Three composers, three plays, three very different takes on the Bard.",
     "program": [
       { "composer": "Felix Mendelssohn", "pieces": ["A Midsummer Night's Dream"] },
       { "composer": "William Walton", "pieces": ["Henry V Suite"] },
@@ -25,7 +25,7 @@
     "status": "past",
     "poster": "/img/concerts/symphonic-fantasia.jpg",
     "programUrl": "/programs/april-2026-programs.pdf",
-    "description": "Join us for Symphonic Fantasia, a vibrant celebration of orchestral color and power, crowned by Beethoven's legendary Fifth Symphony. Experience a whirlwind of musical imagination from Disney's Fantasia: glowing fanfares, spellbound adventures, mythical firebirds, and ancient pines echoing across Rome.",
+    "description": "Symphonic Fantasia paired Beethoven's Fifth with three works that featured in Disney's Fantasia: Dukas's La Péri Fanfare and The Sorcerer's Apprentice, Stravinsky's Firebird Suite, and Respighi's Pines of Rome. Big sounds, big pictures.",
     "program": [
       { "composer": "Paul Dukas", "pieces": ["La Péri: Fanfare", "The Sorcerer's Apprentice"] },
       { "composer": "Igor Stravinsky", "pieces": ["The Firebird Suite"] },
@@ -42,7 +42,7 @@
     "status": "past",
     "poster": "/img/concerts/tchaik-night.png",
     "programUrl": "/programs/november-2025-programs.pdf",
-    "description": "A thrilling evening of orchestral masterpieces celebrating the passion and power of Pyotr Ilyich Tchaikovsky — from the triumphant 1812 Overture to the heartfelt Serenade for Strings and the powerful Symphony No. 5.",
+    "description": "An all-Tchaikovsky evening (with a John Mackey curtain-raiser): the 1812 Overture, the fourth movement of the Serenade for Strings, and the Fifth Symphony. Cannons not included; everything else delivered as written.",
     "program": [
       { "composer": "John Mackey", "pieces": ["Redline Tango"] },
       { "composer": "Pyotr Ilyich Tchaikovsky", "pieces": ["1812 Overture", "Serenade for Strings, Mvt. 4", "Symphony No. 5"] }
@@ -58,7 +58,7 @@
     "poster": "/img/concerts/chamber-spotlight.png",
     "recordingsUrl": "https://youtu.be/yT7Rq5bTpLQ?si=sv3hFKJvbHCTOWYG",
     "programUrl": "/programs/july-2025-chamber-concert-program.png",
-    "description": "Our first concert focusing solely on RTO's chamber ensembles — small groups of musicians delivering an up-close, spotlighted performance of beloved classical melodies."
+    "description": "Our first concert built around RTO's chamber ensembles: small groups, classical repertoire, close enough that you can hear the bows on the strings."
   },
   {
     "id": "broadway-hollywood-2025",
@@ -70,7 +70,7 @@
     "poster": "/img/concerts/broadway-hollywood.jpg",
     "recordingsUrl": "https://youtu.be/U4f-xHoqxPw?si=HyOQzMsqTQEOe7U5",
     "programUrl": "/programs/july-2025-program.pdf",
-    "description": "An enchanting evening of music featuring iconic pieces from movies and musicals.",
+    "description": "An evening of music from movies and musicals — the kind of program where everyone in the audience recognizes at least one cue.",
     "program": [
       { "composer": "John Williams", "pieces": ["Theme from Jurassic Park", "Battle of the Heroes"] },
       { "composer": "Justin Hurwitz", "pieces": ["Epilogue (from La La Land)"] },
@@ -90,7 +90,7 @@
     "poster": "/img/concerts/rach-fest.jpg",
     "recordingsUrl": "https://www.youtube.com/watch?v=o-5L38WpNhM&list=PLbQZTncyg_tWmsSz_KdbrvxvvfnGwfvVg",
     "programUrl": "/programs/rach-fest.pdf",
-    "description": "A captivating evening featuring the stirring power of Tchaikovsky's Slavonic March and the virtuosic brilliance of Rachmaninoff.",
+    "description": "An evening of Tchaikovsky and Rachmaninoff featuring two of Rachmaninoff's biggest piano works: the Rhapsody on a Theme of Paganini and the Second Piano Concerto. Tchaikovsky's Slavonic March opens the night.",
     "program": [
       { "composer": "Pyotr Ilyich Tchaikovsky", "pieces": ["Slavonic March, Op. 31"] },
       { "composer": "Sergei Rachmaninoff", "pieces": ["Symphonic Dances, Op. 45 Mvt. 1", "Rhapsody on a Theme of Paganini, Op. 43 (Diana Gao, soloist)", "Piano Concerto No. 2, Op. 18 (Jada Campbell, soloist)"] }
@@ -106,7 +106,7 @@
     "poster": "/img/concerts/harmony-in-motion.jpg",
     "recordingsUrl": "https://www.youtube.com/watch?v=J6h51igafk8&list=PLbQZTncyg_tVECgs4E-0drMuCjcvXazN7",
     "programUrl": "/programs/harmony-in-motion.pdf",
-    "description": "Featuring the grandeur of Dvořák's New World Symphony, the vibrant Carnival Overture, and Joe Hisaishi's whimsical Symphonic Variation \"Merry-go-round.\"",
+    "description": "Dvořák's New World Symphony and Carnival Overture, plus Joe Hisaishi's Symphonic Variation \"Merry-go-round\" — a Studio Ghibli detour in the middle of two crowd-favorite Dvořáks.",
     "program": [
       { "composer": "Joe Hisaishi", "pieces": ["Symphonic Variation \"Merry-go-round\""] },
       { "composer": "Antonín Dvořák", "pieces": ["Carnival Overture, Op. 92", "Symphony No. 9 in E Minor \"From the New World,\" Op. 95"] }
@@ -121,7 +121,7 @@
     "status": "past",
     "poster": "/img/concerts/rhythm-and-blues.png",
     "recordingsUrl": "https://www.youtube.com/watch?v=rwXBO6ynPq4&list=PLbQZTncyg_tVJk970JbLQR0D9WaHVJBdD",
-    "description": "An evening of music featuring Gershwin's masterpieces — Rhapsody in Blue and An American in Paris — and more.",
+    "description": "An evening built around Gershwin: Rhapsody in Blue and An American in Paris. Plus Copland, Grofé, Bach, and a Red Velvet K-pop arrangement, because we don't always color inside the lines.",
     "program": [
       { "composer": "Ferde Grofé", "pieces": ["Mississippi Suite"] },
       { "composer": "Aaron Copland", "pieces": ["Buckaroo Holiday"] },
@@ -138,9 +138,9 @@
     "venueId": "carlson",
     "status": "past",
     "poster": "/img/concerts/saint-saens.png",
-    "recordingsUrl": "https://www.youtube.com/watch?v=J6h51igafk8&list=PLbQZTncyg_tVECgs4E-0drMuCjcvXazN7",
-    "programUrl": "/programs/july-2023-program.pdf",
-    "description": "Our inaugural concert — the beginning of our musical journey as we set out to recruit musicians from the Seattle tech community and create memorable performances together.",
+    "recordingsUrl": "https://www.youtube.com/watch?v=2Mpi6w_ghXM&list=PLbQZTncyg_tV1YJAh0rV-Fl4w4YKGt0vi",
+    "programUrl": "/programs/march-2024-program.pdf",
+    "description": "Our first concert. We pulled together musicians from across the Seattle tech community, picked some Saint-Saëns, and hoped people would show up. They did.",
     "program": [
       { "composer": "Dmitri Shostakovich", "pieces": ["Waltz No. 2"] },
       { "composer": "Aaron Copland", "pieces": ["Hoedown"] },

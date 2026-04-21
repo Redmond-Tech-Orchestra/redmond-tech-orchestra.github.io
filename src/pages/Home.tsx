@@ -39,7 +39,7 @@ export default function Home() {
   usePageMeta({
     title: "Home",
     description:
-      "Classical music, modern community. The Redmond Tech Orchestra is a 501(c)(3) community orchestra of working tech professionals on the Eastside of Seattle.",
+      "The Redmond Tech Orchestra is a 501(c)(3) community orchestra of working musicians performing free and low-cost concerts on the Eastside of Seattle.",
     path: "/",
     image: "https://www.redmondtechorchestra.org/img/heroes/home-hero.jpg",
   });
