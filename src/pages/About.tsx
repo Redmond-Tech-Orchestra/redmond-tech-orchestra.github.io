@@ -11,26 +11,26 @@ export default function About() {
       "Founded in 2024 by musicians working in tech, the Redmond Tech Orchestra is a community orchestra dedicated to making orchestral music accessible across the Eastside of Seattle.",
     path: "/about",
   });
-  const [lead, ...rest] = about.intro;
   return (
     <>
       <PageHero title="About" backgroundImage="/img/hero-orchestra.jpg" />
       <section className="block">
-        <div className="container about-grid">
-          <div>
-            <SectionEyebrow>Our Story</SectionEyebrow>
-            <p className="about-lead">{lead}</p>
-            {rest.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
-            <div className="mt-2">
-              <Link to="/concerts" className="btn">
-                View Upcoming Concerts
-              </Link>
+        <div className="container">
+          <SectionEyebrow>Our Story</SectionEyebrow>
+          <div className="about-grid">
+            <div>
+              {about.intro.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+              <div className="mt-2">
+                <Link to="/concerts" className="btn">
+                  View Upcoming Concerts
+                </Link>
+              </div>
             </div>
-          </div>
-          <div>
-            <img src="/img/about-moomie.jpg" alt="Moomie, an RTO musician." />
+            <div>
+              <img src="/img/about-moomie.jpg" alt="Moomie, an RTO musician." />
+            </div>
           </div>
         </div>
       </section>

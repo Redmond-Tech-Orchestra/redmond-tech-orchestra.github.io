@@ -266,6 +266,9 @@ section.block h2.section-eyebrow { margin-bottom: 4rem; }
 }
 
 /* ---------- Featured concert (home) ---------- */
+/* Hero "Upcoming Concerts" CTA scrolls to #next-concert. Offset the scroll
+   target so the sticky navbar (~64px tall) doesn't hide the section top. */
+#next-concert { scroll-margin-top: 80px; }
 .featured-concert {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
@@ -321,6 +324,15 @@ section.block h2.section-eyebrow { margin-bottom: 4rem; }
 .featured-concert .when-where .date { font-size: 1.4rem; color: var(--text); display: block; line-height: 1.2; }
 .featured-concert .when-where .venue { margin-top: 0.4rem; }
 .featured-description { color: var(--text-muted); margin: 0; line-height: 1.55; }
+/* Italic muted note shown in place of a "Get Tickets" button when an
+   upcoming concert hasn't published a ticket sales URL yet. Used both on
+   the Home featured concert and on each upcoming ConcertCard. */
+.tickets-pending {
+  margin: 0;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
 .featured-concert .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
 @media (max-width: 760px) {
   .featured-concert { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -495,13 +507,6 @@ section.block h2.section-eyebrow { margin-bottom: 4rem; }
   align-items: center;
 }
 .about-grid p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; }
-.about-lead {
-  font-size: 1.35rem !important;
-  line-height: 1.55 !important;
-  color: var(--text) !important;
-  font-weight: 400;
-  margin-top: 0.5rem;
-}
 .about-grid img {
   width: 100%;
   border-radius: 8px;

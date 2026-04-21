@@ -7,6 +7,7 @@ import venuesData from "../content/venues.json";
 import type { Concert, Venue } from "../content/types";
 import { TicketIcon } from "../components/Icons";
 import { SectionEyebrow } from "../components/SectionEyebrow";
+import { ConcertProgram } from "../components/ConcertCard";
 import { usePageMeta } from "../hooks/usePageTitle";
 
 const concerts = concertsData as Concert[];
@@ -67,9 +68,15 @@ export default function Home() {
             <p className="hero-subhead">{home.hero.subhead}</p>
           </div>
           <div className="actions">
-            <Link to="/concerts" className="btn">
-              Upcoming Concerts
-            </Link>
+            {upcoming ? (
+              <a href="#next-concert" className="btn">
+                Upcoming Concerts
+              </a>
+            ) : (
+              <Link to="/concerts" className="btn">
+                Upcoming Concerts
+              </Link>
+            )}
             <Link to="/about" className="btn btn-ghost">
               About Us
             </Link>
@@ -84,16 +91,11 @@ export default function Home() {
           {home.intro.body.map((p, i) => (
             <p key={i} className="intro-body">{p}</p>
           ))}
-          <div className="text-center mt-2">
-            <Link to={home.intro.cta.to} className="btn btn-ghost">
-              {home.intro.cta.label}
-            </Link>
-          </div>
         </div>
       </section>
 
       {upcoming && (
-        <section className="block alt">
+        <section id="next-concert" className="block alt">
           <div className="container">
             <article className="featured-concert">
               <div className="featured-body">
@@ -108,8 +110,9 @@ export default function Home() {
                 {upcoming.description && (
                   <p className="featured-description">{upcoming.description}</p>
                 )}
-                <div className="actions">
-                  {upcoming.ticketsUrl && (
+                <ConcertProgram program={upcoming.program} />
+                {upcoming.ticketsUrl ? (
+                  <div className="actions">
                     <a
                       className="btn"
                       href={upcoming.ticketsUrl}
@@ -118,11 +121,12 @@ export default function Home() {
                     >
                       <TicketIcon /> Get Tickets
                     </a>
-                  )}
-                  <Link to="/concerts" className="btn btn-ghost">
-                    All Concerts
-                  </Link>
-                </div>
+                  </div>
+                ) : (
+                  <p className="tickets-pending">
+                    Tickets on sale soon — check back closer to the date.
+                  </p>
+                )}
               </div>
               {upcoming.poster ? (
                 <a

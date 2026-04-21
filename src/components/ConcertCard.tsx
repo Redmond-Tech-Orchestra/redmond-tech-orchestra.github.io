@@ -97,6 +97,11 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
               Get Tickets
             </a>
           )}
+          {!concert.ticketsUrl && concert.status === "upcoming" && (
+            <p className="tickets-pending">
+              Tickets on sale soon — check back closer to the date.
+            </p>
+          )}
           {concert.programUrl && (
             <a className="btn-ghost" href={concert.programUrl} target="_blank" rel="noopener noreferrer">
               View Program
@@ -152,6 +157,23 @@ function RepertoireRow({ composer, pieces }: { composer: string; pieces: string[
         ))}
       </div>
     </>
+  );
+}
+
+/**
+ * Reusable program/repertoire list for a concert. Renders the same composer
+ * + pieces grid used inside ConcertCard so the Home featured-concert block
+ * matches the Concerts page styling exactly. Returns null if there's no
+ * program data.
+ */
+export function ConcertProgram({ program }: { program?: Concert["program"] }) {
+  if (!program || program.length === 0) return null;
+  return (
+    <div className="repertoire">
+      {program.map((entry, i) => (
+        <RepertoireRow key={i} composer={entry.composer} pieces={entry.pieces} />
+      ))}
+    </div>
   );
 }
 
