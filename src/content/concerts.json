@@ -1,0 +1,147 @@
+[
+  {
+    "id": "shakespeare-2026",
+    "title": "Shakespeare!",
+    "date": "2026-07-16T19:00:00-07:00",
+    "dateDisplay": "July 16, 2026 · 7:00 PM  •  July 18, 2026 · 4:00 PM",
+    "venue": "Redmond Performing Arts Center",
+    "status": "upcoming",
+    "description": "A Shakespeare-inspired program bringing the Bard's most beloved stories to life through the orchestra — from Mendelssohn's enchanted forest to Walton's heroic battlefield to Prokofiev's star-crossed lovers.",
+    "program": [
+      { "composer": "Felix Mendelssohn", "pieces": ["A Midsummer Night's Dream"] },
+      { "composer": "William Walton", "pieces": ["Henry V Suite"] },
+      { "composer": "Sergei Prokofiev", "pieces": ["Romeo & Juliet Suite No. 2"] }
+    ]
+  },
+  {
+    "id": "symphonic-fantasia",
+    "title": "Symphonic Fantasia",
+    "date": "2026-04-04T16:00:00-07:00",
+    "dateDisplay": "April 4, 2026 · 4:00 PM",
+    "venue": "Meydenbauer Center Theatre, Bellevue",
+    "status": "past",
+    "poster": "/img/concerts/symphonic-fantasia.jpg",
+    "ticketsUrl": "https://www.eventbrite.com/e/symphonic-fantasia-tickets-1981626133108?aff=rtoweb",
+    "description": "Join us for Symphonic Fantasia, a vibrant celebration of orchestral color and power, crowned by Beethoven's legendary Fifth Symphony. Experience a whirlwind of musical imagination from Disney's Fantasia: glowing fanfares, spellbound adventures, mythical firebirds, and ancient pines echoing across Rome.",
+    "program": [
+      { "composer": "Paul Dukas", "pieces": ["La Péri: Fanfare", "The Sorcerer's Apprentice"] },
+      { "composer": "Igor Stravinsky", "pieces": ["The Firebird Suite"] },
+      { "composer": "Ottorino Respighi", "pieces": ["Pines of Rome"] },
+      { "composer": "Ludwig van Beethoven", "pieces": ["Symphony No. 5"] }
+    ]
+  },
+  {
+    "id": "tchaik-night",
+    "title": "Tchaik Night",
+    "date": "2025-11-01T16:00:00-07:00",
+    "dateDisplay": "November 1, 2025 · 4:00 PM",
+    "venue": "Overlake Christian Church",
+    "status": "past",
+    "poster": "/img/concerts/tchaik-night.png",
+    "programUrl": "https://www.redmondtechorchestra.org/s/November-2025-Programs-v4.pdf",
+    "description": "A thrilling evening of orchestral masterpieces celebrating the passion and power of Pyotr Ilyich Tchaikovsky — from the triumphant 1812 Overture to the heartfelt Serenade for Strings and the powerful Symphony No. 5.",
+    "program": [
+      { "composer": "John Mackey", "pieces": ["Redline Tango"] },
+      { "composer": "Pyotr Ilyich Tchaikovsky", "pieces": ["1812 Overture", "Serenade for Strings, Mvt. 4", "Symphony No. 5"] }
+    ]
+  },
+  {
+    "id": "chamber-spotlight-2025",
+    "title": "Chamber Music: In the Spotlight",
+    "date": "2025-07-26T15:00:00-07:00",
+    "dateDisplay": "July 26, 2025 · 3:00 PM",
+    "venue": "Lake Washington High School",
+    "status": "past",
+    "poster": "/img/concerts/chamber-spotlight.png",
+    "recordingsUrl": "https://youtu.be/yT7Rq5bTpLQ?si=sv3hFKJvbHCTOWYG",
+    "programUrl": "https://www.redmondtechorchestra.org/s/July-2025-Chamber-Concert-Program.png",
+    "description": "Our first concert focusing solely on RTO's chamber ensembles — small groups of musicians delivering an up-close, spotlighted performance of beloved classical melodies."
+  },
+  {
+    "id": "broadway-hollywood-2025",
+    "title": "Broadway Lights, Hollywood Nights",
+    "date": "2025-07-19T16:00:00-07:00",
+    "dateDisplay": "July 19, 2025 · 4:00 PM",
+    "venue": "Overlake Christian Church",
+    "status": "past",
+    "poster": "/img/concerts/broadway-hollywood.jpg",
+    "recordingsUrl": "https://youtu.be/U4f-xHoqxPw?si=HyOQzMsqTQEOe7U5",
+    "programUrl": "https://www.redmondtechorchestra.org/s/July-2025-Program-v5.pdf",
+    "description": "An enchanting evening of music featuring iconic pieces from movies and musicals.",
+    "program": [
+      { "composer": "John Williams", "pieces": ["Theme from Jurassic Park", "Battle of the Heroes"] },
+      { "composer": "Justin Hurwitz", "pieces": ["Epilogue (from La La Land)"] },
+      { "composer": "Leigh Harline / arr. Mark Hayes", "pieces": ["When You Wish Upon a Star"] },
+      { "composer": "Stephen Schwartz / arr. Mark Brymer", "pieces": ["Wicked (Choral Highlights)"] },
+      { "composer": "Leonard Bernstein", "pieces": ["Symphonic Dances from West Side Story"] },
+      { "composer": "Andrew Lloyd Webber / arr. Andrew Cottee", "pieces": ["The Phantom of the Opera — Symphonic Suite"] }
+    ]
+  },
+  {
+    "id": "rach-fest",
+    "title": "RACH FEST",
+    "date": "2025-04-03T19:00:00-07:00",
+    "dateDisplay": "April 3, 2025 · 7:00 PM",
+    "venue": "Meydenbauer Center Theatre",
+    "status": "past",
+    "poster": "/img/concerts/rach-fest.jpg",
+    "recordingsUrl": "https://www.youtube.com/watch?v=o-5L38WpNhM&list=PLbQZTncyg_tWmsSz_KdbrvxvvfnGwfvVg",
+    "programUrl": "https://www.redmondtechorchestra.org/s/RACH-FEST.pdf",
+    "description": "A captivating evening featuring the stirring power of Tchaikovsky's Slavonic March and the virtuosic brilliance of Rachmaninoff.",
+    "program": [
+      { "composer": "Pyotr Ilyich Tchaikovsky", "pieces": ["Slavonic March, Op. 31"] },
+      { "composer": "Sergei Rachmaninoff", "pieces": ["Symphonic Dances, Op. 45 Mvt. 1", "Rhapsody on a Theme of Paganini, Op. 43 (Diana Gao, soloist)", "Piano Concerto No. 2, Op. 18 (Jada Campbell, soloist)"] }
+    ]
+  },
+  {
+    "id": "harmony-in-motion",
+    "title": "Harmony in Motion: A Symphonic Exploration",
+    "date": "2024-11-16T19:30:00-08:00",
+    "dateDisplay": "November 16, 2024 · 7:30 PM",
+    "venue": "Kirkland Performance Center",
+    "status": "past",
+    "poster": "/img/concerts/harmony-in-motion.png",
+    "recordingsUrl": "https://www.youtube.com/watch?v=J6h51igafk8&list=PLbQZTncyg_tVECgs4E-0drMuCjcvXazN7",
+    "programUrl": "https://www.redmondtechorchestra.org/s/Harmony-In-Motion-FOR-PRINT.pdf",
+    "description": "Featuring the grandeur of Dvořák's New World Symphony, the vibrant Carnival Overture, and Joe Hisaishi's whimsical Symphonic Variation \"Merry-go-round.\"",
+    "program": [
+      { "composer": "Joe Hisaishi", "pieces": ["Symphonic Variation \"Merry-go-round\""] },
+      { "composer": "Antonín Dvořák", "pieces": ["Carnival Overture, Op. 92", "Symphony No. 9 in E Minor \"From the New World,\" Op. 95"] }
+    ]
+  },
+  {
+    "id": "rhythm-and-blues",
+    "title": "Rhythm & Blues: A Musical Journey",
+    "date": "2024-07-18T19:30:00-07:00",
+    "dateDisplay": "July 18, 2024 · 7:30 PM",
+    "venue": "Kirkland Performance Center",
+    "status": "past",
+    "poster": "/img/concerts/rhythm-and-blues.png",
+    "recordingsUrl": "https://www.youtube.com/watch?v=rwXBO6ynPq4&list=PLbQZTncyg_tVJk970JbLQR0D9WaHVJBdD",
+    "description": "An evening of music featuring Gershwin's masterpieces — Rhapsody in Blue and An American in Paris — and more.",
+    "program": [
+      { "composer": "Ferde Grofé", "pieces": ["Mississippi Suite"] },
+      { "composer": "Aaron Copland", "pieces": ["Buckaroo Holiday"] },
+      { "composer": "J.S. Bach", "pieces": ["Air"] },
+      { "composer": "Red Velvet / arr. Peter Yang", "pieces": ["Feel My Rhythm", "Birthday"] },
+      { "composer": "George Gershwin", "pieces": ["Rhapsody in Blue (Jada Campbell, soloist)", "An American in Paris"] }
+    ]
+  },
+  {
+    "id": "starting-with-saint-saens",
+    "title": "Starting with Saint-Saëns",
+    "date": "2024-03-30T15:00:00-07:00",
+    "dateDisplay": "March 30, 2024 · 3:00 PM",
+    "venue": "Carlson Theater",
+    "status": "past",
+    "poster": "/img/concerts/saint-saens.png",
+    "recordingsUrl": "https://www.youtube.com/watch?v=J6h51igafk8&list=PLbQZTncyg_tVECgs4E-0drMuCjcvXazN7",
+    "programUrl": "https://www.redmondtechorchestra.org/s/APznzabNSYdEtnznFHfaAr1CbGxavMoeOnR49iWt0Ro1pGd9rUoVtuf-k9NNFWu3OpIXi-4lioTbUmcCIMxgc6nTwzzD5qdazob7.pdf",
+    "description": "Our inaugural concert — the beginning of our musical journey as we set out to recruit musicians from the Seattle tech community and create memorable performances together.",
+    "program": [
+      { "composer": "Dmitri Shostakovich", "pieces": ["Waltz No. 2"] },
+      { "composer": "Aaron Copland", "pieces": ["Hoedown"] },
+      { "composer": "Camille Saint-Saëns", "pieces": ["Danse Bacchanale from Samson and Delilah", "Danse Macabre", "Symphony No. 3 in C minor, Op. 78"] }
+    ]
+  }
+]

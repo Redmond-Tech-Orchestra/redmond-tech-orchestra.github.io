@@ -1,0 +1,20 @@
+{
+  "orgName": "Redmond Tech Orchestra",
+  "shortName": "RTO",
+  "tagline": "We are dedicated to fostering a vibrant cultural environment, supporting musical education, and ensuring that the joy of orchestral performances is accessible to all.",
+  "foundingYear": 2024,
+  "nonprofitNote": "A registered 501(c)(3) nonprofit organization. Donations are tax-deductible to the full extent of the law.",
+  "donateUrl": "https://www.paypal.com/donate/?hosted_button_id=FMGNWMZECNGZE",
+  "bylawsUrl": "/bylaws.pdf",
+  "social": {
+    "youtube": "https://www.youtube.com/@RedmondTechOrchestra",
+    "instagram": null,
+    "facebook": null
+  },
+  "nav": [
+    { "label": "Home", "to": "/" },
+    { "label": "Concerts", "to": "/concerts" },
+    { "label": "About", "to": "/about" },
+    { "label": "Contact", "to": "/contact" }
+  ]
+}

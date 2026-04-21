@@ -1,0 +1,13 @@
+{
+  "intro": {
+    "heading": "Join us in celebrating music in the Puget Sound area.",
+    "body": [
+      "The Redmond Tech Orchestra (RTO) has been instrumental in enriching the arts community in the greater Puget Sound area. Founded by a couple of musicians working in tech, we are on a mission to provide opportunities for working adults to continue playing their instrument and sharing their love of music with the community.",
+      "Come join RTO at one of our concerts throughout the year, and be amazed at our musicians' talent!"
+    ],
+    "cta": {
+      "label": "Want to hear us perform?",
+      "to": "/concerts"
+    }
+  }
+}
