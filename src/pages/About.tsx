@@ -73,13 +73,15 @@ export default function About() {
           <div className="quote-grid">
             {about.memberQuotes.map((q) => (
               <figure className="quote-card" key={q.name}>
-                {"image" in q && q.image && (
-                  <img className="member-photo" src={q.image} alt={q.name} loading="lazy" />
-                )}
                 <blockquote>{q.quote}</blockquote>
                 <figcaption>
-                  <strong>{q.name}</strong>
-                  <span>{q.instrument}</span>
+                  {"image" in q && q.image && (
+                    <img className="member-photo" src={q.image} alt="" loading="lazy" />
+                  )}
+                  <span className="quote-card__byline">
+                    <strong>{q.name}</strong>
+                    <span>{q.instrument}</span>
+                  </span>
                 </figcaption>
               </figure>
             ))}
