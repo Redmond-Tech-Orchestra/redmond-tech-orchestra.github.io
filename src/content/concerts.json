@@ -68,6 +68,7 @@
     "category": "masterworks",
     "poster": "/img/concerts/tchaik-night.png",
     "programUrl": "/concert-programs/november-2025-programs.pdf",
+    "recordingsUrl": "https://www.youtube.com/watch?v=wRIXCVQVINs",
     "description": "An all-Tchaikovsky evening (with a John Mackey curtain-raiser): the 1812 Overture, the fourth movement of the Serenade for Strings, and the Fifth Symphony. Cannons not included; everything else delivered as written.",
     "program": [
       { "composer": "John Mackey", "pieces": ["Redline Tango"] },
