@@ -490,7 +490,7 @@ select option { background: var(--bg-solid); color: var(--text); }
   font-weight: 600;
   color: var(--gold);
   margin: 0 0 2rem;
-  padding-bottom: 0.85rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--line);
   text-align: left;
 }
