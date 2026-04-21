@@ -20,6 +20,8 @@ function CategoryPill({ category }: { category: ConcertCategory }) {
   );
 }
 
+export { CategoryPill };
+
 type Props = {
   concert: Concert;
   showProgram?: boolean;

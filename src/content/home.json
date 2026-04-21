@@ -1,19 +1,40 @@
 {
   "hero": {
     "eyebrow": "Meet the Redmond Tech Orchestra",
-    "headline": "A community orchestra for the Eastside.",
-    "subhead": "We're a 501(c)(3) nonprofit of working professionals who happen to also be musicians, putting on concerts around Redmond and the greater Seattle area."
+    "headline": "Classical music, modern community.",
+    "subhead": "We are dedicated to fostering a vibrant cultural environment, supporting musical education, and ensuring that the joy of orchestral performances is accessible to all."
   },
   "intro": {
     "eyebrow": "Our Mission",
     "heading": "Bringing live orchestral music to the Eastside.",
     "body": [
-      "RTO was started in 2024 by a few musicians who'd spent their post-college years missing their instruments. The pitch was simple: a place for working adults to keep playing the music they love, in front of audiences who actually live in the neighborhood.",
-      "Three years in, we're a full orchestra rehearsing weekly and performing several times a year. Our concerts are free or low-cost on purpose. Bring a friend, bring your kids, and we'll see you there."
+      "We rehearse weekly and play several concerts a year — symphonies and overtures alongside film scores, video game music, and the occasional K-pop arrangement.",
+      "Concerts are free or low-cost on purpose. Bring a friend, bring your family, and we'll see you there."
     ],
     "cta": {
       "label": "See Upcoming Concerts",
       "to": "/concerts"
     }
+  },
+  "highlights": {
+    "eyebrow": "Highlights",
+    "videos": [
+      {
+        "id": "h2bj1r9NE_w",
+        "title": "Frieren & Violet Evergarden — Evan Call Orchestral Suite"
+      },
+      {
+        "id": "wRIXCVQVINs",
+        "title": "Tchaik Night (Full Concert)"
+      },
+      {
+        "id": "Amu5UD6Q9bg",
+        "title": "Rachmaninoff Piano Concerto No. 2 — Jada Campbell"
+      },
+      {
+        "id": "lqztAwtqVpA",
+        "title": "Carnival Overture — Antonín Dvořák"
+      }
+    ]
   }
 }

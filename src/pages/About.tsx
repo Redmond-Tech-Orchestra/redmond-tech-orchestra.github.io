@@ -35,7 +35,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="block alt">
+      <section className="block">
         <div className="container">
           <SectionEyebrow>What sets us apart</SectionEyebrow>
           <ul className="highlights">
@@ -67,7 +67,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="block alt">
+      <section className="block">
         <div className="container">
           <SectionEyebrow>Meet the Members</SectionEyebrow>
           <div className="quote-grid">

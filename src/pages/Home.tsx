@@ -1,17 +1,13 @@
 import { Link } from "react-router-dom";
 import site from "../content/site.json";
-import about from "../content/about.json";
 import home from "../content/home.json";
 import concertsData from "../content/concerts.json";
-import venuesData from "../content/venues.json";
-import type { Concert, Venue } from "../content/types";
-import { TicketIcon } from "../components/Icons";
+import type { Concert } from "../content/types";
 import { SectionEyebrow } from "../components/SectionEyebrow";
-import { ConcertProgram } from "../components/ConcertCard";
+import ConcertCard from "../components/ConcertCard";
 import { usePageMeta } from "../hooks/usePageTitle";
 
 const concerts = concertsData as Concert[];
-const venues = venuesData as Record<string, Venue>;
 
 const orgJsonLd = {
   "@context": "https://schema.org",
@@ -44,13 +40,6 @@ export default function Home() {
     image: "https://www.redmondtechorchestra.org/img/heroes/home-hero.jpg",
   });
   const upcoming = concerts.find((c) => c.status === "upcoming");
-  const upcomingVenue = upcoming?.venueId ? venues[upcoming.venueId] : undefined;
-  const upcomingVenueName = upcoming?.venue ?? upcomingVenue?.name ?? "";
-  const upcomingDates = upcoming
-    ? Array.isArray(upcoming.dateDisplay)
-      ? upcoming.dateDisplay
-      : [upcoming.dateDisplay]
-    : [];
 
   return (
     <>
@@ -84,6 +73,19 @@ export default function Home() {
         </div>
       </section>
 
+      {upcoming && (
+        <section id="next-concert" className="block">
+          <div className="container">
+            <SectionEyebrow>Next Concert</SectionEyebrow>
+            <ul className="concert-list">
+              <li>
+                <ConcertCard concert={upcoming} />
+              </li>
+            </ul>
+          </div>
+        </section>
+      )}
+
       <section className="block">
         <div className="container intro-block">
           <SectionEyebrow>{home.intro.eyebrow}</SectionEyebrow>
@@ -94,81 +96,45 @@ export default function Home() {
         </div>
       </section>
 
-      {upcoming && (
-        <section id="next-concert" className="block alt">
-          <div className="container">
-            <article className="featured-concert">
-              <div className="featured-body">
-                <div className="meta">Next Concert</div>
-                <h3>{upcoming.title}</h3>
-                <div className="when-where">
-                  {upcomingDates.map((d, i) => (
-                    <span key={i} className="date">{d}</span>
-                  ))}
-                  {upcomingVenueName && <span className="venue">{upcomingVenueName}</span>}
-                </div>
-                {upcoming.description && (
-                  <p className="featured-description">{upcoming.description}</p>
-                )}
-                <ConcertProgram program={upcoming.program} />
-                {upcoming.ticketsUrl ? (
-                  <div className="actions">
-                    <a
-                      className="btn"
-                      href={upcoming.ticketsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <TicketIcon /> Get Tickets
-                    </a>
-                  </div>
-                ) : (
-                  <p className="tickets-pending">
-                    Tickets on sale soon — check back closer to the date.
-                  </p>
-                )}
-              </div>
-              {upcoming.poster ? (
-                <a
-                  className="featured-poster"
-                  href={upcoming.poster}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${upcoming.title} poster`}
-                >
-                  <img src={upcoming.poster} alt={`${upcoming.title} poster`} />
-                </a>
-              ) : (
-                <div className="poster-placeholder" aria-hidden="true">
-                  <span>Poster coming soon</span>
-                </div>
-              )}
-            </article>
-          </div>
-        </section>
-      )}
-
       <section className="block">
         <div className="container">
-          <SectionEyebrow>About the Orchestra</SectionEyebrow>
-          <p className="section-lead">{about.intro[1]}</p>
-          <ul className="highlights">
-            {about.highlights.map((h) => (
-              <li className="highlight-card" key={h.title}>
-                <h3>{h.title}</h3>
-                <p style={{ margin: 0 }}>{h.body}</p>
+          <SectionEyebrow>{home.highlights.eyebrow}</SectionEyebrow>
+          <ul className="video-highlights">
+            {home.highlights.videos.map((v) => (
+              <li key={v.id} className="video-highlight">
+                <a
+                  href={`https://www.youtube.com/watch?v=${v.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={v.title}
+                >
+                  <div className="video-thumb">
+                    <img
+                      src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
+                      alt=""
+                      loading="lazy"
+                    />
+                    <span className="video-play" aria-hidden="true">▶</span>
+                  </div>
+                  <h3>{v.title}</h3>
+                </a>
               </li>
             ))}
           </ul>
           <div className="text-center mt-2">
-            <Link to="/about" className="btn btn-ghost">
-              Meet the Orchestra
-            </Link>
+            <a
+              className="btn btn-ghost"
+              href={site.social.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              More on YouTube
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="block alt">
+      <section className="block">
         <div className="container text-center">
           <h2>Support our growth</h2>
           <p className="section-lead">
