@@ -146,6 +146,19 @@
     ]
   },
   {
+    "id": "chime-concert-2025",
+    "title": "25th Microsoft Asian Spring Festival Celebration",
+    "date": "2025-01-25T00:00:00-08:00",
+    "dateDisplay": "January 25, 2025",
+    "venueId": "overlake-christian",
+    "status": "past",
+    "category": "community",
+    "poster": "/img/concerts/chime.jpg",
+    "posterOrientation": "landscape",
+    "recordingsUrl": "https://www.youtube.com/watch?v=x18Dv1HcBKA",
+    "description": "A medley of \"Above the Moon\" and \"Journey to the West\" performed by the Redmond Tech Orchestra to open the gala for the 25th Microsoft Asian Spring Festival Celebration."
+  },
+  {
     "id": "harmony-in-motion",
     "title": "Harmony in Motion: A Symphonic Exploration",
     "date": "2024-11-16T19:30:00-08:00",
