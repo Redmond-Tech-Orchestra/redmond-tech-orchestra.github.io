@@ -42,7 +42,7 @@ src/
     Home.tsx          # /
     Concerts.tsx      # /concerts
     About.tsx         # /about
-    Contact.tsx       # /contact (mailto-based form)
+    Contact.tsx       # /contact (Formspree-powered form)
     Donate.tsx        # /donate
     NotFound.tsx
   App.tsx             # layout shell (header + outlet + footer)
