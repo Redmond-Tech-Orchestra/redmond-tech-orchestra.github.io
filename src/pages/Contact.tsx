@@ -1,8 +1,10 @@
 import { useState, type FormEvent } from "react";
 import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageTitle";
+import site from "../content/site.json";
 
 const TOPICS = ["General inquiry", "Joining the orchestra", "Sponsorship", "Press / media", "Other"];
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzlgljy";
 
 export default function Contact() {
   usePageMeta({
@@ -12,19 +14,56 @@ export default function Contact() {
     path: "/contact",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: wire up a forms backend (Formspree, Netlify Forms, etc.).
-    // The contact email is intentionally not stored in source to avoid scraping.
-    setSubmitted(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error("Formspree error:", response.status, errorData);
+        throw new Error(`Formspree returned ${response.status}`);
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setError("We couldn't send your message right now. Please try again in a moment.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
       <PageHero
         title="Contact Us"
-        subtitle="If you have feedback, questions, or any other inquiries, please use the contact form to reach out to us. A member of our team will get back to you shortly."
+        subtitle={
+          <>
+            If you have feedback, questions, or any other inquiries, please use the contact form to reach out to us. A member of our team will get back to you shortly. You can also reach us on Instagram at{" "}
+            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer">
+              @redmondtechorchestra
+            </a>
+            .
+          </>
+        }
       />
       <section className="block">
         <div className="container">
@@ -66,8 +105,10 @@ export default function Contact() {
                 <textarea id="message" name="message" required />
               </div>
             </div>
-            <button className="btn" type="submit" disabled={submitted}>
-              {submitted ? "Thanks — we'll be in touch" : "Send"}
+            {submitted && <p className="form-message success">Thanks - we'll be in touch soon.</p>}
+            {error && <p className="form-message error">{error}</p>}
+            <button className="btn" type="submit" disabled={submitted || isSubmitting}>
+              {submitted ? "Sent" : isSubmitting ? "Sending..." : "Send"}
             </button>
           </form>
         </div>
