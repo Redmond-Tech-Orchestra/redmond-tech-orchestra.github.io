@@ -70,5 +70,13 @@
     "addressRegion": "WA",
     "postalCode": "98101",
     "addressCountry": "US"
+  },
+  "redmond-senior-center": {
+    "name": "Redmond Senior & Community Center",
+    "streetAddress": "8703 160th Ave NE",
+    "addressLocality": "Redmond",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "addressCountry": "US"
   }
 }

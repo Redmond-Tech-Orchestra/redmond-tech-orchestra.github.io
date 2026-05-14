@@ -18,6 +18,20 @@
     ]
   },
   {
+    "id": "dvorak-chamber-2026",
+    "title": "An Evening of DVOŘÁK: Chamber Music",
+    "date": "2026-04-22T19:00:00-07:00",
+    "dateDisplay": "April 22, 2026 · 7:00 PM",
+    "venueId": "redmond-senior-center",
+    "status": "past",
+    "category": "chamber",
+    "poster": "/img/concerts/dvorak-chamber.jpg",
+    "posterOrientation": "landscape",
+    "programUrl": "/concert-programs/april-2026-chamber-concert.pdf",
+    "recordingsUrl": "https://www.youtube.com/playlist?list=PLbQZTncyg_tW61XREr_BM_htX3pSwjmA4",
+    "description": "An intimate evening featuring small music ensembles and Dvořák’s renowned Serenade for Strings"
+  },
+  {
     "id": "symphonic-fantasia",
     "title": "Symphonic Fantasia",
     "date": "2026-04-04T16:00:00-07:00",
