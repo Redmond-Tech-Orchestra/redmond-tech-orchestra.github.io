@@ -3,6 +3,10 @@
 The official site for the Redmond Tech Orchestra, deployed to
 [redmondtechorchestra.org](https://redmondtechorchestra.org) via GitHub Pages.
 
+For how the website fits into the broader orchestra infrastructure (preview
+environment, server, deploy flows, request diagrams), see the
+[infra repo](https://github.com/Redmond-Tech-Orchestra/infra).
+
 ## Stack
 
 - **Vite + React + TypeScript** — fast dev, simple build, no framework lock-in
@@ -63,9 +67,35 @@ npm run preview  # preview the production build locally
 
 ## Deployment
 
-Pushing to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), which builds the site and publishes it to GitHub Pages. The custom domain `redmondtechorchestra.org` is configured via [`public/CNAME`](public/CNAME).
+### Production
+
+Pushing to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which builds the site and publishes it to GitHub Pages. The custom domain
+`redmondtechorchestra.org` is configured via [`public/CNAME`](public/CNAME).
 
 In the repo settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
+
+### PR previews
+
+Opening or updating a pull request triggers
+[`.github/workflows/preview.yml`](.github/workflows/preview.yml). The workflow
+builds the site and rsyncs it over SSH to `/var/www/preview/` on the orchestra
+server, where nginx serves it at
+[preview.redmondtechorchestra.org](https://preview.redmondtechorchestra.org).
+A sticky comment is posted on the PR with the URL.
+
+The preview environment is **shared** — the most recent PR push wins. The site
+is served with `X-Robots-Tag: noindex` and a `Disallow: /` robots.txt so
+search engines never index it. Server-side configuration (nginx vhost, TLS,
+firewall) lives in the [infra repo](https://github.com/Redmond-Tech-Orchestra/infra).
+
+Required GitHub Actions secrets for the preview workflow:
+
+| Secret | Purpose |
+| --- | --- |
+| `SSH_HOST` | hostname of the preview server (currently `schemes.me`) |
+| `SSH_USER` | SSH user (currently `peter`) |
+| `SSH_PRIVATE_KEY` | private half of a deploy key whose public half lives in the server's `~/.ssh/authorized_keys` |
 
 ## Telling an AI to update the site
 
@@ -75,33 +105,3 @@ Because content and presentation are separated, you can give an AI assistant nar
 - **Styling / layout edits** ("make the hero darker", "stack the concert cards differently on mobile") → restrict the AI to `src/styles.css` and `src/components/`.
 
 Each side has a clear contract via [`src/content/types.ts`](src/content/types.ts), so changes to one don't accidentally break the other.
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
