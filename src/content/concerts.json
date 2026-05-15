@@ -29,7 +29,17 @@
     "posterOrientation": "landscape",
     "programUrl": "/concert-programs/april-2026-chamber-concert.pdf",
     "recordingsUrl": "https://www.youtube.com/playlist?list=PLbQZTncyg_tW61XREr_BM_htX3pSwjmA4",
-    "description": "An intimate evening featuring small music ensembles and Dvořák’s renowned Serenade for Strings"
+    "description": "An intimate evening featuring small music ensembles and Dvořák’s renowned Serenade for Strings",
+    "program": [
+      { "composer": "Victor Schertzinger", "pieces": ["Tangerine"] },
+      { "composer": "Henryk Kuzniak", "pieces": ["Vabank"] },
+      { "composer": "Antonio Carlos Jobim", "pieces": ["Wave"] },
+      { "composer": "Sonny Rollins", "pieces": ["St Thomas"] },
+      { "composer": "Billy Strayhorn", "pieces": ["Take the \"A\" Train"] },
+      { "composer": "Robert Schumann", "pieces": ["Märchenbilder, Op. 113"] },
+      { "composer": "Felix Mendelssohn", "pieces": ["String Quartet No. 2 in A minor, Op. 13"] },
+      { "composer": "Antonín Dvořák", "pieces": ["Serenade for Strings in E Major, Op. 22"] }
+    ]
   },
   {
     "id": "symphonic-fantasia",
