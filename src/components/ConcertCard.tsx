@@ -90,7 +90,16 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
         </div>
 
         <p className="description" itemProp="description">
-          {concert.description}
+          {concert.description.split(/(https?:\/\/[^\s)]+)/g).map((part, i) => {
+            if (part.match(/^https?:\/\//)) {
+              return (
+                <a key={i} href={part} target="_blank" rel="noopener noreferrer">
+                  {part}
+                </a>
+              );
+            }
+            return part;
+          })}
         </p>
 
         {showProgram && concert.program && concert.program.length > 0 && (
