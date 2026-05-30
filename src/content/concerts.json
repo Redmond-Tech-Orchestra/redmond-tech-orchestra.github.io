@@ -12,7 +12,7 @@
     "category": "masterworks",
     "poster": "/img/concerts/shakespeare.webp",
     "ticketsUrl": "https://www.eventbrite.com/e/all-the-worlds-a-song-orchestral-themes-inspired-by-shakespeare-tickets-1989325371738?aff=rtoweb",
-    "description": "A program of music inspired by Shakespeare: Mendelssohn's A Midsummer Night's Dream, Walton's Henry V Suite, and the second Romeo & Juliet suite from Prokofiev. Featuring Technically Thespians (https://technicallythespians.com/), three composers, three plays, three very different takes on the Bard.",
+    "description": "A program of music inspired by Shakespeare: Mendelssohn's A Midsummer Night's Dream, Walton's Henry V Suite, and the second Romeo & Juliet suite from Prokofiev. Featuring [Technically Thespians](https://technicallythespians.com/), three composers, three plays, three very different takes on the Bard.",
     "program": [
       { "composer": "Felix Mendelssohn", "pieces": ["A Midsummer Night's Dream"] },
       { "composer": "William Walton", "pieces": ["Henry V Suite"] },
