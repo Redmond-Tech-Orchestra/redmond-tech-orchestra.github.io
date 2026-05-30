@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import type { Concert, ConcertCategory, Venue } from "../content/types";
 import venuesData from "../content/venues.json";
 import Lightbox from "./Lightbox";
@@ -37,8 +38,8 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
       className={
         "concert-item" +
         (isPast ? " past" : "") +
-        (concert.category ? ` concert-item--${concert.category}` : "") +
-        ` concert-item--${concert.posterOrientation ?? "portrait"}`
+        (concert.category ? " concert-item--" + concert.category : "") +
+        " concert-item--" + (concert.posterOrientation ?? "portrait")
       }
       itemScope
       itemType="https://schema.org/MusicEvent"
@@ -89,9 +90,20 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
           </address>
         </div>
 
-        <p className="description" itemProp="description">
-          {concert.description}
-        </p>
+        <div className="description" itemProp="description">
+          <ReactMarkdown
+            components={{
+              p: (pProps: any) => <span>{pProps.children}</span>,
+              a: (aProps: any) => (
+                <a href={aProps.href} target="_blank" rel="noopener noreferrer">
+                  {aProps.children}
+                </a>
+              ),
+            }}
+          >
+            {concert.description}
+          </ReactMarkdown>
+        </div>
 
         {showProgram && concert.program && concert.program.length > 0 && (
           <div className="repertoire">
@@ -143,11 +155,11 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
           type="button"
           className="poster"
           onClick={() => setLightboxOpen(true)}
-          aria-label={`View ${concert.title} poster full size`}
+          aria-label={"View " + concert.title + " poster full size"}
         >
           <img
             src={concert.poster}
-            alt={`${concert.title} poster`}
+            alt={concert.title + " poster"}
             loading="lazy"
             itemProp="image"
           />
@@ -161,7 +173,7 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
       {lightboxOpen && concert.poster && (
         <Lightbox
           src={concert.poster}
-          alt={`${concert.title} poster`}
+          alt={concert.title + " poster"}
           onClose={() => setLightboxOpen(false)}
         />
       )}
@@ -183,12 +195,6 @@ function RepertoireRow({ composer, pieces }: { composer: string; pieces: string[
   );
 }
 
-/**
- * Reusable program/repertoire list for a concert. Renders the same composer
- * + pieces grid used inside ConcertCard so the Home featured-concert block
- * matches the Concerts page styling exactly. Returns null if there's no
- * program data.
- */
 export function ConcertProgram({ program }: { program?: Concert["program"] }) {
   if (!program || program.length === 0) return null;
   return (
@@ -200,9 +206,6 @@ export function ConcertProgram({ program }: { program?: Concert["program"] }) {
   );
 }
 
-// Use the last surname for the composer label (matches Figma style).
-// Strips "/ arr. ..." suffixes and preserves known two-word surnames.
-// For comma-separated multi-composer credits, returns the full string unchanged.
 function shortComposer(name: string): string {
   const main = name.split("/")[0].trim();
   if (main.includes(",")) return main;
