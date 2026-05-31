@@ -22,7 +22,7 @@ export default function Donate() {
           </p>
           <p>
             RTO is a registered 501(c)(3) nonprofit organization. Donations are tax-deductible to the full
-            extent of the law.
+            extent of the law. You can view our <a href={site.bylawsUrl} target="_blank" rel="noopener noreferrer">Bylaws here</a>.
           </p>
           <p>
             Interested in sponsoring as a business?{" "}
