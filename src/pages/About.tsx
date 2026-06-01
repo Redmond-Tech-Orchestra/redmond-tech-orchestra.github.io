@@ -88,6 +88,25 @@ export default function About() {
           </div>
         </div>
       </section>
+      <section className="block">
+        <div className="container">
+          <SectionEyebrow>Governance</SectionEyebrow>
+          <p>
+            Redmond Tech Orchestra is a 501(c)(3) nonprofit organization. We are committed to
+            transparency and accountability in our operations.
+          </p>
+          <div className="mt-2">
+            <a
+              href="/bylaws.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost"
+            >
+              View our Bylaws (PDF)
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
