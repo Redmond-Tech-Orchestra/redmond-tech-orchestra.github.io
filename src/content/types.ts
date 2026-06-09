@@ -53,3 +53,48 @@ export type AboutContent = {
   intro: string[];
   highlights: { title: string; body: string }[];
 };
+
+export type SponsorshipTier = {
+  name: string;
+  price: string;
+  benefits: string[];
+};
+
+export type SponsorshipRationaleGroup = {
+  title: string;
+  body: string[];
+  highlights: { title: string; body: string }[];
+};
+
+export type SponsorshipImage = {
+  src: string;
+  alt: string;
+  caption?: string;
+};
+
+export type SponsorshipContent = {
+  hero: { title: string; subtitle: string };
+  intro: string[];
+  introImage?: SponsorshipImage;
+  audience: {
+    heading: string;
+    lead: string;
+    segments: { title: string; body: string }[];
+    footnote: string;
+    image?: SponsorshipImage;
+  };
+  rationaleGroups: SponsorshipRationaleGroup[];
+  annualPackages: {
+    heading: string;
+    lead: string;
+    tiers: SponsorshipTier[];
+    image?: SponsorshipImage;
+  };
+  perConcertPackages: {
+    heading: string;
+    lead: string;
+    tiers: SponsorshipTier[];
+  };
+  inKind: { heading: string; body: string };
+  contact: { heading: string; body: string; image?: SponsorshipImage };
+};

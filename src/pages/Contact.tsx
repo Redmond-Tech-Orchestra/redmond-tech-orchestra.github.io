@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageTitle";
 import site from "../content/site.json";
@@ -16,6 +17,9 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [searchParams] = useSearchParams();
+  const topicParam = searchParams.get("topic") ?? "";
+  const initialTopic = TOPICS.includes(topicParam) ? topicParam : "";
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -87,7 +91,7 @@ export default function Contact() {
             <div className="form-row">
               <div>
                 <label htmlFor="topic">I have a question about…</label>
-                <select id="topic" name="topic" required defaultValue="">
+                <select id="topic" name="topic" required defaultValue={initialTopic}>
                   <option value="" disabled>
                     Select a topic
                   </option>
