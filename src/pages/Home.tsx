@@ -135,15 +135,21 @@ export default function Home() {
       </section>
 
       <section className="block">
-        <div className="container text-center">
+        <div className="container text-center" style={{ maxWidth: 720 }}>
           <h2>Support our growth</h2>
           <p className="section-lead">
             {site.orgName} is a registered 501(c)(3) nonprofit. Your tax-deductible donation helps us keep
             ticket prices low and bring more orchestral music to the Eastside.
           </p>
-          <Link to="/donate" className="btn">
-            Donate
-          </Link>
+          <p className="section-lead">
+            Interested in sponsoring as a business?{" "}
+            <Link to="/sponsor">View available sponsorship packages</Link>.
+          </p>
+          <div className="actions">
+            <Link to="/donate" className="btn">
+              Donate
+            </Link>
+          </div>
         </div>
       </section>
     </>

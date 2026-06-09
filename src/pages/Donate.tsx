@@ -26,7 +26,8 @@ export default function Donate() {
           </p>
           <p>
             Interested in sponsoring as a business?{" "}
-            <Link to="/contact">Reach out via our contact form</Link>.
+            <Link to="/sponsor">See our 2026&ndash;27 sponsorship packages</Link>{" "}
+            or <Link to="/contact?topic=Sponsorship">reach out via our contact form</Link>.
           </p>
           <div className="mt-2">
             <a className="btn btn-gold" href={site.donateUrl} target="_blank" rel="noopener noreferrer">

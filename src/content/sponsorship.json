@@ -1,0 +1,171 @@
+{
+  "hero": {
+    "title": "2026–27 Sponsorship Proposal",
+    "subtitle": "Supporting music and community"
+  },
+  "intro": [
+    "The Redmond Tech Orchestra (RTO) invites you to partner with us for our 2026–27 season. As a distinguished 501(c)(3) nonprofit organization, RTO is dedicated to enriching the cultural landscape of our community through exceptional musical performances. Founded by passionate Microsoft employees, we are proud to present 3–4 captivating concerts annually, drawing an audience of over 3,000 attendees per event.",
+    "Our mission is to make high-quality orchestral music accessible and enjoyable for everyone. We are seeking sponsors to help us continue this tradition and expand our reach. Your support will not only enhance our artistic endeavors but also provide valuable visibility for your business among a diverse and engaged audience."
+  ],
+  "introImage": {
+    "src": "/img/sponsor/heart-wordcloud.png",
+    "alt": "Heart-shaped word cloud of audience feedback featuring words such as Music, Conductor, Quality, and Musicians from RTO concert surveys"
+  },
+  "audience": {
+    "heading": "Why Sponsor the Redmond Tech Orchestra?",
+    "lead": "Our concerts attract a broad demographic:",
+    "segments": [
+      {
+        "title": "Tech Professionals & Families",
+        "body": "Many attendees are from the vibrant tech community in Redmond and surrounding areas, often bringing their families."
+      },
+      {
+        "title": "Music Enthusiasts",
+        "body": "Individuals with a deep appreciation for classical and contemporary orchestral music."
+      },
+      {
+        "title": "Community Members",
+        "body": "Residents seeking high-quality, affordable, and family-friendly entertainment."
+      }
+    ],
+    "footnote": "With an attendance of 3,000+ per performance, sponsoring RTO offers a unique opportunity to connect with a dedicated and appreciative audience. Audience engagement continues to grow, with a rising base of season subscribers and 75% of attendees committed to returning for future concerts.",
+    "image": {
+      "src": "/img/sponsor/audience-feedback.png",
+      "alt": "Audience feedback highlights from recent RTO concert surveys."
+    }
+  },
+  "rationaleGroups": [
+    {
+      "title": "Local Small Businesses — Connecting with Community & Customers",
+      "body": [
+        "Local small businesses thrive on community connections and customer loyalty. RTO concerts bring hundreds of local residents together for a shared cultural experience—families, seniors, and professionals who often dine or shop nearby as part of their concert outing. As a sponsor, you gain direct visibility with these potential customers in a positive, lively setting. By supporting RTO, your business is seen as a true community champion, helping keep live music accessible and affordable for all. This boosts your brand's goodwill and differentiates you as a locally engaged, family-friendly business. Audiences frequently express gratitude that RTO performances are free or low-cost, making them \"affordable for retired seniors and families.\""
+      ],
+      "highlights": [
+        {
+          "title": "Stronger Community Presence",
+          "body": "Annual sponsorship ensures repeated exposure across all RTO concerts in a year, reinforcing your brand with our loyal audience. Over 95% of attendees are \"very likely\" to attend again or recommend our concerts. Instead of reaching approximately 1,000 people at one event, you'll connect with 3,000+ attendees across an entire season."
+        },
+        {
+          "title": "Enhanced Engagement",
+          "body": "Higher-tier sponsors unlock on-site promotion (tables, booths) and more personalized recognition—invaluable for driving customer traffic and personal connections."
+        }
+      ]
+    },
+    {
+      "title": "Mid-Size Regional Companies — Building Brand & Community Presence",
+      "body": [
+        "For growing companies and regional brands, RTO offers high-value exposure and CSR alignment. Our audience represents the Eastside's diverse community: families, professionals, and culturally engaged residents who appreciate sponsors that support local arts. Audience feedback frequently cites gratitude for companies who make these concerts possible. Sponsoring RTO elevates your brand's visibility across the region and demonstrates corporate social responsibility, showing that your company invests in community enrichment and inclusivity. The orchestra's welcoming, family-friendly environment—with dynamic programming from classic symphonies to film and game music—lets you connect your brand to positive shared experiences and emotional moments. Sponsorship also provides networking opportunities and fosters pride among your employees, who enjoy seeing their employer support beloved local events."
+      ],
+      "highlights": [
+        {
+          "title": "Season-Long Impact",
+          "body": "An annual sponsorship amplifies your reach and message across every concert, maximizing brand recall. It also cements your status as a leading community partner year-round, rather than just at a single event."
+        },
+        {
+          "title": "High-Tier Benefits",
+          "body": "Premium tiers (Gold/Diamond) offer wider recognition—more social media promotion, larger program ads, prime logo placement—which can significantly boost your brand's share of voice in our marketing channels and at events."
+        }
+      ]
+    },
+    {
+      "title": "Large Corporate Sponsors — Thought Leadership & Community",
+      "body": [
+        "For major corporations, especially in tech or with Eastside headquarters, sponsoring RTO is a powerful way to demonstrate community leadership, support the arts, and engage the tech community. RTO's origin as a volunteer orchestra founded by Microsoft employees—blending technology professionals and skilled musicians—gives it a unique story that resonates with tech audiences. Our concerts attract a high proportion of tech industry families and employees, providing a relaxed cultural experience that complements life in a tech hub. Your sponsorship aligns your brand with innovation, creativity, and community values. It also offers tangible employee engagement opportunities (VIP concert experiences, team volunteering) that can boost morale and pride internally. By supporting RTO, your company will be seen as an inclusive patron of the arts—fostering diversity (STEAM education, cross-cultural experiences) and enhancing your corporate social responsibility profile in the region."
+      ],
+      "highlights": [
+        {
+          "title": "Title Sponsorship",
+          "body": "The top annual tier positions your company as the lead partner for the season, with the broadest recognition, strongest community visibility, and the richest employee engagement opportunities."
+        },
+        {
+          "title": "Deep Employee & Community Engagement",
+          "body": "Higher tiers can extend beyond logo placement to include volunteer opportunities, hosted experiences, and co-branded community impact moments that reinforce your values internally and externally."
+        }
+      ]
+    }
+  ],
+  "annualPackages": {
+    "heading": "Annual Sponsorship Packages",
+    "lead": "Commit to a full season of supporting the Redmond Tech Orchestra and gain year-round recognition.",
+    "image": {
+      "src": "/img/sponsor/ensemble-strip.png",
+      "alt": "Three photos of RTO ensembles and musicians performing"
+    },
+    "tiers": [
+      {
+        "name": "Supporter",
+        "price": "$1,000 / year",
+        "benefits": [
+          "Logo on RTO website (Sponsor page)",
+          "Recognition in concert programs (one season)",
+          "Social media mention (one post per season)"
+        ]
+      },
+      {
+        "name": "Partner",
+        "price": "$2,500 / year",
+        "benefits": [
+          "All Supporter benefits, plus:",
+          "Prominent logo placement on RTO website",
+          "Logo and dedicated recognition in all concert programs (one season)",
+          "Two social media mentions per season",
+          "Opportunity to display marketing materials"
+        ]
+      },
+      {
+        "name": "Presenting Sponsor",
+        "price": "$5,000 / year",
+        "benefits": [
+          "All Partner benefits, plus:",
+          "\"Presented by [Your Company Name]\" recognition on concert marketing materials and program covers (one season)",
+          "Logo featured prominently on RTO website homepage",
+          "Four social media mentions per season",
+          "Opportunity to speak briefly at one concert and host company booth during intermission",
+          "Two VIP concert season packages"
+        ]
+      }
+    ]
+  },
+  "perConcertPackages": {
+    "heading": "Per-Concert Sponsorship Packages",
+    "lead": "Choose to sponsor a single concert and connect with our audience for a specific event.",
+    "tiers": [
+      {
+        "name": "Supporter",
+        "price": "$300 / concert",
+        "benefits": [
+          "Recognition in the program for the sponsored concert",
+          "Social media mention (one post for the sponsored concert)"
+        ]
+      },
+      {
+        "name": "Partner",
+        "price": "$500 / concert",
+        "benefits": [
+          "All Supporter benefits for the sponsored concert, plus:",
+          "Logo and dedicated ⅓-page recognition in the program for the sponsored concert",
+          "One VIP ticket to the sponsored concert"
+        ]
+      },
+      {
+        "name": "Concert Sponsor",
+        "price": "$700 / concert",
+        "benefits": [
+          "All Partner benefits for the sponsored concert, plus:",
+          "\"Concert sponsored by [Your Company Name]\" recognition on concert marketing materials and program cover for the sponsored concert",
+          "Opportunity to introduce the orchestra at the sponsored concert",
+          "Opportunity to host a company booth during intermission",
+          "Two VIP tickets to the sponsored concert"
+        ]
+      }
+    ]
+  },
+  "inKind": {
+    "heading": "Non-Cash Sponsorship Opportunities",
+    "body": "In addition to financial sponsorships, RTO also welcomes in-kind support. If your company can provide goods or services that benefit the orchestra—such as hospitality, meals, printing, venue support, professional services, raffle items, or other event-related needs—we would be pleased to recognize your generosity and discuss appropriate sponsorship acknowledgment."
+  },
+  "contact": {
+    "heading": "Connect With Us",
+    "body": "Partnering with the Redmond Tech Orchestra is an investment in our community's cultural vitality and an excellent opportunity to enhance your brand's visibility. We are eager to discuss how we can create a mutually beneficial relationship."
+  }
+}
