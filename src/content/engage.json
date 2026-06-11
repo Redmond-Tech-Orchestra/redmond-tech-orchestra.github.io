@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "eyebrow": "Community Outreach",
+    "title": "Inspiring the Next Generation Through Music",
+    "subtitle": "Our musicians visit local high schools to coach student orchestras, share repertoire, and remind them that a life with music — alongside any career — is possible.",
+    "image": {
+      "src": "/img/engage/community_outreach.png",
+      "alt": "Redmond Tech Orchestra musicians coaching high school student musicians during a rehearsal"
+    }
+  },
+  "tagline": "Investing in today's students. Strengthening tomorrow's community.",
+  "intro": [
+    "Redmond Tech Orchestra is more than a place for working musicians to keep performing — it is a bridge between professional players and the next generation of young string and wind musicians across the Eastside.",
+    "Through high-school visits, sectional coaching, and side-by-side rehearsals, our members donate their time so that students can hear their parts played up close, ask questions, and see firsthand what years of practice make possible."
+  ],
+  "stats": {
+    "heading": "Making an Impact",
+    "items": [
+      { "number": "4", "label": "High Schools Visited" },
+      { "number": "60+", "label": "Volunteer Hours" },
+      { "number": "120+", "label": "Student Musicians Reached" },
+      { "number": "1", "label": "Stronger Community" }
+    ]
+  },
+  "testimonial": {
+    "quote": "Thank you, Redmond Tech Orchestra, for taking the time to work with our students. Your encouragement and expertise make such a difference!",
+    "author": "Orchestra Director",
+    "affiliation": "Redmond High School"
+  },
+  "cta": {
+    "heading": "Want to bring our musicians to your school?",
+    "body": "We partner with high-school orchestra programs across the Eastside for sectional coaching, side-by-side rehearsals, and Q&A clinics. If you direct a school program — or know one that could benefit — we'd love to hear from you.",
+    "buttonLabel": "Get in touch",
+    "buttonTo": "/contact?topic=Outreach"
+  }
+}

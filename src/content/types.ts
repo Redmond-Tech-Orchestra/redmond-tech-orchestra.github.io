@@ -72,6 +72,37 @@ export type SponsorshipImage = {
   caption?: string;
 };
 
+export type EngageStat = {
+  number: string;
+  label: string;
+};
+
+export type EngageContent = {
+  hero: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    image: { src: string; alt: string };
+  };
+  tagline: string;
+  intro: string[];
+  stats: {
+    heading: string;
+    items: EngageStat[];
+  };
+  testimonial: {
+    quote: string;
+    author: string;
+    affiliation: string;
+  };
+  cta: {
+    heading: string;
+    body: string;
+    buttonLabel: string;
+    buttonTo: string;
+  };
+};
+
 export type SponsorshipContent = {
   hero: { title: string; subtitle: string };
   intro: string[];
