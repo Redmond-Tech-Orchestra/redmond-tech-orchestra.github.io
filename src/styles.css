@@ -252,10 +252,15 @@ ul { margin: 0 0 1em; padding-left: 1.25rem; }
 }
 
 /* ---------- Sections ---------- */
-#main { display: flex; flex-direction: column; gap: 6rem; padding-bottom: 6rem; }
+#main {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  padding-bottom: clamp(2.5rem, 6vw, 6rem);
+}
 section.block { padding: 0; }
 section.block h2 { text-align: center; margin-bottom: 0.5em; }
-section.block h2.section-eyebrow { margin-bottom: 6rem; }
+section.block h2.section-eyebrow { margin-bottom: clamp(2rem, 5vw, 6rem); }
 .section-lead {
   text-align: center;
   max-width: 720px;
@@ -688,15 +693,20 @@ select option { background: var(--bg-solid); color: var(--text); }
 
 /* ---------- Page hero (sub-pages) ---------- */
 .page-hero {
-  padding: 5rem 1.5rem 3rem;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 5vw, 3rem);
   text-align: center;
   border-bottom: 1px solid var(--line);
 }
-.page-hero h1 { color: #fff; margin: 0; }
+.page-hero h1 {
+  color: #fff;
+  margin: 0;
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  line-height: 1.15;
+}
 .page-hero p {
   margin: 0.75rem auto 0;
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   max-width: 640px;
 }
 .page-hero--image {
@@ -744,16 +754,21 @@ select option { background: var(--bg-solid); color: var(--text); }
 .section-eyebrow {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: clamp(0.5rem, 2vw, 1.25rem);
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 1.15rem;
+  font-size: clamp(0.85rem, 2.5vw, 1.15rem);
   font-weight: 600;
   color: var(--gold);
-  margin: 0 0 4rem;
+  margin: 0 0 clamp(1.5rem, 4vw, 4rem);
   text-align: center;
 }
-.section-eyebrow__text { flex: 0 0 auto; white-space: nowrap; }
+.section-eyebrow__text {
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: normal;
+  text-align: center;
+}
 .staff-divider {
   /* The staff-space (1 sp) is the primary geometric unit, exactly matching
      SMuFL conventions and Harmonia's `sp` parameter. The 5-line staff height
