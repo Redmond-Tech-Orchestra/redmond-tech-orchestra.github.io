@@ -19,9 +19,9 @@ const orgJsonLd = {
   foundingDate: "2024",
   foundingLocation: { "@type": "Place", name: "Redmond, Washington" },
   areaServed: { "@type": "Place", name: "Greater Seattle / Eastside, Washington" },
-  logo: "https://www.redmondtechorchestra.org/img/logo.png",
-  image: "https://www.redmondtechorchestra.org/img/heroes/home-hero.jpg",
-  url: "https://www.redmondtechorchestra.org/",
+  logo: "https://redmondtechorchestra.org/img/logo.png",
+  image: "https://redmondtechorchestra.org/img/heroes/home-hero.jpg",
+  url: "https://redmondtechorchestra.org/",
   nonprofitStatus: "Nonprofit501c3",
   sameAs: [
     "https://www.instagram.com/redmondtechorchestra/",
@@ -37,7 +37,7 @@ export default function Home() {
     description:
       "The Redmond Tech Orchestra is a 501(c)(3) community orchestra of working musicians performing free and low-cost concerts on the Eastside of Seattle.",
     path: "/",
-    image: "https://www.redmondtechorchestra.org/img/heroes/home-hero.jpg",
+    image: "https://redmondtechorchestra.org/img/heroes/home-hero.jpg",
   });
   const upcoming = concerts.find((c) => c.status === "upcoming");
 
