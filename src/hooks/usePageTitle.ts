@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const SITE_NAME = "Redmond Tech Orchestra";
-const ORIGIN = "https://www.redmondtechorchestra.org";
+const ORIGIN = "https://redmondtechorchestra.org";
 
 type PageMeta = {
   /** Page-specific title; org name is appended automatically. */
