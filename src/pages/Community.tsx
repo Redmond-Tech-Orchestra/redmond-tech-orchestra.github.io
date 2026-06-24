@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import { usePageMeta } from "../hooks/usePageTitle";
-import engage from "../content/engage.json";
-import type { EngageContent } from "../content/types";
+import community from "../content/community.json";
+import type { CommunityContent } from "../content/types";
 
-const content = engage as EngageContent;
+const content = community as CommunityContent;
 
-export default function Engage() {
+export default function Community() {
   usePageMeta({
-    title: "Engage",
+    title: "Community",
     description:
       "Redmond Tech Orchestra musicians visit local high schools to coach student orchestras, share repertoire, and inspire the next generation.",
-    path: "/engage",
+    path: "/community",
   });
 
   return (
     <>
       <section
-        className="page-hero page-hero--image engage-hero"
+        className="page-hero page-hero--image community-hero"
         style={{ backgroundImage: `url(${content.hero.image.src})` }}
         aria-label={content.hero.image.alt}
       >
@@ -29,7 +29,7 @@ export default function Engage() {
       </section>
 
       <section className="block">
-        <div className="container engage-tagline">
+        <div className="container community-tagline">
           <p>{content.tagline}</p>
         </div>
       </section>
@@ -47,11 +47,11 @@ export default function Engage() {
       <section className="block">
         <div className="container">
           <SectionEyebrow>{content.stats.heading}</SectionEyebrow>
-          <ul className="engage-stats">
+          <ul className="community-stats">
             {content.stats.items.map((stat) => (
-              <li className="engage-stat" key={stat.label}>
-                <div className="engage-stat__number">{stat.number}</div>
-                <div className="engage-stat__label">{stat.label}</div>
+              <li className="community-stat" key={stat.label}>
+                <div className="community-stat__number">{stat.number}</div>
+                <div className="community-stat__label">{stat.label}</div>
               </li>
             ))}
           </ul>
@@ -60,7 +60,7 @@ export default function Engage() {
 
       <section className="block">
         <div className="container" style={{ maxWidth: 820 }}>
-          <figure className="quote-card engage-quote">
+          <figure className="quote-card community-quote">
             <blockquote>{content.testimonial.quote}</blockquote>
             <figcaption>
               <div className="quote-card__byline">
@@ -73,7 +73,7 @@ export default function Engage() {
       </section>
 
       <section className="block">
-        <div className="container engage-cta" style={{ maxWidth: 820 }}>
+        <div className="container community-cta" style={{ maxWidth: 820 }}>
           <h2>{content.cta.heading}</h2>
           <p>{content.cta.body}</p>
           <p style={{ textAlign: "center", marginBottom: 0 }}>

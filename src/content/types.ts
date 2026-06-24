@@ -72,12 +72,12 @@ export type SponsorshipImage = {
   caption?: string;
 };
 
-export type EngageStat = {
+export type CommunityStat = {
   number: string;
   label: string;
 };
 
-export type EngageContent = {
+export type CommunityContent = {
   hero: {
     eyebrow: string;
     title: string;
@@ -88,7 +88,7 @@ export type EngageContent = {
   intro: string[];
   stats: {
     heading: string;
-    items: EngageStat[];
+    items: CommunityStat[];
   };
   testimonial: {
     quote: string;
