@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { SectionEyebrow } from "../components/SectionEyebrow";
+import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageTitle";
 import community from "../content/community.json";
 import type { CommunityContent } from "../content/types";
@@ -16,26 +17,14 @@ export default function Community() {
 
   return (
     <>
-      <section
-        className="page-hero page-hero--image community-hero"
-        style={{ backgroundImage: `url(${content.hero.image.src})` }}
-        aria-label={content.hero.image.alt}
-      >
-        <div className="container">
-          <p className="hero-eyebrow">{content.hero.eyebrow}</p>
-          <h1>{content.hero.title}</h1>
-          <p>{content.hero.subtitle}</p>
-        </div>
-      </section>
-
-      <section className="block">
-        <div className="container community-tagline">
-          <p>{content.tagline}</p>
-        </div>
-      </section>
+      <PageHero
+        title={content.hero.eyebrow}
+        backgroundImage={content.hero.image.src}
+      />
 
       <section className="block">
         <div className="container">
+          <SectionEyebrow>{content.tagline}</SectionEyebrow>
           {content.intro.map((paragraph, i) => (
             <p key={i} className="intro-body" style={{ textAlign: "left" }}>
               {paragraph}
@@ -75,6 +64,12 @@ export default function Community() {
               className="community-photo"
               src="/img/community/Microsoft_Asian_Spring_Festival.png"
               alt="Microsoft Asian Spring Festival"
+              loading="lazy"
+            />
+            <img
+              className="community-photo"
+              src="/img/community/LakeWashingtonHighSchool2026.png"
+              alt="Lake Washington High School 2026"
               loading="lazy"
             />
           </div>
