@@ -1129,6 +1129,32 @@ select option { background: var(--bg-solid); color: var(--text); }
     grid-template-columns: 1fr 1fr;
   }
 }
+.community-highlights {
+  margin: 1.5rem auto 0;
+  max-width: 720px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 3rem;
+  text-align: center;
+}
+.community-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.community-highlight__number {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gold);
+}
+.community-highlight__label {
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
 .community-photos {
   margin: 1rem auto 0;
   max-width: 980px;

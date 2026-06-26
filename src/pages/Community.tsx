@@ -50,6 +50,20 @@ export default function Community() {
           <h2 style={{ textAlign: "center" }}>
             Connecting communities through performances at landmark Eastside events.
           </h2>
+          <div className="community-highlights">
+            <div className="community-highlight">
+              <span className="community-highlight__number">250+</span>
+              <span className="community-highlight__label">Mentorship Reach</span>
+            </div>
+            <div className="community-highlight">
+              <span className="community-highlight__number">67B</span>
+              <span className="community-highlight__label">Annual Volunteer Hours</span>
+            </div>
+            <div className="community-highlight">
+              <span className="community-highlight__number">One</span>
+              <span className="community-highlight__label">Stronger Community</span>
+            </div>
+          </div>
           <div className="community-photos">
             <img
               className="community-photo"
@@ -68,7 +82,7 @@ export default function Community() {
       </section>
 
       <section className="block">
-        <div className="container community-cta" style={{ maxWidth: 820 }}>
+        <div className="container community-cta">
           <h2>{content.cta.heading}</h2>
           <p>{content.cta.body}</p>
           <p style={{ textAlign: "center", marginBottom: 0 }}>
