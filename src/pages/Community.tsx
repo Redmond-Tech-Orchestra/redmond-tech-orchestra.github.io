@@ -36,42 +36,25 @@ export default function Community() {
       <section className="block">
         <div className="container">
           <SectionEyebrow>{content.stats.heading}</SectionEyebrow>
-          <h2 style={{ textAlign: "center" }}>
-            Connecting communities through performances at landmark Eastside events.
-          </h2>
+          <h2 style={{ textAlign: "center" }}>{content.stats.subheading}</h2>
           <div className="community-highlights">
-            <div className="community-highlight">
-              <span className="community-highlight__number">250+</span>
-              <span className="community-highlight__label">Mentorship Reach</span>
-            </div>
-            <div className="community-highlight">
-              <span className="community-highlight__number">67B</span>
-              <span className="community-highlight__label">Annual Volunteer Hours</span>
-            </div>
-            <div className="community-highlight">
-              <span className="community-highlight__number">One</span>
-              <span className="community-highlight__label">Stronger Community</span>
-            </div>
+            {content.stats.items.map((stat, i) => (
+              <div key={i} className="community-highlight">
+                <span className="community-highlight__number">{stat.number}</span>
+                <span className="community-highlight__label">{stat.label}</span>
+              </div>
+            ))}
           </div>
           <div className="community-photos">
-            <img
-              className="community-photo"
-              src="/img/community/Marymoor_Village_Station_Grand_Opening.png"
-              alt="Marymoor Village Station Grand Opening"
-              loading="lazy"
-            />
-            <img
-              className="community-photo"
-              src="/img/community/Microsoft_Asian_Spring_Festival.png"
-              alt="Microsoft Asian Spring Festival"
-              loading="lazy"
-            />
-            <img
-              className="community-photo"
-              src="/img/community/LakeWashingtonHighSchool2026.png"
-              alt="Lake Washington High School 2026"
-              loading="lazy"
-            />
+            {content.photos.map((photo, i) => (
+              <img
+                key={i}
+                className="community-photo"
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+              />
+            ))}
           </div>
         </div>
       </section>

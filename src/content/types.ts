@@ -88,8 +88,10 @@ export type CommunityContent = {
   intro: string[];
   stats: {
     heading: string;
+    subheading: string;
     items: CommunityStat[];
   };
+  photos: { src: string; alt: string }[];
   testimonial: {
     quote: string;
     author: string;

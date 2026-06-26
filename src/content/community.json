@@ -13,13 +13,27 @@
   ],
   "stats": {
     "heading": "Making an Impact",
+    "subheading": "Connecting communities through performances at landmark Eastside events.",
     "items": [
-      { "number": "4", "label": "High Schools Visited" },
-      { "number": "60+", "label": "Volunteer Hours" },
-      { "number": "120+", "label": "Student Musicians Reached" },
-      { "number": "1", "label": "Stronger Community" }
+      { "number": "250+", "label": "Mentorship Reach" },
+      { "number": "67B", "label": "Annual Volunteer Hours" },
+      { "number": "One", "label": "Stronger Community" }
     ]
   },
+  "photos": [
+    {
+      "src": "/img/community/Marymoor_Village_Station_Grand_Opening.png",
+      "alt": "Marymoor Village Station Grand Opening"
+    },
+    {
+      "src": "/img/community/Microsoft_Asian_Spring_Festival.png",
+      "alt": "Microsoft Asian Spring Festival"
+    },
+    {
+      "src": "/img/community/LakeWashingtonHighSchool2026.png",
+      "alt": "Lake Washington High School 2026"
+    }
+  ],
   "cta": {
     "heading": "Bring live music to your program or community",
     "body": "Need an orchestra, an ensemble, a few musicians, or a clinician to coach your students? We'd love to help.",
