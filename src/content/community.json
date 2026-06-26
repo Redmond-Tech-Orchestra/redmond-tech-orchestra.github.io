@@ -22,15 +22,10 @@
       { "number": "1", "label": "Stronger Community" }
     ]
   },
-  "testimonial": {
-    "quote": "Thank you, Redmond Tech Orchestra, for taking the time to work with our students. Your encouragement and expertise make such a difference!",
-    "author": "Orchestra Director",
-    "affiliation": "Redmond High School"
-  },
   "cta": {
-    "heading": "Looking for music for your program or community?",
-    "body": "We partner with high-school orchestra programs across the Eastside for sectional coaching, side-by-side rehearsals, and Q&A clinics. If you direct a school program — or know one that could benefit — we'd love to hear from you.",
-    "buttonLabel": "Get in touch",
+    "heading": "Bring live music to your program or community",
+    "body": "Need an orchestra, an ensemble, a few musicians, or a clinician to coach your students? We'd love to help.",
+    "buttonLabel": "Let's talk",
     "buttonTo": "/contact?topic=Outreach"
   }
 }

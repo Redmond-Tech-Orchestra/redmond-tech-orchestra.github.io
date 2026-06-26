@@ -47,28 +47,23 @@ export default function Community() {
       <section className="block">
         <div className="container">
           <SectionEyebrow>{content.stats.heading}</SectionEyebrow>
-          <ul className="community-stats">
-            {content.stats.items.map((stat) => (
-              <li className="community-stat" key={stat.label}>
-                <div className="community-stat__number">{stat.number}</div>
-                <div className="community-stat__label">{stat.label}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="block">
-        <div className="container" style={{ maxWidth: 820 }}>
-          <figure className="quote-card community-quote">
-            <blockquote>{content.testimonial.quote}</blockquote>
-            <figcaption>
-              <div className="quote-card__byline">
-                <strong>{content.testimonial.author}</strong>
-                <span>{content.testimonial.affiliation}</span>
-              </div>
-            </figcaption>
-          </figure>
+          <h2 style={{ textAlign: "center" }}>
+            Connecting communities through performances at landmark Eastside events.
+          </h2>
+          <div className="community-photos">
+            <img
+              className="community-photo"
+              src="/img/community/Marymoor_Village_Station_Grand_Opening.png"
+              alt="Marymoor Village Station Grand Opening"
+              loading="lazy"
+            />
+            <img
+              className="community-photo"
+              src="/img/community/Microsoft_Asian_Spring_Festival.png"
+              alt="Microsoft Asian Spring Festival"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

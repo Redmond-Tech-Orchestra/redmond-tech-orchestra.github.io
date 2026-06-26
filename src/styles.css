@@ -1129,6 +1129,25 @@ select option { background: var(--bg-solid); color: var(--text); }
     grid-template-columns: 1fr 1fr;
   }
 }
+.community-photos {
+  margin: 1rem auto 0;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .community-photos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.community-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  display: block;
+}
 .community-stat {
   position: relative;
   background: var(--surface);
