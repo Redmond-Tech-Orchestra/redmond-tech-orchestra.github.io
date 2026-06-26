@@ -35,7 +35,7 @@ export default function Community() {
       </section>
 
       <section className="block">
-        <div className="container" style={{ maxWidth: 820 }}>
+        <div className="container">
           {content.intro.map((paragraph, i) => (
             <p key={i} className="intro-body" style={{ textAlign: "left" }}>
               {paragraph}
