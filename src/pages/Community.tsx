@@ -26,7 +26,7 @@ export default function Community() {
         <div className="container">
           <SectionEyebrow>{content.tagline}</SectionEyebrow>
           {content.intro.map((paragraph, i) => (
-            <p key={i} className="intro-body" style={{ textAlign: "left" }}>
+            <p key={i} className="intro-body">
               {paragraph}
             </p>
           ))}
@@ -36,7 +36,7 @@ export default function Community() {
       <section className="block">
         <div className="container">
           <SectionEyebrow>{content.stats.heading}</SectionEyebrow>
-          <h2 style={{ textAlign: "center" }}>{content.stats.subheading}</h2>
+          <h2>{content.stats.subheading}</h2>
           <div className="community-highlights">
             {content.stats.items.map((stat, i) => (
               <div key={i} className="community-highlight">
@@ -63,7 +63,7 @@ export default function Community() {
         <div className="container community-cta">
           <h2>{content.cta.heading}</h2>
           <p>{content.cta.body}</p>
-          <p style={{ textAlign: "center", marginBottom: 0 }}>
+          <p>
             <Link to={content.cta.buttonTo} className="btn">
               {content.cta.buttonLabel}
             </Link>
