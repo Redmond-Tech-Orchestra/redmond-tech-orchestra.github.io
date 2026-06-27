@@ -1143,6 +1143,9 @@ select option { background: var(--bg-solid); color: var(--text); }
 }
 
 /* Closing CTA block — heading + body + button, centered. */
+.community-cta {
+  text-align: center;
+}
 .community-cta h2 {
   margin-bottom: 1rem;
 }
