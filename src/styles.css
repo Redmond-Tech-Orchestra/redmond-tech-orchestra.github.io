@@ -1087,53 +1087,10 @@ select option { background: var(--bg-solid); color: var(--text); }
 }
 
 /* ---------- Community (community outreach) page ---------- */
-.community-hero {
-  /* The eyebrow + h1 + p block needs a touch more breathing room than the
-     default page-hero so the gold "COMMUNITY OUTREACH" label can stand on
-     its own line above the title. */
-  --hero-focal: 50% 35%;
-}
-.community-hero .hero-eyebrow {
-  margin-bottom: 0.75rem;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
-}
-
 .intro-body.community-intro {
   max-width: 980px;
 }
 
-
-/* Tagline band — gold-toned, italicized, centered. Mirrors the visual weight
-   of the green band in the source mock without breaking the dark palette. */
-.community-tagline {
-  text-align: center;
-  max-width: 820px;
-}
-.community-tagline p {
-  margin: 0;
-  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
-  font-style: italic;
-  color: var(--gold);
-  line-height: 1.5;
-  letter-spacing: 0.01em;
-}
-
-/* Big-number impact stats. Same card chrome as .highlight-card but the
-   number is the dominant element. */
-.community-stats {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem auto 0;
-  max-width: 720px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-@media (min-width: 640px) {
-  .community-stats {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 .community-highlights {
   margin: 1.5rem auto 0;
   max-width: 720px;
@@ -1184,57 +1141,8 @@ select option { background: var(--bg-solid); color: var(--text); }
   border: 1px solid var(--line);
   display: block;
 }
-.community-stat {
-  position: relative;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 2.25rem 1.5rem 1.75rem;
-  text-align: center;
-  overflow: hidden;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.community-stat::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), transparent);
-}
-.community-stat:hover {
-  transform: translateY(-2px);
-  border-color: var(--line-strong);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-}
-.community-stat__number {
-  font-size: clamp(2.5rem, 6vw, 3.75rem);
-  font-weight: 700;
-  line-height: 1;
-  color: var(--gold);
-  letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
-}
-.community-stat__label {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  line-height: 1.4;
-}
-
-/* The testimonial uses the existing .quote-card chrome but without a member
-   photo — bylines should still center cleanly. */
-.community-quote {
-  margin: 0 auto;
-}
-.community-quote figcaption {
-  justify-content: center;
-  text-align: center;
-}
 
 /* Closing CTA block — heading + body + button, centered. */
-.community-cta {
-  text-align: center;
-}
 .community-cta h2 {
   margin-bottom: 1rem;
 }
