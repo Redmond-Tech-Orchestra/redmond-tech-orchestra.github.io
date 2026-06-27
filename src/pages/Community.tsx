@@ -26,7 +26,7 @@ export default function Community() {
         <div className="container">
           <SectionEyebrow>{content.tagline}</SectionEyebrow>
           {content.intro.map((paragraph, i) => (
-            <p key={i} className="intro-body">
+            <p key={i} className="intro-body community-intro">
               {paragraph}
             </p>
           ))}

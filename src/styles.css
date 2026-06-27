@@ -837,7 +837,7 @@ select option { background: var(--bg-solid); color: var(--text); }
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.25rem;
-  max-width: 980px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1097,6 +1097,11 @@ select option { background: var(--bg-solid); color: var(--text); }
   margin-bottom: 0.75rem;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
 }
+
+.intro-body.community-intro {
+  max-width: 980px;
+}
+
 
 /* Tagline band — gold-toned, italicized, centered. Mirrors the visual weight
    of the green band in the source mock without breaking the dark palette. */
