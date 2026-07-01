@@ -36,7 +36,7 @@ export default function Community() {
       <section className="block">
         <div className="container">
           <SectionEyebrow>{content.stats.heading}</SectionEyebrow>
-          <h2>{content.stats.subheading}</h2>
+          <p className="intro-body community-intro">{content.stats.subheading}</p>
           <div className="community-highlights">
             {content.stats.items.map((stat, i) => (
               <div key={i} className="community-highlight">
