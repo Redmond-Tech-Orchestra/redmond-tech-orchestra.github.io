@@ -15,6 +15,7 @@
   "nav": [
     { "label": "Home", "to": "/" },
     { "label": "Concerts", "to": "/concerts" },
+    { "label": "Community Outreach", "to": "/community" },
     { "label": "About", "to": "/about" },
     { "label": "Contact", "to": "/contact" }
   ]

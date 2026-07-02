@@ -837,7 +837,7 @@ select option { background: var(--bg-solid); color: var(--text); }
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.25rem;
-  max-width: 760px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1085,3 +1085,76 @@ select option { background: var(--bg-solid); color: var(--text); }
   text-align: center;
   font-style: italic;
 }
+
+/* ---------- Community (community outreach) page ---------- */
+.intro-body.community-intro {
+  max-width: 980px;
+}
+
+.community-highlights {
+  margin: 1.5rem auto 0;
+  max-width: 980px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 3rem;
+  text-align: center;
+}
+.community-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.community-highlight__number {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gold);
+}
+.community-highlight__label {
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+.community-photos {
+  margin: 1rem auto 0;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .community-photos {
+    grid-template-columns: 1fr 1fr;
+  }
+  .community-photo:nth-child(3):last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 0.75rem);
+    margin-inline: auto;
+  }
+}
+.community-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+/* Closing CTA block — heading + body + button, centered. */
+.community-cta {
+  text-align: center;
+}
+.community-cta h2 {
+  margin-bottom: 1rem;
+}
+.community-cta p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+

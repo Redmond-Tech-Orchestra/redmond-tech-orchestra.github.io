@@ -4,7 +4,7 @@ import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageTitle";
 import site from "../content/site.json";
 
-const TOPICS = ["General inquiry", "Joining the orchestra", "Sponsorship", "Press / media", "Other"];
+const TOPICS = ["General inquiry", "Joining the orchestra", "Sponsorship", "Press / media", "Outreach", "Other"];
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzlgljy";
 
 export default function Contact() {

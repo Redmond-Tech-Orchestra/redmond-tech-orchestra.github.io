@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "eyebrow": "Community Outreach",
+    "image": {
+      "src": "/img/community/community_outreach_2.png",
+      "alt": "Redmond Tech Orchestra musicians coaching high school student musicians during a rehearsal"
+    }
+  },
+  "tagline": "Building Community Through Music",
+  "intro": [
+    "Redmond Tech Orchestra brings people together through the shared experience of live orchestral music. Through community performances, cultural celebrations, educational outreach, and student mentorship, we create opportunities for audiences, young musicians, and community organizations across the Eastside to connect, learn, and be inspired.",
+    "Our members volunteer their time and talent to enrich community life, support the next generation of musicians, and make high-quality orchestral music accessible to more people. From neighborhood events and civic celebrations to school partnerships and side-by-side learning experiences, we use music to strengthen the connections that make our community thrive."
+  ],
+  "stats": {
+    "heading": "Making an impact on stage and beyond",
+    "subheading": "Connecting communities through landmark Eastside performances and inspiring the next generation of musicians.",
+    "items": [
+      { "number": "75+", "label": "Student Coaching Hours" },
+      { "number": "300+", "label": "Volunteer Community Performance Hours" },
+      { "number": "One", "label": "Stronger Community" }
+    ]
+  },
+  "photos": [
+    {
+      "src": "/img/community/Marymoor_Village_Station_Grand_Opening.png",
+      "alt": "Marymoor Village Station Grand Opening"
+    },
+    {
+      "src": "/img/community/Microsoft_Asian_Spring_Festival.png",
+      "alt": "Microsoft Asian Spring Festival"
+    },
+    {
+      "src": "/img/community/LakeWashingtonHighSchool2026.png",
+      "alt": "Lake Washington High School 2026"
+    },
+    {
+      "src": "/img/community/20251107_Korean_National_Day.JPG",
+      "alt": "Korean National Day Reception 2025"
+    }
+  ],
+  "cta": {
+    "heading": "Bring live music to your program or community.",
+    "body": "Need an orchestra, an ensemble, a few musicians, or a clinician to coach your students? We'd love to help.",
+    "buttonLabel": "Let's talk",
+    "buttonTo": "/contact?topic=Outreach"
+  }
+}
