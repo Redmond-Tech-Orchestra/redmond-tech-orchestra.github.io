@@ -1,5 +1,42 @@
 [
   {
+    "id": "moose-aug-2026",
+    "title": "August 2026",
+    "date": "2026-08-21T17:30:00-07:00",
+    "dateDisplay": [
+      "August 21, 2026 · 5:30 PM"
+    ],
+    "venueId": "redmond-senior-center",
+    "status": "upcoming",
+    "category": "chamber",
+    "poster": "/img/concerts/MOOSE-Aug-2026-V3.png",
+    "description": "Come for an evening of music with the Redmond Tech Orchestra's chamber ensembles!",
+    "program": [
+      { "composer": "Giacomo Puccini", "pieces": ["Crisantemi"] },
+      { "composer": "Jean Sibelius", "pieces": ["Impromptu"] },
+      { "composer": "Raphael Novarina", "pieces": ["Notre Envol"] },
+      { "composer": "Carlos Gardel", "pieces": ["Por Una Cabeza"] }
+    ]
+  },
+  {
+    "id": "nov-2026",
+    "title": "November 2026",
+    "date": "2026-11-01T16:00:00-07:00",
+    "dateDisplay": [
+      "November 1, 2026 · 4:00 PM"
+    ],
+    "venueId": "rpac",
+    "status": "upcoming",
+    "category": "masterworks",
+    "description": "More information coming soon!",
+    "program": [
+      { "composer": "John Williams", "pieces": ["Star Wars Main Theme"] },
+      { "composer": "Gustav Holst", "pieces": ["Mars"] },
+      { "composer": "Erich Wolfgang Korngold", "pieces": ["King's Row Suite"] },
+      { "composer": "Joe Hisaishi", "pieces": ["Spirited Away Suite"] }
+    ]
+  },
+  {
     "id": "shakespeare-2026",
     "title": "All the World's a Song",
     "date": "2026-07-16T19:00:00-07:00",
@@ -8,7 +45,7 @@
       "July 18, 2026 · 4:00 PM"
     ],
     "venueId": "rpac",
-    "status": "upcoming",
+    "status": "past",
     "category": "masterworks",
     "poster": "/img/concerts/shakespeare.png",
     "ticketsUrl": "https://www.eventbrite.com/e/all-the-worlds-a-song-orchestral-themes-inspired-by-shakespeare-tickets-1989325371738?aff=rtoweb",
