@@ -10,7 +10,7 @@
     "status": "upcoming",
     "category": "chamber",
     "poster": "/img/concerts/MOOSE-Aug-2026-V3.png",
-    "description": "Featuring the works of Crisantemi by Giacomo Puccini, Impromptu by Jean Sibelius, Notre Envol by Raphael Novarina, Por Una Cabeza by Carlos Gardel",
+    "description": "Come for a night of chamber music with the Redmond Tech Orchestra's MOOSE ensemble!",
     "program": [
       { "composer": "Giacomo Puccini", "pieces": ["Crisantemi"] },
       { "composer": "Jean Sibelius", "pieces": ["Impromptu"] },
