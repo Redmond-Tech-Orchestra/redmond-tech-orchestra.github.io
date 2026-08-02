@@ -38,6 +38,7 @@
       "alt": "Korean National Day Reception 2025"
     }
   ],
+  "carouselDelayMs": 4000,
   "cta": {
     "heading": "Bring live music to your program or community.",
     "body": "Looking for performances, ensembles, or guest musicians for your school or community program?",

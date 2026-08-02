@@ -92,6 +92,7 @@ export type CommunityContent = {
     items: CommunityStat[];
   };
   photos: { src: string; alt: string }[];
+  carouselDelayMs?: number;
   testimonial: {
     quote: string;
     author: string;

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CommunityImageCarousel from "../components/CommunityImageCarousel";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageTitle";
@@ -45,17 +46,10 @@ export default function Community() {
               </div>
             ))}
           </div>
-          <div className="community-photos">
-            {content.photos.map((photo, i) => (
-              <img
-                key={i}
-                className="community-photo"
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-              />
-            ))}
-          </div>
+          <CommunityImageCarousel
+            photos={content.photos}
+            delayMs={content.carouselDelayMs}
+          />
         </div>
       </section>
 
