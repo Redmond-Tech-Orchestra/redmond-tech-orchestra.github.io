@@ -1,3 +1,6 @@
+import { useMemo } from "react";
+import AutoScroll from "embla-carousel-auto-scroll";
+import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "react-router-dom";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import PageHero from "../components/PageHero";
@@ -8,6 +11,29 @@ import type { CommunityContent } from "../content/types";
 const content = community as CommunityContent;
 
 export default function Community() {
+  const carouselPhotos =
+    content.photos.length < 4
+      ? [...content.photos, ...content.photos]
+      : content.photos;
+  const autoScroll = useMemo(
+    () =>
+      AutoScroll({
+        playOnInit:
+          typeof window === "undefined" ||
+          !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+        speed: 1,
+        startDelay: 1000,
+        stopOnFocusIn: false,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false,
+      }),
+    [],
+  );
+  const [communityPhotosRef] = useEmblaCarousel(
+    { align: "start", dragFree: true, loop: true },
+    [autoScroll],
+  );
+
   usePageMeta({
     title: "Community",
     description:
@@ -45,16 +71,39 @@ export default function Community() {
               </div>
             ))}
           </div>
-          <div className="community-photos">
-            {content.photos.map((photo, i) => (
-              <img
-                key={i}
-                className="community-photo"
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-              />
-            ))}
+          <div
+            className="community-photos"
+            ref={communityPhotosRef}
+            role="region"
+            aria-label="Community photos"
+          >
+            <div className="community-photos__track">
+              {carouselPhotos.map((photo, i) => {
+                const photoIndex = i % content.photos.length;
+                const isDuplicate = i >= content.photos.length;
+
+                return (
+                  <div
+                    key={`${photo.src}-${i}`}
+                    className="community-photo-slide"
+                    role={isDuplicate ? undefined : "group"}
+                    aria-label={
+                      isDuplicate
+                        ? undefined
+                        : `Photo ${photoIndex + 1} of ${content.photos.length}`
+                    }
+                    aria-hidden={isDuplicate || undefined}
+                  >
+                    <img
+                      className="community-photo"
+                      src={photo.src}
+                      alt={isDuplicate ? "" : photo.alt}
+                      loading="lazy"
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
