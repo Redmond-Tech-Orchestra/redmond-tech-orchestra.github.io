@@ -25,14 +25,16 @@
     "dateDisplay": [
       "November 1, 2026 · 4:00 PM"
     ],
-    "venueId": "rpac",
+    "venueId": "meydenbauer-convention-center",
     "status": "upcoming",
     "category": "masterworks",
     "description": "More information coming soon!",
     "program": [
-      { "composer": "John Williams", "pieces": ["Star Wars Main Theme"] },
-      { "composer": "Gustav Holst", "pieces": ["Mars"] },
+      { "composer": "Samuel Barber", "pieces": ["Violin Concerto, Mvt. 1 (Isabel Milewski, soloist)"] },
+      { "composer": "Gustav Holst", "pieces": ["Mars from \"The Planets\""] },
+      { "composer": "John Williams", "pieces": ["Star Wars Theme"] },
       { "composer": "Erich Wolfgang Korngold", "pieces": ["King's Row Suite"] },
+      { "composer": "Maurice Ravel", "pieces": ["Valses nobles et sentimentales, Mvt. 1, 2, 6, 7"] },
       { "composer": "Joe Hisaishi", "pieces": ["Spirited Away Suite"] }
     ]
   },
@@ -86,7 +88,7 @@
     "title": "Symphonic Fantasia",
     "date": "2026-04-04T16:00:00-07:00",
     "dateDisplay": "April 4, 2026 · 4:00 PM",
-    "venueId": "meydenbauer",
+    "venueId": "meydenbauer-convention-center",
     "status": "past",
     "category": "masterworks",
     "poster": "/img/concerts/symphonic-fantasia.jpg",

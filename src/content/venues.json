@@ -15,6 +15,14 @@
     "postalCode": "98004",
     "addressCountry": "US"
   },
+  "meydenbauer-convention-center": {
+    "name": "Meydenbauer Convention Center",
+    "streetAddress": "11100 NE 6th St",
+    "addressLocality": "Bellevue",
+    "addressRegion": "WA",
+    "postalCode": "98004",
+    "addressCountry": "US"
+  },
   "overlake-christian": {
     "name": "Overlake Christian Church",
     "streetAddress": "9900 Willows Rd NE",
