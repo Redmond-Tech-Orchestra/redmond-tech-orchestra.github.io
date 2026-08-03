@@ -30,9 +30,11 @@
     "category": "masterworks",
     "description": "More information coming soon!",
     "program": [
-      { "composer": "John Williams", "pieces": ["Star Wars Main Theme"] },
-      { "composer": "Gustav Holst", "pieces": ["Mars"] },
+      { "composer": "Samuel Barber", "pieces": ["Violin Concerto, Mvt. 1"] },
+      { "composer": "Gustav Holst", "pieces": ["Mars from \"The Planets\""] },
+      { "composer": "John Williams", "pieces": ["Star Wars Theme"] },
       { "composer": "Erich Wolfgang Korngold", "pieces": ["King's Row Suite"] },
+      { "composer": "Maurice Ravel", "pieces": ["Valses nobles et sentimentales, Mvt. 1, 2, 6, 7"] },
       { "composer": "Joe Hisaishi", "pieces": ["Spirited Away Suite"] }
     ]
   },
