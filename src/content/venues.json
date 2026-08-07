@@ -86,5 +86,13 @@
     "addressRegion": "WA",
     "postalCode": "98052",
     "addressCountry": "US"
+  },
+  "downtown-park": {
+    "name": "Redmond Downtown Park",
+    "streetAddress": "16101 Redmond Way",
+    "addressLocality": "Redmond",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "addressCountry": "US"
   }
 }
