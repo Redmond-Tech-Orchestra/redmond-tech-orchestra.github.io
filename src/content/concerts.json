@@ -19,6 +19,20 @@
     ]
   },
   {
+    "id": "arts-in-the-park-2026",
+    "title": "Arts in the Park - Redmond",
+    "date": "2026-09-05T18:30:00-07:00",
+    "dateDisplay": "September 5, 2026 · 6:30 PM",
+    "venueId": "downtown-park",
+    "status": "upcoming",
+    "category": "community",
+    "poster": "/img/concerts/arts-in-the-park-2026.jpg",
+    "posterOrientation": "landscape",
+    "ticketsUrl": "https://www.eventbrite.com/e/arts-in-the-park-redmond-tickets-1996026726671?aff=rto",
+    "programUrl": "/concert-programs/arts-in-the-park-2026.pdf",
+    "description": "Redmond Tech Orchestra performs as part of Redmond's Arts in the Park September Concert Series at Downtown Park."
+  },
+  {
     "id": "nov-2026",
     "title": "November 2026",
     "date": "2026-11-01T16:00:00-07:00",
