@@ -21,7 +21,7 @@ export default function Community() {
         playOnInit:
           typeof window === "undefined" ||
           !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-        speed: 1,
+        speed: 0.4,
         startDelay: 1000,
         stopOnFocusIn: false,
         stopOnInteraction: false,
