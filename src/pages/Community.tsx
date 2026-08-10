@@ -12,7 +12,7 @@ const content = community as CommunityContent;
 
 export default function Community() {
   const carouselPhotos =
-    content.photos.length < 4
+    content.photos.length < 10
       ? [...content.photos, ...content.photos]
       : content.photos;
   const autoScroll = useMemo(
