@@ -113,6 +113,7 @@ export default function Home() {
                       src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
                       alt=""
                       loading="lazy"
+                      decoding="async"
                     />
                     <span className="video-play" aria-hidden="true">▶</span>
                   </div>

@@ -29,7 +29,7 @@ export default function About() {
               </div>
             </div>
             <div>
-              <img src="/img/about-moomie.jpg" alt="Moomie, an RTO musician." />
+              <img src="/img/about-moomie.jpg" alt="Moomie, an RTO musician." loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function About() {
             {about.team.map((member) => (
               <article className="team-card" key={member.name}>
                 {"image" in member && member.image && (
-                  <img className="team-photo" src={member.image} alt={member.name} loading="lazy" />
+                  <img className="team-photo" src={member.image} alt={member.name} loading="lazy" decoding="async" />
                 )}
                 <h3>{member.name}</h3>
                 <div className="team-role">{member.role}</div>
@@ -76,7 +76,7 @@ export default function About() {
                 <blockquote>{q.quote}</blockquote>
                 <figcaption>
                   {"image" in q && q.image && (
-                    <img className="member-photo" src={q.image} alt="" loading="lazy" />
+                    <img className="member-photo" src={q.image} alt="" loading="lazy" decoding="async" />
                   )}
                   <span className="quote-card__byline">
                     <strong>{q.name}</strong>
