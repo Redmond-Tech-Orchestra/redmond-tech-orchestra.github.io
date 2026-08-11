@@ -30,6 +30,7 @@ export default function Lightbox({ src, alt, onClose }: Props) {
         className="lightbox-img"
         src={src}
         alt={alt}
+        decoding="async"
         onClick={(e) => e.stopPropagation()}
       />
     </div>,

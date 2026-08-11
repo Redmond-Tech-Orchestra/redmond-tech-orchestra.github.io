@@ -99,6 +99,7 @@ export default function Community() {
                       src={photo.src}
                       alt={isDuplicate ? "" : photo.alt}
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 );

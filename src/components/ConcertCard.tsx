@@ -161,6 +161,7 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
             src={concert.poster}
             alt={concert.title + " poster"}
             loading="lazy"
+            decoding="async"
             itemProp="image"
           />
         </button>

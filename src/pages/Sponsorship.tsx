@@ -10,7 +10,7 @@ const content = sponsorship as SponsorshipContent;
 function SponsorFigure({ image }: { image: SponsorshipImage }) {
   return (
     <figure className="sponsor-figure">
-      <img src={image.src} alt={image.alt} loading="lazy" />
+      <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
       {image.caption && <figcaption>{image.caption}</figcaption>}
     </figure>
   );

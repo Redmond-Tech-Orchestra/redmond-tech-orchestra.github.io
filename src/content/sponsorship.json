@@ -8,7 +8,7 @@
     "Our mission is to make high-quality orchestral music accessible and enjoyable for everyone. We are seeking sponsors to help us continue this tradition and expand our reach. Your support will not only enhance our artistic endeavors but also provide valuable visibility for your business among a diverse and engaged audience."
   ],
   "introImage": {
-    "src": "/img/sponsor/heart-wordcloud.png",
+    "src": "/img/sponsor/heart-wordcloud.webp",
     "alt": "Heart-shaped word cloud of audience feedback featuring words such as Music, Conductor, Quality, and Musicians from RTO concert surveys"
   },
   "audience": {
@@ -30,7 +30,7 @@
     ],
     "footnote": "With an attendance of 3,000+ per performance, sponsoring RTO offers a unique opportunity to connect with a dedicated and appreciative audience. Audience engagement continues to grow, with a rising base of season subscribers and 75% of attendees committed to returning for future concerts.",
     "image": {
-      "src": "/img/sponsor/audience-feedback.png",
+      "src": "/img/sponsor/audience-feedback.webp",
       "alt": "Audience feedback highlights from recent RTO concert surveys."
     }
   },
@@ -88,7 +88,7 @@
     "heading": "Annual Sponsorship Packages",
     "lead": "Commit to a full season of supporting the Redmond Tech Orchestra and gain year-round recognition.",
     "image": {
-      "src": "/img/sponsor/ensemble-strip.png",
+      "src": "/img/sponsor/ensemble-strip.webp",
       "alt": "Three photos of RTO ensembles and musicians performing"
     },
     "tiers": [

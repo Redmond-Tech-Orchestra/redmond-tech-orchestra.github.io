@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "Community Outreach",
     "image": {
-      "src": "/img/community/community_outreach_2.png",
+      "src": "/img/community/community_outreach_2.webp",
       "alt": "Redmond Tech Orchestra musicians coaching high school student musicians during a rehearsal"
     }
   },
@@ -22,19 +22,19 @@
   },
   "photos": [
     {
-      "src": "/img/community/Marymoor_Village_Station_Grand_Opening.png",
+      "src": "/img/community/Marymoor_Village_Station_Grand_Opening.webp",
       "alt": "Marymoor Village Station Grand Opening"
     },
     {
-      "src": "/img/community/Microsoft_Asian_Spring_Festival.png",
+      "src": "/img/community/Microsoft_Asian_Spring_Festival.webp",
       "alt": "Microsoft Asian Spring Festival"
     },
     {
-      "src": "/img/community/Korean_National_Day.png",
+      "src": "/img/community/Korean_National_Day.webp",
       "alt": "Korean National Day Reception 2025"
     },
     {
-      "src": "/img/community/LWHS_Prep_Orchestra_Camp_2026.png",
+      "src": "/img/community/LWHS_Prep_Orchestra_Camp_2026.webp",
       "alt": "LWHS Prep Orchestra Camp"
     }
   ],
