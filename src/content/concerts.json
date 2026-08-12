@@ -10,6 +10,7 @@
     "status": "upcoming",
     "category": "chamber",
     "poster": "/img/concerts/MOOSE-Aug-2026-V3.jpg",
+    "ticketsUrl": "https://www.eventbrite.com/e/echoes-ascents-tickets-1997751261802?aff=rtoweb",
     "description": "Come for an evening of music with the Redmond Tech Orchestra's chamber ensembles!",
     "program": [
       { "composer": "Giacomo Puccini", "pieces": ["Crisantemi"] },
