@@ -5,6 +5,8 @@ import venuesData from "../content/venues.json";
 import Lightbox from "./Lightbox";
 
 const venues = venuesData as Record<string, Venue>;
+const EVENTBRITE_ORGANIZER_URL =
+  "https://www.eventbrite.com/o/redmond-tech-orchestra-79403107043";
 
 const CATEGORY_LABEL: Record<ConcertCategory, string> = {
   masterworks: "Masterworks",
@@ -134,7 +136,15 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
           )}
           {!concert.ticketsUrl && concert.status === "upcoming" && (
             <p className="tickets-pending">
-              Tickets on sale soon — check back closer to the date.
+              Tickets on sale soon.{" "}
+              <a
+                href={EVENTBRITE_ORGANIZER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Follow us on Eventbrite
+              </a>{" "}
+              to be notified as soon as tickets become available.
             </p>
           )}
           {concert.programUrl && (
