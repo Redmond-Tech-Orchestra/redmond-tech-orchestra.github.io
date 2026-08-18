@@ -108,6 +108,7 @@
     "category": "masterworks",
     "poster": "/img/concerts/symphonic-fantasia.jpg",
     "programUrl": "/concert-programs/april-2026-programs.pdf",
+    "recordingsUrl": "https://www.youtube.com/watch?v=JcI0i-kqdWA",
     "description": "Symphonic Fantasia paired Beethoven's Fifth with three works that featured in Disney's Fantasia: Dukas's La Péri Fanfare and The Sorcerer's Apprentice, Stravinsky's Firebird Suite, and Respighi's Pines of Rome. Big sounds, big pictures.",
     "program": [
       { "composer": "Paul Dukas", "pieces": ["La Péri: Fanfare", "The Sorcerer's Apprentice"] },
