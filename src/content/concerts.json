@@ -11,11 +11,19 @@
     "category": "chamber",
     "poster": "/img/concerts/MOOSE-Aug-2026-V3.jpg",
     "ticketsUrl": "https://www.eventbrite.com/e/echoes-ascents-tickets-1997751261802?aff=rtoweb",
+    "programUrl": "/concert-programs/august-2026-chamber-program.pdf",
     "description": "Come for an evening of music with the Redmond Tech Orchestra's chamber ensembles!",
     "program": [
-      { "composer": "Giacomo Puccini", "pieces": ["Crisantemi"] },
-      { "composer": "Jean Sibelius", "pieces": ["Impromptu"] },
-      { "composer": "Raphael Novarina", "pieces": ["Notre Envol"] },
+      { "composer": "Johann Sebastian Bach", "pieces": ["Concerto for Oboe and Violin in C minor, BWV 1060R: I. Allegro"] },
+      { "composer": "Dmitry Shostakovich", "pieces": ["Five Pieces for Two Violins and Piano: I. Prelude, II. Gavotte, III. Elegie, IV. Valse, V. Polka"] },
+      { "composer": "Edvard Grieg", "pieces": ["Cello Sonata in A minor, Op. 36: I. Allegro agitato"] },
+      { "composer": "Zequinha de Abreu / Sjoerd van der Veen", "pieces": ["Tico Tico no Fubá"] },
+      { "composer": "Masayoshi Soken / Bassoonify", "pieces": ["Final Fantasy 14 Starting Town Themes: Ul'dah, Gridania, Limsa Lominsa"] },
+      { "composer": "Ethan Eglip", "pieces": ["Imaginary Gardens"] },
+      { "composer": "Alfred Reed", "pieces": ["Double Wind Quintet: I. Intrada (Fanfares Entrances and Marches)"] },
+      { "composer": "Jean Sibelius", "pieces": ["Impromptu for Strings, Op. 5"] },
+      { "composer": "Giacomo Puccini", "pieces": ["Crisantemi, SC 65"] },
+      { "composer": "Raphaël Novarina / Michele Pellicani", "pieces": ["Notre Envol"] },
       { "composer": "Carlos Gardel", "pieces": ["Por Una Cabeza"] }
     ]
   },
