@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import about from "../content/about.json";
+import site from "../content/site.json";
 import { usePageMeta } from "../hooks/usePageTitle";
 
 export default function About() {
@@ -97,7 +98,7 @@ export default function About() {
           </p>
           <div className="mt-2">
             <a
-              href="/bylaws.pdf"
+              href={site.bylawsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-ghost"
