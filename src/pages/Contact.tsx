@@ -5,6 +5,16 @@ import { usePageMeta } from "../hooks/usePageTitle";
 import site from "../content/site.json";
 
 const TOPICS = ["General inquiry", "Joining the orchestra", "Sponsorship", "Press / media", "Outreach", "Other"];
+const JOINING_TOPIC = "Joining the orchestra";
+const OPENINGS = [
+  "Oboe (Substitute)",
+  "2nd Bassoon",
+  "Tuba (Substitute)",
+  "Percussion (Substitute)",
+  "Viola",
+  "Cello",
+  "Bass",
+];
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzlgljy";
 
 export default function Contact() {
@@ -20,6 +30,7 @@ export default function Contact() {
   const [searchParams] = useSearchParams();
   const topicParam = searchParams.get("topic") ?? "";
   const initialTopic = TOPICS.includes(topicParam) ? topicParam : "";
+  const [topic, setTopic] = useState(initialTopic);
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,6 +58,7 @@ export default function Contact() {
 
       setSubmitted(true);
       form.reset();
+      setTopic("");
     } catch (err) {
       console.error("Form submission error:", err);
       setError("We couldn't send your message right now. Please try again in a moment.");
@@ -91,7 +103,13 @@ export default function Contact() {
             <div className="form-row">
               <div>
                 <label htmlFor="topic">I have a question about…</label>
-                <select id="topic" name="topic" required defaultValue={initialTopic}>
+                <select
+                  id="topic"
+                  name="topic"
+                  required
+                  value={topic}
+                  onChange={(event) => setTopic(event.target.value)}
+                >
                   <option value="" disabled>
                     Select a topic
                   </option>
@@ -103,6 +121,20 @@ export default function Contact() {
                 </select>
               </div>
             </div>
+            {topic === JOINING_TOPIC && (
+              <aside className="joining-info" aria-labelledby="joining-info-title">
+                <h2 id="joining-info-title">Current openings</h2>
+                <ul>
+                  {OPENINGS.map((opening) => (
+                    <li key={opening}>{opening}</li>
+                  ))}
+                </ul>
+                <p>
+                  All openings require an audition. Audition materials will be provided upon request.
+                </p>
+                <p>We rehearse Thursdays from 5–7 p.m.</p>
+              </aside>
+            )}
             <div className="form-row">
               <div>
                 <label htmlFor="message">Message</label>

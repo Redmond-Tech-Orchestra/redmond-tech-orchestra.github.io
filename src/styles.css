@@ -619,6 +619,27 @@ input:focus, textarea:focus, select:focus {
 }
 textarea { min-height: 140px; resize: vertical; }
 select option { background: var(--bg-solid); color: var(--text); }
+.joining-info {
+  margin: 0 0 1rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text-muted);
+}
+.joining-info h2 {
+  margin: 0 0 0.6rem;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+.joining-info ul {
+  margin: 0 0 0.75rem;
+  padding-left: 1.25rem;
+  columns: 2;
+}
+.joining-info p { margin: 0.4rem 0 0; }
+@media (max-width: 540px) { .joining-info ul { columns: 1; } }
 .form-message {
   margin: 0 0 1rem;
   padding: 0.65rem 0.8rem;
