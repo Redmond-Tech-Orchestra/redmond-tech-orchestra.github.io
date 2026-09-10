@@ -33,7 +33,7 @@
     "date": "2026-09-05T18:30:00-07:00",
     "dateDisplay": "September 5, 2026 · 6:30 PM",
     "venueId": "downtown-park",
-    "status": "upcoming",
+    "status": "past",
     "category": "community",
     "poster": "/img/concerts/arts-in-the-park-2026.jpg",
     "posterOrientation": "landscape",
@@ -51,6 +51,8 @@
     "venueId": "meydenbauer-convention-center",
     "status": "upcoming",
     "category": "masterworks",
+    "poster": "/img/concerts/origins-of-modern-music.png",
+    "ticketsUrl": "https://www.eventbrite.com/e/origins-of-modern-music-tickets-1997795395808?aff=rtoweb",
     "description": "More information coming soon!",
     "program": [
       { "composer": "Samuel Barber", "pieces": ["Violin Concerto, Mvt. 1 (Isabel Milewski, soloist)"] },
