@@ -155,6 +155,7 @@ export type SponsorsContent = {
   };
   whySponsor: {
     heading: string;
+    tagline: string;
     lead: {
       emphasis: string;
       body: string;
@@ -163,28 +164,20 @@ export type SponsorsContent = {
       emphasis: string;
       body: string;
     }[];
+    contact: {
+      buttonLabel: string;
+      buttonTo: string;
+      download: string;
+      emailtext: string;
+    };
   };
-  intro: string[];
-  introImage?: SponsorshipImage;
-  audience: {
-    heading: string;
-    lead: string;
-    segments: { title: string; body: string }[];
-    footnote: string;
-    image?: SponsorshipImage;
-  };
-  rationaleGroups: SponsorshipRationaleGroup[];
   annualPackages: {
     heading: string;
-    lead: string;
     tiers: SponsorshipTier[];
-    image?: SponsorshipImage;
   };
   perConcertPackages: {
     heading: string;
-    lead: string;
     tiers: SponsorshipTier[];
   };
   inKind: { heading: string; body: string };
-  contact: { heading: string; body: string; image?: SponsorshipImage };
 };

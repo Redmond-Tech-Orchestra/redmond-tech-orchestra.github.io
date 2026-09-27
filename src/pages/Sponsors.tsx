@@ -3,6 +3,7 @@ import type { Sponsor, SponsorsContent } from "../content/types";
 import { usePageMeta } from "../hooks/usePageTitle";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import PageHero from "../components/PageHero";
+import { Link } from "react-router-dom";
 
 const content = sponsors as SponsorsContent;
 
@@ -113,6 +114,26 @@ export default function Sponsors() {
 
     <section className="block">
         <div className="container">
+          <SectionEyebrow>{content.whySponsor.tagline}</SectionEyebrow>
+          <section className="sponsors-why">
+            <h2>{content.whySponsor.heading}</h2>
+            <p>
+              <strong>{content.whySponsor.lead.emphasis}</strong>{" "}
+              {content.whySponsor.lead.body}
+            </p>
+            <ul>
+              {content.whySponsor.points.map((point) => (
+                <li key={point.emphasis}>
+                  <strong>{point.emphasis}</strong> {point.body}
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+    </section>
+    
+    <section className="block">
+        <div className="container">
           <SectionEyebrow>{content.tagline}</SectionEyebrow>
           <div className="container">
             <header className="sponsors-glance__intro">
@@ -135,27 +156,15 @@ export default function Sponsors() {
                 <p>{content.inKind.body}</p>
               </section>
             </div>
-
-            <section className="sponsors-why">
-              <h2>{content.whySponsor.heading}</h2>
-              <p>
-                <strong>{content.whySponsor.lead.emphasis}</strong>{" "}
-                {content.whySponsor.lead.body}
-              </p>
-              <ul>
-                {content.whySponsor.points.map((point) => (
-                  <li key={point.emphasis}>
-                    <strong>{point.emphasis}</strong> {point.body}
-                  </li>
-                ))}
-              </ul>
-            </section>
           </div>
         </div>
       </section>
       
       <section className="block" style={{ paddingTop: 0, paddingBottom: 0, marginTop: "1.5rem" }}>
-        <div className="container" style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          className="container"
+          style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}
+        >
           <a
             className="btn btn-ghost"
             href="/sponsorship-2026-27.pdf"
@@ -163,8 +172,11 @@ export default function Sponsors() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download proposal (PDF)
+            {content.whySponsor.contact.download}
           </a>
+          <Link to={content.whySponsor.contact.buttonTo} className="btn">
+            {content.whySponsor.contact.buttonLabel}
+          </Link>
         </div>
       </section>
 
