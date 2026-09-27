@@ -135,6 +135,21 @@ export default function Sponsors() {
                 <p>{content.inKind.body}</p>
               </section>
             </div>
+
+            <section className="sponsors-why">
+              <h2>{content.whySponsor.heading}</h2>
+              <p>
+                <strong>{content.whySponsor.lead.emphasis}</strong>{" "}
+                {content.whySponsor.lead.body}
+              </p>
+              <ul>
+                {content.whySponsor.points.map((point) => (
+                  <li key={point.emphasis}>
+                    <strong>{point.emphasis}</strong> {point.body}
+                  </li>
+                ))}
+              </ul>
+            </section>
           </div>
         </div>
       </section>

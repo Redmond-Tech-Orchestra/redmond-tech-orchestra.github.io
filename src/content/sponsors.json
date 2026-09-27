@@ -4,7 +4,7 @@
     "title": "Sponsorship Levels at a Glance",
     "subtitle": "Investment thresholds by sponsorship type and level.",
     "image": {
-      "src": "/img/community/community_outreach_2.png",
+      "src": "/img/sponsors/SponsorsHero.jpg",
       "alt": "Redmond Tech Orchestra musicians coaching high school student musicians during a rehearsal"
     }
   },
@@ -20,6 +20,35 @@
       {
         "name": "One Redmond",
         "logo": "/img/sponsors/ORhorizontalgradient-logo.jpg"
+      }
+    ]
+  },
+  "whySponsor": {
+    "heading": "Why sponsor Redmond Tech Orchestra?",
+    "lead": {
+      "emphasis": "Redmond Tech Orchestra is a community-driven, 501(c)(3) nonprofit ensemble bringing high-quality orchestral music to Redmond and the Eastside.",
+      "body": "Sponsorship directly supports performances, outreach programs, and local arts access — and offers meaningful visibility for organizations of all sizes."
+    },
+    "points": [
+      {
+        "emphasis": "Your support strengthens the local arts ecosystem.",
+        "body": "Contributions help fund concerts, community outreach, and educational initiatives."
+      },
+      {
+        "emphasis": "Flexible sponsorship options",
+        "body": "— annual packages, per-concert support, and non-cash partnerships — make it easy to participate at a level that fits your organization’s goals."
+      },
+      {
+        "emphasis": "Visibility tailored to your scale",
+        "body": "— from small businesses to regional companies to large corporate partners — with recognition that aligns with your brand and community presence."
+      },
+      {
+        "emphasis": "Tax-deductible giving",
+        "body": "— as a registered 501(c)(3), all donations are deductible to the full extent of the law."
+      },
+      {
+        "emphasis": "Individual donors of $1000+",
+        "body": "are recognized alongside corporate sponsors."
       }
     ]
   },
