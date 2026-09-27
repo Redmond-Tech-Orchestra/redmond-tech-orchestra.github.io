@@ -1218,7 +1218,7 @@ select option { background: var(--bg-solid); color: var(--text); }
 .sponsors-glance__price {
   margin-bottom: 0.45rem;
   color: var(--text);
-  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
   font-weight: 700;
   text-align: center;
 }
@@ -1242,6 +1242,31 @@ select option { background: var(--bg-solid); color: var(--text); }
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.45;
+}
+.sponsors-why {
+  margin-top: clamp(2rem, 5vw, 2.5rem);
+}
+.sponsors-why h2 {
+  margin: 0 0 1.25rem;
+  text-align: left;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+}
+.sponsors-why p {
+  margin: 0 0 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+.sponsors-why strong {
+  color: var(--text);
+}
+.sponsors-why ul {
+  margin: 0;
+  padding-left: 1.4rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.sponsors-why li + li {
+  margin-top: 0.35rem;
 }
 
 @media (max-width: 800px) {

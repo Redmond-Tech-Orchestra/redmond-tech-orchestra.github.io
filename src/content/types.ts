@@ -152,6 +152,17 @@ export type SponsorsContent = {
     partners: Sponsor[];
     supporters: Sponsor[];
   };
+  whySponsor: {
+    heading: string;
+    lead: {
+      emphasis: string;
+      body: string;
+    };
+    points: {
+      emphasis: string;
+      body: string;
+    }[];
+  };
   intro: string[];
   introImage?: SponsorshipImage;
   audience: {
