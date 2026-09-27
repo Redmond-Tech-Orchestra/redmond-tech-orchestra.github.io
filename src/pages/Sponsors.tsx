@@ -1,10 +1,53 @@
 import sponsors from "../content/sponsors.json";
-import type { SponsorsContent } from "../content/types";
+import type { Sponsor, SponsorsContent } from "../content/types";
 import { usePageMeta } from "../hooks/usePageTitle";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import PageHero from "../components/PageHero";
 
 const content = sponsors as SponsorsContent;
+
+function SponsorSection({
+  heading,
+  sponsors,
+  size,
+}: {
+  heading: string;
+  sponsors: Sponsor[];
+  size: "principal" | "partner" | "supporter";
+}) {
+  if (sponsors.length === 0) {
+    return null;
+  }
+
+  return (
+    <section className="sponsor-logos__section">
+      <SectionEyebrow>{heading}</SectionEyebrow>
+      <ul className={`sponsor-logos sponsor-logos--${size}`}>
+        {sponsors.map((sponsor) => {
+          const logo = (
+            <img
+              src={sponsor.logo}
+              alt={`${sponsor.name} logo`}
+              loading="lazy"
+            />
+          );
+
+          return (
+            <li className="sponsor-logos__item" key={sponsor.name}>
+              {sponsor.url ? (
+                <a href={sponsor.url} aria-label={sponsor.name}>
+                  {logo}
+                </a>
+              ) : (
+                logo
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
 
 function TierRow({
   heading,
@@ -47,8 +90,28 @@ export default function Sponsors() {
         title={content.hero.eyebrow}
         backgroundImage={content.hero.image.src}
       />
-      
-      <section className="block">
+
+    <section className="block sponsor-logos-block">
+      <div className="container">
+        <SponsorSection
+          heading="Principal Patrons"
+          sponsors={content.sponsors.principalPatrons}
+          size="principal"
+        />
+        <SponsorSection
+          heading="Partners"
+          sponsors={content.sponsors.partners}
+          size="partner"
+        />
+        <SponsorSection
+          heading="Supporters"
+          sponsors={content.sponsors.supporters}
+          size="supporter"
+        />
+      </div>
+    </section>
+
+    <section className="block">
         <div className="container">
           <SectionEyebrow>{content.tagline}</SectionEyebrow>
           <div className="container">

@@ -73,6 +73,12 @@ export type SponsorshipImage = {
   caption?: string;
 };
 
+export type Sponsor = {
+  name: string;
+  logo: string;
+  url?: string;
+};
+
 export type CommunityStat = {
   number: string;
   label: string;
@@ -142,6 +148,11 @@ export type SponsorsContent = {
     image: { src: string; alt: string };
   };
   tagline: string;
+  sponsors: {
+    principalPatrons: Sponsor[];
+    partners: Sponsor[];
+    supporters: Sponsor[];
+  };
   intro: string[];
   introImage?: SponsorshipImage;
   audience: {
