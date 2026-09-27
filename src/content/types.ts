@@ -72,6 +72,12 @@ export type SponsorshipImage = {
   caption?: string;
 };
 
+export type Sponsor = {
+  name: string;
+  logo: string;
+  url?: string;
+};
+
 export type CommunityStat = {
   number: string;
   label: string;
@@ -107,6 +113,7 @@ export type CommunityContent = {
 
 export type SponsorshipContent = {
   hero: { title: string; subtitle: string };
+  tagline: string;
   intro: string[];
   introImage?: SponsorshipImage;
   audience: {
@@ -130,4 +137,46 @@ export type SponsorshipContent = {
   };
   inKind: { heading: string; body: string };
   contact: { heading: string; body: string; image?: SponsorshipImage };
+};
+
+export type SponsorsContent = {
+  hero: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    image: { src: string; alt: string };
+  };
+  tagline: string;
+  sponsors: {
+    principalPatrons: Sponsor[];
+    partners: Sponsor[];
+    supporters: Sponsor[];
+  };
+  whySponsor: {
+    heading: string;
+    tagline: string;
+    lead: {
+      emphasis: string;
+      body: string;
+    };
+    points: {
+      emphasis: string;
+      body: string;
+    }[];
+    contact: {
+      buttonLabel: string;
+      buttonTo: string;
+      download: string;
+      emailtext: string;
+    };
+  };
+  annualPackages: {
+    heading: string;
+    tiers: SponsorshipTier[];
+  };
+  perConcertPackages: {
+    heading: string;
+    tiers: SponsorshipTier[];
+  };
+  inKind: { heading: string; body: string };
 };
