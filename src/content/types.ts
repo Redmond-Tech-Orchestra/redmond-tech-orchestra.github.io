@@ -107,6 +107,40 @@ export type CommunityContent = {
 
 export type SponsorshipContent = {
   hero: { title: string; subtitle: string };
+  tagline: string;
+  intro: string[];
+  introImage?: SponsorshipImage;
+  audience: {
+    heading: string;
+    lead: string;
+    segments: { title: string; body: string }[];
+    footnote: string;
+    image?: SponsorshipImage;
+  };
+  rationaleGroups: SponsorshipRationaleGroup[];
+  annualPackages: {
+    heading: string;
+    lead: string;
+    tiers: SponsorshipTier[];
+    image?: SponsorshipImage;
+  };
+  perConcertPackages: {
+    heading: string;
+    lead: string;
+    tiers: SponsorshipTier[];
+  };
+  inKind: { heading: string; body: string };
+  contact: { heading: string; body: string; image?: SponsorshipImage };
+};
+
+export type SponsorsContent = {
+  hero: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    image: { src: string; alt: string };
+  };
+  tagline: string;
   intro: string[];
   introImage?: SponsorshipImage;
   audience: {
