@@ -1156,7 +1156,7 @@ select option { background: var(--bg-solid); color: var(--text); }
 }
 .sponsors-glance__intro h1 {
   margin: 0;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 2.5rem);
 }
 .sponsors-glance__intro p {
   margin: 0.65rem 0 0;
