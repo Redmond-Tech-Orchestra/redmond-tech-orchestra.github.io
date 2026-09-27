@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 import Sponsorship from "./pages/Sponsorship";
+import Sponsors from "./pages/Sponsors";
 import Community from "./pages/Community";
 import NotFound from "./pages/NotFound";
 import "./styles.css";
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="contact" element={<Contact />} />
           <Route path="donate" element={<Donate />} />
           <Route path="sponsor" element={<Sponsorship />} />
+          <Route path="sponsors" element={<Sponsors />} />
           <Route path="community" element={<Community />} />
           <Route path="*" element={<NotFound />} />
         </Route>
