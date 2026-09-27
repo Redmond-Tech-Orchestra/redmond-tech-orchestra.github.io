@@ -1,12 +1,28 @@
 {
   "hero": {
     "eyebrow": "Sponsors",
+    "title": "Sponsorship Levels at a Glance",
+    "subtitle": "Investment thresholds by sponsorship type and level.",
     "image": {
       "src": "/img/community/community_outreach_2.png",
       "alt": "Redmond Tech Orchestra musicians coaching high school student musicians during a rehearsal"
     }
   },
   "tagline": "Sponsorship Levels at a Glance",
+  "sponsors": {
+    "principalPatrons": [],
+    "partners": [],
+    "supporters": [
+      {
+        "name": "Lake Washington High School Music Booster Club",
+        "logo": "/img/sponsors/MusicBoosterClub.jpg"
+      },
+      {
+        "name": "One Redmond",
+        "logo": "/img/sponsors/ORhorizontalgradient-logo.jpg"
+      }
+    ]
+  },
   "intro": [
     "The Redmond Tech Orchestra (RTO) invites you to partner with us for our 2026–27 season. As a distinguished 501(c)(3) nonprofit organization, RTO is dedicated to enriching the cultural landscape of our community through exceptional musical performances. Founded by passionate Microsoft employees, we are proud to present 3–4 captivating concerts annually, drawing an audience of over 3,000 attendees per event.",
     "Our mission is to make high-quality orchestral music accessible and enjoyable for everyone. We are seeking sponsors to help us continue this tradition and expand our reach. Your support will not only enhance our artistic endeavors but also provide valuable visibility for your business among a diverse and engaged audience."
