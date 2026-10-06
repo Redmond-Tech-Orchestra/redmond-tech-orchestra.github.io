@@ -115,6 +115,8 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
           </div>
         )}
 
+        {concert.pricing && <p className="pricing">{concert.pricing}</p>}
+
         <div className="actions">
           {concert.ticketsUrl && (
             <a
