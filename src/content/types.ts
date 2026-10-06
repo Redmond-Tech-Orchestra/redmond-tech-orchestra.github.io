@@ -27,6 +27,7 @@ export type Concert = {
   poster?: string;        // path under /img/concerts/...
   posterOrientation?: "portrait" | "landscape" | "square";  // defaults to "portrait"
   ticketsUrl?: string;
+  pricing?: string;
   recordingsUrl?: string;
   programUrl?: string;
   program?: ProgramEntry[];

@@ -51,6 +51,7 @@
     "category": "masterworks",
     "poster": "/img/concerts/origins-of-modern-music.png",
     "ticketsUrl": "https://www.eventbrite.com/e/origins-of-modern-music-tickets-1997795395808?aff=rtoweb",
+    "pricing": "$10 Premium Admission ⋅ $5 Premium Lite ⋅ Free General Admission",
     "description": "Origins of Modern Music explores the musical roots of the sounds we know and love today, from the elegance of Ravel and the drama of Barber to the orchestral imagination of Korngold, Holst, John Williams, and Joe Hisaishi. Featuring soloist Isabel Milewski in Samuel Barber's lyrical and virtuosic Violin Concerto, this program traces the evolution of orchestral storytelling from the concert hall to the silver screen through sweeping melodies, vivid colors, and unforgettable musical journeys.",
     "program": [
       { "composer": "Samuel Barber", "pieces": ["Violin Concerto, Mvt. 1 (Isabel Milewski, soloist)"] },
