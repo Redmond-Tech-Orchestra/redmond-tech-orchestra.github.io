@@ -512,11 +512,11 @@ section.block h2.section-eyebrow { margin-bottom: clamp(2rem, 5vw, 6rem); }
   font-size: 1rem;
   color: var(--text-muted);
 }
-.concert-item .title-block .pricing {
-  color: var(--accent-bright);
+.concert-item .pricing {
+  color: var(--text);
   font-size: 1rem;
   font-weight: 600;
-  margin: 0.45rem 0 0;
+  margin: 0;
 }
 .concert-item .description {
   color: var(--text-muted);

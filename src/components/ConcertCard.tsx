@@ -90,7 +90,6 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
               <meta itemProp="address" content={venueDisplay} />
             )}
           </address>
-          {concert.pricing && <p className="pricing">{concert.pricing}</p>}
         </div>
 
         <div className="description" itemProp="description">
@@ -115,6 +114,8 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
             ))}
           </div>
         )}
+
+        {concert.pricing && <p className="pricing">{concert.pricing}</p>}
 
         <div className="actions">
           {concert.ticketsUrl && (
