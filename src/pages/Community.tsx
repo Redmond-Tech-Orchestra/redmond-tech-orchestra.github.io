@@ -7,6 +7,7 @@ import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageTitle";
 import community from "../content/community.json";
 import type { CommunityContent } from "../content/types";
+import { getImageDimensions } from "../utils/imageDimensions";
 
 const content = community as CommunityContent;
 
@@ -99,6 +100,9 @@ export default function Community() {
                       src={photo.src}
                       alt={isDuplicate ? "" : photo.alt}
                       loading="lazy"
+                      decoding="async"
+                      width={getImageDimensions(photo.src)?.width}
+                      height={getImageDimensions(photo.src)?.height}
                     />
                   </div>
                 );

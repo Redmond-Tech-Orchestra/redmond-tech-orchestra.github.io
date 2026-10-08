@@ -9,7 +9,7 @@ import { usePageMeta } from "../hooks/usePageTitle";
 
 const concerts = concertsData as Concert[];
 const venues = venuesData as Record<string, Venue>;
-const SITE_ORIGIN = "https://redmond-tech-orchestra.github.io";
+const SITE_ORIGIN = "https://redmondtechorchestra.org";
 const DEFAULT_DURATION_HOURS = 2;
 
 function buildEventJsonLd(c: Concert) {

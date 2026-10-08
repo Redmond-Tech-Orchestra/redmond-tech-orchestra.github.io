@@ -12,6 +12,8 @@ type PageMeta = {
   path?: string;
   /** Absolute URL to a representative image for OG/Twitter cards. */
   image?: string;
+  /** Robots directive for pages that should not be indexed. */
+  robots?: string;
 };
 
 function setMeta(selector: string, attr: "content" | "href", value: string) {
@@ -25,7 +27,7 @@ function setMeta(selector: string, attr: "content" | "href", value: string) {
  *
  * Pass `title` as the page-specific part — the org name is appended.
  */
-export function usePageMeta({ title, description, path, image }: PageMeta) {
+export function usePageMeta({ title, description, path, image, robots = "index, follow" }: PageMeta) {
   useEffect(() => {
     const fullTitle = `${title} · ${SITE_NAME}`;
     const url = ORIGIN + (path ?? window.location.pathname);
@@ -44,6 +46,7 @@ export function usePageMeta({ title, description, path, image }: PageMeta) {
     setMeta('meta[property="og:title"]', "content", fullTitle);
     setMeta('meta[property="og:url"]', "content", url);
     setMeta('meta[name="twitter:title"]', "content", fullTitle);
+    setMeta('meta[name="robots"]', "content", robots);
     if (image) {
       setMeta('meta[property="og:image"]', "content", image);
       setMeta('meta[name="twitter:image"]', "content", image);
@@ -52,7 +55,7 @@ export function usePageMeta({ title, description, path, image }: PageMeta) {
     return () => {
       document.title = previous.title;
     };
-  }, [title, description, path, image]);
+  }, [title, description, path, image, robots]);
 }
 
 /** Backwards-compatible: title-only update. */

@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import type { Concert, ConcertCategory, Venue } from "../content/types";
 import venuesData from "../content/venues.json";
 import Lightbox from "./Lightbox";
+import { getImageDimensions } from "../utils/imageDimensions";
 
 const venues = venuesData as Record<string, Venue>;
 const EVENTBRITE_ORGANIZER_URL =
@@ -35,6 +36,7 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
   const venue = concert.venueId ? venues[concert.venueId] : undefined;
   const venueDisplay = concert.venue ?? venue?.name ?? "";
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const posterDimensions = getImageDimensions(concert.poster);
   return (
     <article
       className={
@@ -172,7 +174,11 @@ export default function ConcertCard({ concert, showProgram = true }: Props) {
           <img
             src={concert.poster}
             alt={concert.title + " poster"}
-            loading="lazy"
+            loading={isPast ? "lazy" : "eager"}
+            fetchPriority={isPast ? "auto" : "high"}
+            decoding="async"
+            width={posterDimensions?.width}
+            height={posterDimensions?.height}
             itemProp="image"
           />
         </button>

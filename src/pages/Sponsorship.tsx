@@ -4,13 +4,22 @@ import sponsorship from "../content/sponsorship.json";
 import type { SponsorshipContent, SponsorshipImage } from "../content/types";
 import { usePageMeta } from "../hooks/usePageTitle";
 import { Link } from "react-router-dom";
+import { getImageDimensions } from "../utils/imageDimensions";
 
 const content = sponsorship as SponsorshipContent;
 
 function SponsorFigure({ image }: { image: SponsorshipImage }) {
+  const dimensions = getImageDimensions(image.src);
   return (
     <figure className="sponsor-figure">
-      <img src={image.src} alt={image.alt} loading="lazy" />
+      <img
+        src={image.src}
+        alt={image.alt}
+        loading="lazy"
+        decoding="async"
+        width={dimensions?.width}
+        height={dimensions?.height}
+      />
       {image.caption && <figcaption>{image.caption}</figcaption>}
     </figure>
   );

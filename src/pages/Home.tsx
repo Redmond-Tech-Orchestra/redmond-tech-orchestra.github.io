@@ -33,7 +33,7 @@ const orgJsonLd = {
 
 export default function Home() {
   usePageMeta({
-    title: "Home",
+    title: "Community Orchestra in Redmond, WA",
     description:
       "The Redmond Tech Orchestra is a 501(c)(3) community orchestra of working musicians performing free and low-cost concerts on the Eastside of Seattle.",
     path: "/",
@@ -113,6 +113,9 @@ export default function Home() {
                       src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
                       alt=""
                       loading="lazy"
+                      decoding="async"
+                      width={480}
+                      height={360}
                     />
                     <span className="video-play" aria-hidden="true">▶</span>
                   </div>
