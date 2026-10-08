@@ -4,6 +4,7 @@ import { SectionEyebrow } from "../components/SectionEyebrow";
 import about from "../content/about.json";
 import site from "../content/site.json";
 import { usePageMeta } from "../hooks/usePageTitle";
+import { getImageDimensions } from "../utils/imageDimensions";
 
 export default function About() {
   usePageMeta({
@@ -30,7 +31,14 @@ export default function About() {
               </div>
             </div>
             <div>
-              <img src="/img/about-moomie.jpg" alt="Moomie, an RTO musician." />
+              <img
+                src="/img/about-moomie.jpg"
+                alt="Moomie, an RTO musician."
+                width={getImageDimensions("/img/about-moomie.jpg")?.width}
+                height={getImageDimensions("/img/about-moomie.jpg")?.height}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
@@ -57,7 +65,15 @@ export default function About() {
             {about.team.map((member) => (
               <article className="team-card" key={member.name}>
                 {"image" in member && member.image && (
-                  <img className="team-photo" src={member.image} alt={member.name} loading="lazy" />
+                  <img
+                    className="team-photo"
+                    src={member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    decoding="async"
+                    width={getImageDimensions(member.image)?.width}
+                    height={getImageDimensions(member.image)?.height}
+                  />
                 )}
                 <h3>{member.name}</h3>
                 <div className="team-role">{member.role}</div>
@@ -77,7 +93,15 @@ export default function About() {
                 <blockquote>{q.quote}</blockquote>
                 <figcaption>
                   {"image" in q && q.image && (
-                    <img className="member-photo" src={q.image} alt="" loading="lazy" />
+                    <img
+                      className="member-photo"
+                      src={q.image}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      width={getImageDimensions(q.image)?.width}
+                      height={getImageDimensions(q.image)?.height}
+                    />
                   )}
                   <span className="quote-card__byline">
                     <strong>{q.name}</strong>
