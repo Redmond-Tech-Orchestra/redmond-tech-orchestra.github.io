@@ -11,6 +11,7 @@
     "category": "chamber",
     "poster": "/img/concerts/MOOSE-Aug-2026-V3.jpg",
     "programUrl": "/concert-programs/august-2026-chamber-program.pdf",
+    "recordingsUrl": "https://www.youtube.com/watch?v=uzBKCrBUYFo",
     "description": "Come for an evening of music with the Redmond Tech Orchestra's chamber ensembles!",
     "program": [
       { "composer": "Johann Sebastian Bach", "pieces": ["Concerto for Oboe and Violin in C minor, BWV 1060R: I. Allegro"] },
