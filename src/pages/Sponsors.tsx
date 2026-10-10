@@ -198,6 +198,11 @@ export default function Sponsors() {
           sponsors={content.sponsors.supporters}
           size="supporter"
         />
+        <SponsorSection
+          heading="In-kind Partners"
+          sponsors={content.sponsors.inKindPartners}
+          size="supporter"
+        />
         <RecognitionColumns
           individualDonors={content.sponsors.recognition.individualDonors}
           corporateMatchingGifts={content.sponsors.recognition.corporateMatchingGifts}
