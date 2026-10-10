@@ -79,6 +79,11 @@ export type Sponsor = {
   url?: string;
 };
 
+export type IndividualDonor = {
+  name: string;
+  startDate: string;
+};
+
 export type CommunityStat = {
   number: string;
   label: string;
@@ -152,6 +157,16 @@ export type SponsorsContent = {
     principalPatrons: Sponsor[];
     partners: Sponsor[];
     supporters: Sponsor[];
+    recognition: {
+      individualDonors: {
+        heading: string;
+        donors: IndividualDonor[];
+      };
+      corporateMatchingGifts: {
+        heading: string;
+        companies: string[];
+      };
+    };
   };
   whySponsor: {
     heading: string;
