@@ -15,11 +15,13 @@
     "supporters": [
       {
         "name": "Lake Washington High School Music Booster Club",
-        "logo": "/img/sponsors/MusicBoosterClub.jpg"
+        "logo": "/img/sponsors/MusicBoosterClub.jpg",
+        "startDate": "2026-10-31"
       },
       {
         "name": "One Redmond",
-        "logo": "/img/sponsors/ORhorizontalgradient-logo.jpg"
+        "logo": "/img/sponsors/ORhorizontalgradient-logo.jpg",
+        "startDate": "2026-10-01"
       }
     ]
   },
