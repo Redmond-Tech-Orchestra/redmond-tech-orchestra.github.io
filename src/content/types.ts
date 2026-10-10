@@ -157,6 +157,7 @@ export type SponsorsContent = {
     principalPatrons: Sponsor[];
     partners: Sponsor[];
     supporters: Sponsor[];
+    inKindPartners: Sponsor[];
     recognition: {
       individualDonors: {
         heading: string;
