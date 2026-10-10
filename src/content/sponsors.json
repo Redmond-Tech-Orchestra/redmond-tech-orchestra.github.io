@@ -23,7 +23,34 @@
         "logo": "/img/sponsors/ORhorizontalgradient-logo.jpg",
         "startDate": "2026-10-01"
       }
-    ]
+    ],
+    "recognition": {
+      "individualDonors": {
+        "heading": "Individual donors ($1000+)",
+        "donors": [
+          {
+            "name": "The Harp family",
+            "startDate": "2026-10-01"
+          },
+          {
+            "name": "The Jin family",
+            "startDate": "2026-10-01"
+          },
+          {
+            "name": "Anonymous donor",
+            "startDate": "2026-10-01"
+          }
+        ]
+      },
+      "corporateMatchingGifts": {
+        "heading": "Corporate Matching Gifts",
+        "companies": [
+          "Microsoft",
+          "Boeing",
+          "Nvidia"
+        ]
+      }
+    }
   },
   "whySponsor": {
     "heading": "Why sponsor Redmond Tech Orchestra?",

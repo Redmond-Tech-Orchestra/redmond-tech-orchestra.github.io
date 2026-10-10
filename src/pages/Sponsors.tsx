@@ -1,5 +1,5 @@
 import sponsors from "../content/sponsors.json";
-import type { Sponsor, SponsorsContent } from "../content/types";
+import type { IndividualDonor, Sponsor, SponsorsContent } from "../content/types";
 import { usePageMeta } from "../hooks/usePageTitle";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import PageHero from "../components/PageHero";
@@ -28,13 +28,16 @@ function parseSponsorDate(value: string) {
   return date;
 }
 
-function getActiveSponsors(sponsors: Sponsor[], now = new Date()) {
+function getActiveRecognitions<T extends { startDate: string }>(
+  entries: T[],
+  now = new Date(),
+) {
   const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
 
-  return sponsors
-    .map((sponsor) => ({
-      sponsor,
-      startDate: parseSponsorDate(sponsor.startDate),
+  return entries
+    .map((entry) => ({
+      entry,
+      startDate: parseSponsorDate(entry.startDate),
     }))
     .filter(({ startDate }) => {
       const expirationDate = new Date(startDate);
@@ -43,7 +46,7 @@ function getActiveSponsors(sponsors: Sponsor[], now = new Date()) {
       return startDate.getTime() <= today && today < expirationDate.getTime();
     })
     .sort((a, b) => a.startDate.getTime() - b.startDate.getTime())
-    .map(({ sponsor }) => sponsor);
+    .map(({ entry }) => entry);
 }
 
 function SponsorSection({
@@ -55,7 +58,7 @@ function SponsorSection({
   sponsors: Sponsor[];
   size: "principal" | "partner" | "supporter";
 }) {
-  const activeSponsors = getActiveSponsors(sponsors);
+  const activeSponsors = getActiveRecognitions(sponsors);
 
   if (activeSponsors.length === 0) {
     return null;
@@ -87,6 +90,51 @@ function SponsorSection({
           );
         })}
       </ul>
+    </section>
+  );
+}
+
+function RecognitionColumns({
+  individualDonors,
+  corporateMatchingGifts,
+}: {
+  individualDonors: {
+    heading: string;
+    donors: IndividualDonor[];
+  };
+  corporateMatchingGifts: {
+    heading: string;
+    companies: string[];
+  };
+}) {
+  const activeDonors = getActiveRecognitions(individualDonors.donors);
+
+  if (activeDonors.length === 0 && corporateMatchingGifts.companies.length === 0) {
+    return null;
+  }
+
+  return (
+    <section className="sponsor-recognition">
+      {activeDonors.length > 0 && (
+        <div className="sponsor-recognition__column">
+          <h2>{individualDonors.heading}</h2>
+          <ul>
+            {activeDonors.map((donor) => (
+              <li key={donor.name}>{donor.name}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {corporateMatchingGifts.companies.length > 0 && (
+        <div className="sponsor-recognition__column">
+          <h2>{corporateMatchingGifts.heading}</h2>
+          <ul>
+            {corporateMatchingGifts.companies.map((company) => (
+              <li key={company}>{company}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </section>
   );
 }
@@ -149,6 +197,10 @@ export default function Sponsors() {
           heading="Supporters"
           sponsors={content.sponsors.supporters}
           size="supporter"
+        />
+        <RecognitionColumns
+          individualDonors={content.sponsors.recognition.individualDonors}
+          corporateMatchingGifts={content.sponsors.recognition.corporateMatchingGifts}
         />
       </div>
     </section>
