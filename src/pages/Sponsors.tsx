@@ -165,6 +165,9 @@ export default function Sponsors() {
           className="container"
           style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}
         >
+          <Link to={content.whySponsor.contact.buttonTo} className="btn">
+            {content.whySponsor.contact.buttonLabel}
+          </Link>
           <a
             className="btn btn-ghost"
             href="/sponsorship-2026-27.pdf"
@@ -174,9 +177,6 @@ export default function Sponsors() {
           >
             {content.whySponsor.contact.download}
           </a>
-          <Link to={content.whySponsor.contact.buttonTo} className="btn">
-            {content.whySponsor.contact.buttonLabel}
-          </Link>
         </div>
       </section>
 

@@ -53,7 +53,7 @@
       }
     ],
     "contact": {
-      "buttonLabel": "Interesting in sponsoring?",
+      "buttonLabel": "Become a sponsor",
       "buttonTo": "/contact?topic=Sponsorship",
       "download": "Download proposal (PDF)",
       "emailtext": "Contact us for more information"
