@@ -1143,16 +1143,13 @@ select option { background: var(--bg-solid); color: var(--text); }
 .sponsor-logos__item img {
   display: block;
   box-sizing: border-box;
-  width: 100%;
+  width: 355px;
+  max-width: 100%;
   height: auto;
+  aspect-ratio: 355 / 125;
   margin: 0 auto;
   padding: 15px;
   background: #fff;
-}
-.sponsor-logos__item .sponsor-logos__image--svg {
-  width: 350px;
-  max-width: 100%;
-  height: 125px;
   object-fit: contain;
 }
 .sponsor-recognition {
