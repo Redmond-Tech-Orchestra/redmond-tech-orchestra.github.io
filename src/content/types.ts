@@ -76,6 +76,7 @@ export type SponsorshipImage = {
 export type Sponsor = {
   name: string;
   logo: string;
+  startDate: string;
   url?: string;
 };
 

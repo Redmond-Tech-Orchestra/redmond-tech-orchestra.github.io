@@ -7,6 +7,45 @@ import { Link } from "react-router-dom";
 
 const content = sponsors as SponsorsContent;
 
+function parseSponsorDate(value: string) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+
+  if (!match) {
+    throw new Error(`Invalid sponsor start date "${value}". Expected YYYY-MM-DD.`);
+  }
+
+  const [, year, month, day] = match;
+  const date = new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)));
+
+  if (
+    date.getUTCFullYear() !== Number(year) ||
+    date.getUTCMonth() !== Number(month) - 1 ||
+    date.getUTCDate() !== Number(day)
+  ) {
+    throw new Error(`Invalid sponsor start date "${value}".`);
+  }
+
+  return date;
+}
+
+function getActiveSponsors(sponsors: Sponsor[], now = new Date()) {
+  const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+
+  return sponsors
+    .map((sponsor) => ({
+      sponsor,
+      startDate: parseSponsorDate(sponsor.startDate),
+    }))
+    .filter(({ startDate }) => {
+      const expirationDate = new Date(startDate);
+      expirationDate.setUTCFullYear(expirationDate.getUTCFullYear() + 1);
+
+      return startDate.getTime() <= today && today < expirationDate.getTime();
+    })
+    .sort((a, b) => a.startDate.getTime() - b.startDate.getTime())
+    .map(({ sponsor }) => sponsor);
+}
+
 function SponsorSection({
   heading,
   sponsors,
@@ -16,7 +55,9 @@ function SponsorSection({
   sponsors: Sponsor[];
   size: "principal" | "partner" | "supporter";
 }) {
-  if (sponsors.length === 0) {
+  const activeSponsors = getActiveSponsors(sponsors);
+
+  if (activeSponsors.length === 0) {
     return null;
   }
 
@@ -24,7 +65,7 @@ function SponsorSection({
     <section className="sponsor-logos__section">
       <SectionEyebrow>{heading}</SectionEyebrow>
       <ul className={`sponsor-logos sponsor-logos--${size}`}>
-        {sponsors.map((sponsor) => {
+        {activeSponsors.map((sponsor) => {
           const logo = (
             <img
               src={sponsor.logo}
