@@ -69,10 +69,8 @@ function SponsorSection({
       <SectionEyebrow>{heading}</SectionEyebrow>
       <ul className={`sponsor-logos sponsor-logos--${size}`}>
         {activeSponsors.map((sponsor) => {
-          const isSvg = /\.svg(?:[?#].*)?$/i.test(sponsor.logo);
           const logo = (
             <img
-              className={isSvg ? "sponsor-logos__image--svg" : undefined}
               src={sponsor.logo}
               alt={`${sponsor.name} logo`}
               loading="lazy"
