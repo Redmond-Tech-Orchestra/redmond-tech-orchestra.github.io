@@ -24,7 +24,14 @@
         "startDate": "2026-10-01"
       }
     ],
-    "inKindPartners": [],
+    "inKindPartners": [
+      {
+        "name": "Minuteman Press",
+        "logo": "/img/sponsors/corp.svg",
+        "startDate": "2026-10-01",
+        "url": "https://minuteman.com/"
+      }
+    ],
     "recognition": {
       "individualDonors": {
         "heading": "Individual donors ($1000+)",
