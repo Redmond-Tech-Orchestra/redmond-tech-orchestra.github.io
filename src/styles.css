@@ -1134,7 +1134,7 @@ select option { background: var(--bg-solid); color: var(--text); }
   flex-basis: 50%;
 }
 .sponsor-logos--supporter .sponsor-logos__item {
-  flex-basis: 25%;
+  flex-basis: 33%;
 }
 .sponsor-logos__item a {
   display: block;
@@ -1142,9 +1142,12 @@ select option { background: var(--bg-solid); color: var(--text); }
 }
 .sponsor-logos__item img {
   display: block;
+  box-sizing: border-box;
   width: 100%;
   height: auto;
   margin: 0 auto;
+  padding: 15px;
+  background: #fff;
 }
 
 .sponsors-glance {
@@ -1165,6 +1168,10 @@ select option { background: var(--bg-solid); color: var(--text); }
 .sponsors-glance__table {
   display: grid;
   gap: 1rem;
+}
+.sponsors-glance__row > .sponsors-glance__row-title,
+.sponsors-glance__table > .sponsors-glance__in-kind h2 {
+  margin-bottom: 0;
 }
 .sponsors-glance__row,
 .sponsors-glance__in-kind {
