@@ -1,0 +1,174 @@
+{
+  "hero": {
+    "eyebrow": "Sponsors",
+    "title": "Sponsorship Levels",
+    "subtitle": "Investment thresholds by sponsorship type and level.",
+    "image": {
+      "src": "/img/sponsors/SponsorsHero.jpg",
+      "alt": "Redmond Tech Orchestra Tchaik night performance"
+    }
+  },
+  "tagline": "Sponsorship Levels",
+  "sponsors": {
+    "principalPatrons": [],
+    "partners": [],
+    "supporters": [
+      {
+        "name": "Lake Washington High School Music Booster Club",
+        "logo": "/img/sponsors/MusicBoosterClub.jpg",
+        "startDate": "2026-10-31"
+      },
+      {
+        "name": "One Redmond",
+        "logo": "/img/sponsors/ORhorizontalgradient-logo.jpg",
+        "startDate": "2026-10-01",
+        "url": "https://oneredmond.org/"
+      },
+      {
+        "name": "Hammond Ashley Violins",
+        "logo": "/img/sponsors/hammondashley.png",
+        "startDate": "2026-10-01",
+        "url": "https://www.hammondashley.com/"
+      }
+    ],
+    "inKindPartners": [
+      {
+        "name": "Minuteman Press",
+        "logo": "/img/sponsors/corp.svg",
+        "startDate": "2026-10-01",
+        "url": "https://minuteman.com/"
+      }
+    ],
+    "recognition": {
+      "individualDonors": {
+        "heading": "Individual donors ($1000+)",
+        "donors": [
+          {
+            "name": "The Harp family",
+            "startDate": "2026-10-01"
+          },
+          {
+            "name": "The Jin family",
+            "startDate": "2026-10-01"
+          },
+          {
+            "name": "Anonymous donor",
+            "startDate": "2026-10-01"
+          }
+        ]
+      },
+      "corporateMatchingGifts": {
+        "heading": "Corporate Matching Gifts",
+        "companies": [
+          "Microsoft",
+          "Boeing",
+          "Nvidia"
+        ]
+      }
+    }
+  },
+  "whySponsor": {
+    "heading": "Why sponsor Redmond Tech Orchestra?",
+    "tagline": "Sponsoring RTO",
+    "lead": {
+      "emphasis": "Redmond Tech Orchestra is a community-driven, 501(c)(3) nonprofit ensemble bringing high-quality orchestral music to Redmond and the Eastside.",
+      "body": "Sponsorship directly supports performances, outreach programs, and local arts access — and offers meaningful visibility for organizations of all sizes."
+    },
+    "points": [
+      {
+        "emphasis": "Your support strengthens the local arts ecosystem.",
+        "body": "Contributions help fund concerts, community outreach, and educational initiatives."
+      },
+      {
+        "emphasis": "Flexible sponsorship options",
+        "body": "— annual packages, per-concert support, and non-cash partnerships — make it easy to participate at a level that fits your organization’s goals."
+      },
+      {
+        "emphasis": "Visibility tailored to your scale",
+        "body": "— from small businesses to regional companies to large corporate partners — with recognition that aligns with your brand and community presence."
+      },
+      {
+        "emphasis": "Tax-deductible giving",
+        "body": "— as a registered 501(c)(3), all donations are deductible to the full extent of the law."
+      },
+      {
+        "emphasis": "Individual donors of $1000+",
+        "body": "are recognized alongside corporate sponsors."
+      }
+    ],
+    "contact": {
+      "buttonLabel": "Become a sponsor",
+      "buttonTo": "/contact?topic=Sponsorship",
+      "download": "Download proposal (PDF)",
+      "emailtext": "Contact us for more information"
+    }
+  },
+  "annualPackages": {
+    "heading": "Annual Sponsorship",
+    "tiers": [
+      {
+        "name": "Supporter",
+        "price": "$1,000 / year",
+        "benefits": [
+          "Logo on website sponsor page",
+          "Program recognition",
+          "One social mention"
+        ]
+      },
+      {
+        "name": "Partner",
+        "price": "$2,500 / year",
+        "benefits": [
+          "All Supporter benefits",
+          "Prominent logo on website sponsor page",
+          "Logo in all programs",
+          "Two social mentions and materials display"
+        ]
+      },
+      {
+        "name": "Principal Patron",
+        "price": "$5,000 / year",
+        "benefits": [
+          "All Partner benefits",
+          "\"Presented by\" branding and homepage logo",
+          "Four social mentions and two VIP packages"
+        ]
+      }
+    ]
+  },
+  "perConcertPackages": {
+    "heading": "Per-Concert Sponsorship",
+    "tiers": [
+      {
+        "name": "Prelude",
+        "price": "$300 / concert",
+        "benefits": [
+          "Program recognition for that concert",
+          "One social post"
+        ]
+      },
+      {
+        "name": "Encore",
+        "price": "$500 / concert",
+        "benefits": [
+          "All Prelude sponsor benefits",
+          "Logo and ⅓-page program recognition",
+          "One VIP ticket"
+        ]
+      },
+      {
+        "name": "Maestro",
+        "price": "$700 / concert",
+        "benefits": [
+          "All Encore sponsor benefits",
+          "\"Sponsored by\" branding and stage introduction",
+          "Booth and two VIP tickets"
+        ]
+      }
+    ]
+  },
+  "inKind": {
+    "heading": "In-Kind Sponsorship",
+    "body": "Custom recognition for non-cash donations, such as hospitality, meals, printing, venue support, professional services, raffle items, or other event-related needs."
+  }
+}
