@@ -186,6 +186,9 @@ export type SponsorsContent = {
       body: string;
     }[];
     contact: {
+      hero: {
+        heading: string;
+      };
       buttonLabel: string;
       buttonTo: string;
       download: string;

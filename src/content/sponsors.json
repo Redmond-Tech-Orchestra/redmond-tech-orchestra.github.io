@@ -101,9 +101,12 @@
       }
     ],
     "contact": {
-      "buttonLabel": "Become a sponsor",
+      "hero": {
+        "heading": "Be instrumental. Become a sponsor"
+      },
+      "buttonLabel": "Let's talk!",
       "buttonTo": "/contact?topic=Sponsorship",
-      "download": "Download proposal (PDF)",
+      "download": "Review sponsorship proposal (PDF)",
       "emailtext": "Contact us for more information"
     }
   },

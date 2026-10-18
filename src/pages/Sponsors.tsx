@@ -1,5 +1,9 @@
 import sponsors from "../content/sponsors.json";
-import type { IndividualDonor, Sponsor, SponsorsContent } from "../content/types";
+import type {
+  IndividualDonor,
+  Sponsor,
+  SponsorsContent,
+} from "../content/types";
 import { usePageMeta } from "../hooks/usePageTitle";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import PageHero from "../components/PageHero";
@@ -11,7 +15,9 @@ function parseSponsorDate(value: string) {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
 
   if (!match) {
-    throw new Error(`Invalid sponsor start date "${value}". Expected YYYY-MM-DD.`);
+    throw new Error(
+      `Invalid sponsor start date "${value}". Expected YYYY-MM-DD.`,
+    );
   }
 
   const [, year, month, day] = match;
@@ -111,7 +117,10 @@ function RecognitionColumns({
 }) {
   const activeDonors = getActiveRecognitions(individualDonors.donors);
 
-  if (activeDonors.length === 0 && corporateMatchingGifts.companies.length === 0) {
+  if (
+    activeDonors.length === 0 &&
+    corporateMatchingGifts.companies.length === 0
+  ) {
     return null;
   }
 
@@ -178,45 +187,47 @@ export default function Sponsors() {
 
   return (
     <>
-    <PageHero
+      <PageHero
         title={content.hero.eyebrow}
         backgroundImage={content.hero.image.src}
       />
 
-    <section className="block sponsor-logos-block">
-      <div className="container">
-        <header className="sponsors-intro">
-          <p className="sponsors-intro__lead">{content.intro.lead}</p>
-          <p className="sponsors-intro__closing">{content.intro.body}</p>
-        </header>
-        <SponsorSection
-          heading="Principal Patrons"
-          sponsors={content.sponsors.principalPatrons}
-          size="principal"
-        />
-        <SponsorSection
-          heading="Partners"
-          sponsors={content.sponsors.partners}
-          size="partner"
-        />
-        <SponsorSection
-          heading="Supporters"
-          sponsors={content.sponsors.supporters}
-          size="supporter"
-        />
-        <RecognitionColumns
-          individualDonors={content.sponsors.recognition.individualDonors}
-          corporateMatchingGifts={content.sponsors.recognition.corporateMatchingGifts}
-        />
-        <SponsorSection
-          heading="In-kind Partners"
-          sponsors={content.sponsors.inKindPartners}
-          size="supporter"
-        />
-      </div>
-    </section>
+      <section className="block sponsor-logos-block">
+        <div className="container">
+          <header className="sponsors-intro">
+            <p className="sponsors-intro__lead">{content.intro.lead}</p>
+            <p className="sponsors-intro__closing">{content.intro.body}</p>
+          </header>
+          <SponsorSection
+            heading="Principal Patrons"
+            sponsors={content.sponsors.principalPatrons}
+            size="principal"
+          />
+          <SponsorSection
+            heading="Partners"
+            sponsors={content.sponsors.partners}
+            size="partner"
+          />
+          <SponsorSection
+            heading="Supporters"
+            sponsors={content.sponsors.supporters}
+            size="supporter"
+          />
+          <RecognitionColumns
+            individualDonors={content.sponsors.recognition.individualDonors}
+            corporateMatchingGifts={
+              content.sponsors.recognition.corporateMatchingGifts
+            }
+          />
+          <SponsorSection
+            heading="In-kind Partners"
+            sponsors={content.sponsors.inKindPartners}
+            size="supporter"
+          />
+        </div>
+      </section>
 
-    <section className="block">
+      <section className="block">
         <div className="container">
           <SectionEyebrow>{content.whySponsor.tagline}</SectionEyebrow>
           <section className="sponsors-why">
@@ -234,9 +245,40 @@ export default function Sponsors() {
             </ul>
           </section>
         </div>
-    </section>
-    
-    <section className="block">
+      </section>
+
+      <section
+        className="block"
+        style={{ paddingTop: 0, paddingBottom: 0, marginTop: "1.5rem" }}
+      >
+        <header className="sponsors-glance__intro">
+          <h1>{content.whySponsor.contact.hero.heading}</h1>
+        </header>
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "1rem",
+            flexWrap: "wrap",
+          }}
+        >
+          <Link to={content.whySponsor.contact.buttonTo} className="btn">
+            {content.whySponsor.contact.buttonLabel}
+          </Link>
+          <a
+            className="btn btn-ghost"
+            href="/sponsorship-2026-27.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {content.whySponsor.contact.download}
+          </a>
+        </div>
+      </section>
+
+      <section className="block">
         <div className="container">
           <div className="container">
             <header className="sponsors-glance__intro">
@@ -262,27 +304,6 @@ export default function Sponsors() {
           </div>
         </div>
       </section>
-      
-      <section className="block" style={{ paddingTop: 0, paddingBottom: 0, marginTop: "1.5rem" }}>
-        <div
-          className="container"
-          style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}
-        >
-          <Link to={content.whySponsor.contact.buttonTo} className="btn">
-            {content.whySponsor.contact.buttonLabel}
-          </Link>
-          <a
-            className="btn btn-ghost"
-            href="/sponsorship-2026-27.pdf"
-            download
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {content.whySponsor.contact.download}
-          </a>
-        </div>
-      </section>
-
     </>
   );
 }
