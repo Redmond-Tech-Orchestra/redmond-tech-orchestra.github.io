@@ -20,17 +20,17 @@
       {
         "name": "Lake Washington High School Music Booster Club",
         "logo": "/img/sponsors/MusicBoosterClub.jpg",
-        "startDate": "2026-10-31"
+        "startDate": "2026-10-18"
       },
       {
-        "name": "One Redmond",
-        "logo": "/img/sponsors/ORhorizontalgradient-logo.jpg",
+        "name": "Ted Warner Photography",
+        "logo": "/img/sponsors/TedWarnerPhotography.png",
         "startDate": "2026-10-01",
-        "url": "https://oneredmond.org/"
+        "url": "https://tedwarnerphotography.com/"
       },
       {
         "name": "Hammond Ashley Violins",
-        "logo": "/img/sponsors/hammondashley.png",
+        "logo": "/img/sponsors/hammondashley.jpg",
         "startDate": "2026-10-01",
         "url": "https://www.hammondashley.com/"
       }
@@ -73,31 +73,31 @@
   },
   "whySponsor": {
     "heading": "Why sponsor Redmond Tech Orchestra?",
-    "tagline": "Sponsoring RTO",
+    "tagline": "Become a sponsor",
     "lead": {
-      "emphasis": "Redmond Tech Orchestra is a community-driven, 501(c)(3) nonprofit ensemble bringing high-quality orchestral music to Redmond and the Eastside.",
-      "body": "Sponsorship directly supports performances, outreach programs, and local arts access — and offers meaningful visibility for organizations of all sizes."
+      "emphasis": "Redmond Tech Orchestra is a community orchestra bringing quality music to the Eastside.",
+      "body": "Your sponsorship supports concerts, outreach, and access to local arts. It also helps your organization connect with the community."
     },
     "points": [
       {
-        "emphasis": "Your support strengthens the local arts ecosystem.",
-        "body": "Contributions help fund concerts, community outreach, and educational initiatives."
+        "emphasis": "Your support strengthens local arts.",
+        "body": "Help fund concerts, community outreach, and music education."
       },
       {
-        "emphasis": "Flexible sponsorship options",
-        "body": "— annual packages, per-concert support, and non-cash partnerships — make it easy to participate at a level that fits your organization’s goals."
+        "emphasis": "Flexible sponsorship options.",
+        "body": "Choose an annual package, sponsor a concert, or contribute goods or services at a level that works for you."
       },
       {
-        "emphasis": "Visibility tailored to your scale",
-        "body": "— from small businesses to regional companies to large corporate partners — with recognition that aligns with your brand and community presence."
+        "emphasis": "Visibility tailored to your scale.",
+        "body": "We offer recognition for small businesses, regional companies, and larger partners that fits your brand and community presence."
       },
       {
-        "emphasis": "Tax-deductible giving",
-        "body": "— as a registered 501(c)(3), all donations are deductible to the full extent of the law."
+        "emphasis": "Tax deductible giving.",
+        "body": "We’re a registered 501(c)(3) nonprofit, so your donations are tax deductible."
       },
       {
-        "emphasis": "Individual donors of $1000+",
-        "body": "are recognized alongside corporate sponsors."
+        "emphasis": "",
+        "body": "Individual donors of $1,000 or more receive recognition alongside corporate sponsors."
       }
     ],
     "contact": {

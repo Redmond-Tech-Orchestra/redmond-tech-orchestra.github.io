@@ -236,7 +236,6 @@ export default function Sponsors() {
     
     <section className="block">
         <div className="container">
-          <SectionEyebrow>{content.tagline}</SectionEyebrow>
           <div className="container">
             <header className="sponsors-glance__intro">
               <h1>{content.hero.title}</h1>
