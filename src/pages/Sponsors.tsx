@@ -58,7 +58,9 @@ function SponsorSection({
   sponsors: Sponsor[];
   size: "principal" | "partner" | "supporter";
 }) {
-  const activeSponsors = getActiveRecognitions(sponsors);
+  const activeSponsors = getActiveRecognitions(sponsors).sort((a, b) =>
+    b.startDate.localeCompare(a.startDate),
+  );
 
   if (activeSponsors.length === 0) {
     return null;
