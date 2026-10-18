@@ -1175,6 +1175,18 @@ select option { background: var(--bg-solid); color: var(--text); }
   background: #fff;
   object-fit: contain;
 }
+@media (min-width: 601px) {
+  .sponsor-logos--principal .sponsor-logos__item {
+    flex-basis: 80%;
+  }
+  .sponsor-logos--partner .sponsor-logos__item {
+    flex-basis: 45%;
+  }
+  .sponsor-logos--principal .sponsor-logos__item img,
+  .sponsor-logos--partner .sponsor-logos__item img {
+    width: 100%;
+  }
+}
 .sponsor-recognition {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1336,6 +1348,18 @@ select option { background: var(--bg-solid); color: var(--text); }
 }
 
 @media (max-width: 600px) {
+  .sponsor-logos .sponsor-logos__item {
+    flex-basis: 100%;
+  }
+  .sponsor-logos__item img {
+    width: 100%;
+  }
+  .sponsor-logos--partner .sponsor-logos__item img {
+    width: 85%;
+  }
+  .sponsor-logos--supporter .sponsor-logos__item img {
+    width: 70%;
+  }
   .sponsor-recognition {
     grid-template-columns: 1fr;
   }
