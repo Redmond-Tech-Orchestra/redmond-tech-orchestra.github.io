@@ -154,6 +154,10 @@ export type SponsorsContent = {
     image: { src: string; alt: string };
   };
   tagline: string;
+  intro: {
+    lead: string;
+    body: string;
+  };
   sponsors: {
     principalPatrons: Sponsor[];
     partners: Sponsor[];

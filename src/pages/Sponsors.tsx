@@ -183,6 +183,10 @@ export default function Sponsors() {
 
     <section className="block sponsor-logos-block">
       <div className="container">
+        <header className="sponsors-intro">
+          <p className="sponsors-intro__lead">{content.intro.lead}</p>
+          <p className="sponsors-intro__closing">{content.intro.body}</p>
+        </header>
         <SponsorSection
           heading="Principal Patrons"
           sponsors={content.sponsors.principalPatrons}

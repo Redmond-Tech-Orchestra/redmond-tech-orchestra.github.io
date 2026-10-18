@@ -1113,6 +1113,23 @@ select option { background: var(--bg-solid); color: var(--text); }
 }
 
 /* ---------- Sponsorship levels at a glance ---------- */
+.sponsors-intro {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.sponsors-intro__lead {
+  margin: 0 0 1rem;
+  font-size: clamp(1.25rem, 1.25vw, 1.175rem);
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+.sponsors-intro__closing {
+  margin: 0;
+  font-size: clamp(1.25rem, 1.25vw, 1.175rem);
+  color: var(--text-muted);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
 .sponsor-logos-block .container {
   display: grid;
   gap: clamp(2rem, 5vw, 4rem);
