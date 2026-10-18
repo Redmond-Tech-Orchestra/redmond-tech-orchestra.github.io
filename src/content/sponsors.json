@@ -23,12 +23,6 @@
         "startDate": "2026-10-18"
       },
       {
-        "name": "Ted Warner Photography",
-        "logo": "/img/sponsors/TedWarnerPhotography.png",
-        "startDate": "2026-10-01",
-        "url": "https://tedwarnerphotography.com/"
-      },
-      {
         "name": "Hammond Ashley Violins",
         "logo": "/img/sponsors/hammondashley.jpg",
         "startDate": "2026-10-01",
@@ -36,6 +30,12 @@
       }
     ],
     "inKindPartners": [
+      {
+        "name": "Ted Warner Photography",
+        "logo": "/img/sponsors/TedWarnerPhotography.png",
+        "startDate": "2026-10-01",
+        "url": "https://tedwarnerphotography.com/"
+      },
       {
         "name": "Minuteman Press",
         "logo": "/img/sponsors/corp.svg",
