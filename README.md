@@ -28,9 +28,6 @@ All site copy and data lives in JSON files. Edit these to update the website wit
 | [`concerts.json`](src/content/concerts.json) | All concerts (upcoming + past) with date, venue, program, ticket/recording links |
 | [`sponsors.json`](src/content/sponsors.json) | Sponsor recognition, names displayed as logo captions, and sponsorship packages |
 
-On the sponsors page, the proposal PDF opens in a new tab using the browser's
-normal PDF handling rather than requesting a download.
-
 The shape of each JSON file is described in [src/content/types.ts](src/content/types.ts).
 
 To add a new concert, append an entry to `concerts.json`. To move a concert to the past, change its `status` from `"upcoming"` to `"past"`.
