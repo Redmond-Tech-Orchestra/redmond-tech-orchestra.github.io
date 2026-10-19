@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import site from "../content/site.json";
-import { InstagramIcon, FacebookIcon, YouTubeIcon, TikTokIcon } from "./Icons";
+import { InstagramIcon, FacebookIcon, YouTubeIcon, TikTokIcon, EventbriteIcon } from "./Icons";
 
 const socialLinks = [
+  { key: "eventbrite", label: "Eventbrite", url: site.social.eventbrite, Icon: EventbriteIcon },
   { key: "instagram", label: "Instagram", url: site.social.instagram, Icon: InstagramIcon },
   { key: "facebook", label: "Facebook", url: site.social.facebook, Icon: FacebookIcon },
   { key: "youtube", label: "YouTube", url: site.social.youtube, Icon: YouTubeIcon },

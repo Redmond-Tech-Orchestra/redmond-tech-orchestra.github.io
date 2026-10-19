@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { LuTicket, LuMenu, LuX } from "react-icons/lu";
 import { SiInstagram, SiFacebook, SiYoutube, SiTiktok } from "react-icons/si";
+import { CgEventbrite } from "react-icons/cg";
 
 type IconProps = { className?: string };
 
@@ -24,3 +25,4 @@ export const InstagramIcon = wrap(SiInstagram);
 export const FacebookIcon = wrap(SiFacebook);
 export const YouTubeIcon = wrap(SiYoutube);
 export const TikTokIcon = wrap(SiTiktok);
+export const EventbriteIcon = wrap(CgEventbrite);
