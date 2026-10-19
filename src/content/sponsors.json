@@ -20,7 +20,8 @@
       {
         "name": "Lake Washington High School Music Booster Club",
         "logo": "/img/sponsors/MusicBoosterClub.jpg",
-        "startDate": "2026-10-18"
+        "startDate": "2026-10-18",
+        "url": "https://www.lwhsmusicboosters.org/"
       },
       {
         "name": "Hammond Ashley Violins",
@@ -38,7 +39,7 @@
       },
       {
         "name": "Minuteman Press",
-        "logo": "/img/sponsors/corp.svg",
+        "logo": "/img/sponsors/minutemen.svg",
         "startDate": "2026-10-01",
         "url": "https://minuteman.com/"
       }

@@ -62,7 +62,7 @@ function SponsorSection({
 }: {
   heading: string;
   sponsors: Sponsor[];
-  size: "principal" | "partner" | "supporter";
+  size: "principal" | "partner" | "supporter" | "in-kind";
 }) {
   const activeSponsors = getActiveRecognitions(sponsors).sort((a, b) =>
     b.startDate.localeCompare(a.startDate),
@@ -220,9 +220,9 @@ export default function Sponsors() {
             }
           />
           <SponsorSection
-            heading="In-kind Partners"
+            heading="In-kind Sponsor"
             sponsors={content.sponsors.inKindPartners}
-            size="supporter"
+            size="in-kind"
           />
         </div>
       </section>
