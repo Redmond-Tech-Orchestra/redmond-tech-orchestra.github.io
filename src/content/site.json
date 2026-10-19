@@ -10,7 +10,8 @@
     "instagram": "https://www.instagram.com/redmondtechorchestra/",
     "facebook": "https://www.facebook.com/people/Redmond-Tech-Orchestra/61557022596926/",
     "youtube": "https://www.youtube.com/@RedmondTechOrchestra",
-    "tiktok": "https://www.tiktok.com/@redmondtechorch"
+    "tiktok": "https://www.tiktok.com/@redmondtechorch",
+    "eventbrite": "https://www.eventbrite.com/o/79403107043"
   },
   "nav": [
     { "label": "Home", "to": "/" },

@@ -46,6 +46,7 @@ export type SiteContent = {
     instagram: string | null;
     facebook: string | null;
     tiktok: string | null;
+    eventbrite: string | null;
   };
   nav: { label: string; to: string }[];
 };

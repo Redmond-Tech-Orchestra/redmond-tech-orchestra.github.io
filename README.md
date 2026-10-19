@@ -29,6 +29,10 @@ All site copy and data lives in JSON files. Edit these to update the website wit
 
 The shape of each JSON file is described in [src/content/types.ts](src/content/types.ts).
 
+The footer's Follow section includes Eventbrite, Instagram, Facebook, YouTube, and
+TikTok. Update their URLs in `site.json` under `social`; set a URL to `null`
+to hide that link.
+
 To add a new concert, append an entry to `concerts.json`. To move a concert to the past, change its `status` from `"upcoming"` to `"past"`.
 
 ### 2. Presentation layer — [src/components/](src/components/) and [src/pages/](src/pages/)
