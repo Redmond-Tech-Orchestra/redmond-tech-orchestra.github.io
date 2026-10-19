@@ -231,7 +231,6 @@ export default function Sponsors() {
         <div className="container">
           <SectionEyebrow>{content.whySponsor.tagline}</SectionEyebrow>
           <section className="sponsors-why">
-            <h2>{content.whySponsor.heading}</h2>
             <p>
               <strong>{content.whySponsor.lead.emphasis}</strong>{" "}
               {content.whySponsor.lead.body}
@@ -282,7 +281,6 @@ export default function Sponsors() {
         <div className="container">
           <div className="container">
             <header className="sponsors-glance__intro">
-              <h1>{content.hero.title}</h1>
               <p>{content.hero.subtitle}</p>
             </header>
 

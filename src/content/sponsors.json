@@ -1,14 +1,12 @@
 {
   "hero": {
     "eyebrow": "Sponsors",
-    "title": "Sponsorship Levels",
     "subtitle": "Investment thresholds by sponsorship type and level.",
     "image": {
       "src": "/img/sponsors/SponsorsHero.jpg",
       "alt": "Redmond Tech Orchestra Tchaik night performance"
     }
   },
-  "tagline": "Sponsorship Levels",
   "intro": {
     "lead": "Redmond Tech Orchestra is deeply grateful to the corporate partners, local businesses, and individual donors whose generosity makes our season possible.",
     "body": "Thank you for helping us keep live, high-quality orchestral music accessible to our community."
@@ -73,7 +71,6 @@
     }
   },
   "whySponsor": {
-    "heading": "Why sponsor Redmond Tech Orchestra?",
     "tagline": "Become a sponsor",
     "lead": {
       "emphasis": "Redmond Tech Orchestra is a community orchestra bringing quality music to the Eastside.",
@@ -103,7 +100,7 @@
     ],
     "contact": {
       "hero": {
-        "heading": "Be instrumental. Become a sponsor"
+        "heading": "Be instrumental. Become a sponsor."
       },
       "buttonLabel": "Let's talk!",
       "buttonTo": "/contact?topic=Sponsorship",

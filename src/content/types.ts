@@ -149,11 +149,9 @@ export type SponsorshipContent = {
 export type SponsorsContent = {
   hero: {
     eyebrow: string;
-    title: string;
     subtitle: string;
     image: { src: string; alt: string };
   };
-  tagline: string;
   intro: {
     lead: string;
     body: string;
@@ -175,7 +173,6 @@ export type SponsorsContent = {
     };
   };
   whySponsor: {
-    heading: string;
     tagline: string;
     lead: {
       emphasis: string;
