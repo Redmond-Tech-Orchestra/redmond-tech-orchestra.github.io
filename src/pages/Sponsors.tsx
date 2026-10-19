@@ -269,6 +269,8 @@ export default function Sponsors() {
             href="/sponsorship-2026-27.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`${content.whySponsor.contact.download} (opens in a new tab)`}
+            title="Opens in a new tab"
           >
             {content.whySponsor.contact.download}
           </a>

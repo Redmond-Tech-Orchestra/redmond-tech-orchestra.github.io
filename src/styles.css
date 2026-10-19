@@ -1163,6 +1163,15 @@ select option { background: var(--bg-solid); color: var(--text); }
 .sponsor-logos__item a {
   display: block;
   width: 100%;
+  color: var(--gold);
+}
+.sponsor-logos__item a:hover,
+.sponsor-logos__item a:focus-visible {
+  color: var(--text);
+}
+.sponsor-logos__item a figcaption {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 .sponsor-logos__figure {
   width: 100%;
