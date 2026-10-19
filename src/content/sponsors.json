@@ -104,7 +104,7 @@
       },
       "buttonLabel": "Let's talk!",
       "buttonTo": "/contact?topic=Sponsorship",
-      "download": "Review sponsorship proposal (PDF)",
+      "download": "Review sponsorship proposal (PDF, opens in a new tab)",
       "emailtext": "Contact us for more information"
     }
   },

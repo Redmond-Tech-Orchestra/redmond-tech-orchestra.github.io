@@ -77,22 +77,21 @@ function SponsorSection({
       <SectionEyebrow>{heading}</SectionEyebrow>
       <ul className={`sponsor-logos sponsor-logos--${size}`}>
         {activeSponsors.map((sponsor) => {
-          const logo = (
-            <img
-              src={sponsor.logo}
-              alt={`${sponsor.name} logo`}
-              loading="lazy"
-            />
+          const recognition = (
+            <figure className="sponsor-logos__figure">
+              <img src={sponsor.logo} alt="" loading="lazy" />
+              <figcaption>{sponsor.name}</figcaption>
+            </figure>
           );
 
           return (
             <li className="sponsor-logos__item" key={sponsor.name}>
               {sponsor.url ? (
-                <a href={sponsor.url} aria-label={sponsor.name}>
-                  {logo}
+                <a href={sponsor.url}>
+                  {recognition}
                 </a>
               ) : (
-                logo
+                recognition
               )}
             </li>
           );
@@ -220,7 +219,7 @@ export default function Sponsors() {
             }
           />
           <SponsorSection
-            heading="In-kind Sponsor"
+            heading="In-kind Sponsors"
             sponsors={content.sponsors.inKindPartners}
             size="in-kind"
           />
@@ -251,7 +250,7 @@ export default function Sponsors() {
         style={{ paddingTop: 0, paddingBottom: 0, marginTop: "1.5rem" }}
       >
         <header className="sponsors-glance__intro">
-          <h1>{content.whySponsor.contact.hero.heading}</h1>
+          <h2>{content.whySponsor.contact.hero.heading}</h2>
         </header>
         <div
           className="container"
@@ -268,7 +267,6 @@ export default function Sponsors() {
           <a
             className="btn btn-ghost"
             href="/sponsorship-2026-27.pdf"
-            download
             target="_blank"
             rel="noopener noreferrer"
           >
