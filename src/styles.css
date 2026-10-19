@@ -1145,7 +1145,7 @@ select option { background: var(--bg-solid); color: var(--text); }
 }
 .sponsor-logos__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex: 0 0 100%;
   min-width: 0;
