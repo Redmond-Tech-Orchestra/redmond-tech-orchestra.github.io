@@ -1145,7 +1145,7 @@ select option { background: var(--bg-solid); color: var(--text); }
 }
 .sponsor-logos__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex: 0 0 100%;
   min-width: 0;
@@ -1163,6 +1163,26 @@ select option { background: var(--bg-solid); color: var(--text); }
 .sponsor-logos__item a {
   display: block;
   width: 100%;
+  color: var(--gold);
+}
+.sponsor-logos__item a:hover,
+.sponsor-logos__item a:focus-visible {
+  color: var(--text);
+}
+.sponsor-logos__item a figcaption {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.sponsor-logos__figure {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+.sponsor-logos__figure figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 .sponsor-logos__item img {
   display: block;
@@ -1219,7 +1239,7 @@ select option { background: var(--bg-solid); color: var(--text); }
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.sponsors-glance__intro h1 {
+.sponsors-glance__intro h2 {
   margin: 0;
   font-size: clamp(2rem, 5vw, 2.5rem);
 }

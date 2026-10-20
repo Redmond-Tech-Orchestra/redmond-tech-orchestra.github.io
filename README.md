@@ -26,6 +26,7 @@ All site copy and data lives in JSON files. Edit these to update the website wit
 | [`site.json`](src/content/site.json) | Org name, tagline, nav links, donate URL, social links, footer copy |
 | [`about.json`](src/content/about.json) | About page intro paragraphs and "highlights" cards |
 | [`concerts.json`](src/content/concerts.json) | All concerts (upcoming + past) with date, venue, program, ticket/recording links |
+| [`sponsors.json`](src/content/sponsors.json) | Sponsor recognition, names displayed as logo captions, and sponsorship packages |
 
 The shape of each JSON file is described in [src/content/types.ts](src/content/types.ts).
 
