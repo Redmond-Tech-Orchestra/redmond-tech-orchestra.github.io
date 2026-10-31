@@ -101,6 +101,12 @@ Required GitHub Actions secrets for the preview workflow:
 | `SSH_USER` | SSH user (currently `peter`) |
 | `SSH_PRIVATE_KEY` | private half of a deploy key whose public half lives in the server's `~/.ssh/authorized_keys` |
 
+## Website audits
+
+See the [October 2026 SEO, Lighthouse, and image-tooling audit](docs/seo-performance-audit-2026-10-19.md)
+for measured production results and the Astro recommendation for issues #114,
+#125, and #76.
+
 ## Telling an AI to update the site
 
 Because content and presentation are separated, you can give an AI assistant narrowly-scoped instructions:
