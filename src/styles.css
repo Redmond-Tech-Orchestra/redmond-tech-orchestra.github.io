@@ -528,7 +528,7 @@ section.block h2.section-eyebrow { margin-bottom: clamp(2rem, 5vw, 6rem); }
 
 .repertoire {
   display: grid;
-  grid-template-columns: minmax(140px, 22%) 1fr;
+  grid-template-columns: minmax(140px, 24%) 1fr;
   gap: 0.65rem 1.25rem;
   font-size: 1rem;
   align-items: baseline;
