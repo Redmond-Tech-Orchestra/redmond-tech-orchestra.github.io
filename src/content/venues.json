@@ -87,6 +87,14 @@
     "postalCode": "98052",
     "addressCountry": "US"
   },
+  "lwumc": {
+    "name": "Lake Washington United Methodist Church",
+    "streetAddress": "9700 NE 120th St",
+    "addressLocality": "Kirkland",
+    "addressRegion": "WA",
+    "postalCode": "98034",
+    "addressCountry": "US"
+  },
   "downtown-park": {
     "name": "Redmond Downtown Park",
     "streetAddress": "16101 Redmond Way",
