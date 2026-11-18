@@ -7,6 +7,14 @@
     "postalCode": "98052",
     "addressCountry": "US"
   },
+  "redmond-high-school": {
+    "name": "Redmond High School",
+    "streetAddress": "17272 NE 104th St",
+    "addressLocality": "Redmond",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "addressCountry": "US"
+  },
   "meydenbauer": {
     "name": "Meydenbauer Center Theatre",
     "streetAddress": "11100 NE 6th St",
