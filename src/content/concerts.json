@@ -1,5 +1,24 @@
 [
   {
+    "id": "pathetique-2027",
+    "title": "Tchaikovsky Pathétique Symphony",
+    "date": "2027-04-01T19:00:00-07:00",
+    "dateDisplay": [
+      "April 1, 2027 · 7:00 PM",
+      "April 3, 2027 · 4:00 PM"
+    ],
+    "venueId": "redmond-high-school",
+    "status": "upcoming",
+    "category": "masterworks",
+    "description": "Redmond Tech Orchestra presents Tchaikovsky's powerful Sixth Symphony, the Pathétique.",
+    "program": [
+      { "composer": "Modest Mussorgsky / arr. Leopold Stokowski", "pieces": ["Night on Bald Mountain"] },
+      { "composer": "Edvard Grieg", "pieces": ["\"Morning Mood\" from Peer Gynt, Op. 23"] },
+      { "composer": "Anna Clyne", "pieces": ["Masquerade"] },
+      { "composer": "Pyotr Ilyich Tchaikovsky", "pieces": ["Symphony No. 6"] }
+    ]
+  },
+  {
     "id": "moose-nov-2026",
     "title": "The Pastures Classic",
     "date": "2026-11-13T18:30:00-07:00",
@@ -7,7 +26,7 @@
       "November 13, 2026 · 6:30 PM"
     ],
     "venueId": "lwumc",
-    "status": "upcoming",
+    "status": "past",
     "category": "chamber",
     "poster": "/img/concerts/PasturesClassicConcert.jpg",
     "ticketsUrl": "https://www.eventbrite.com/e/the-pastures-classic-tickets-2003444451285?aff=rtoweb",
