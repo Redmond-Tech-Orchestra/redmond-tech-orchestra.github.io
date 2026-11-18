@@ -12,7 +12,10 @@
     "category": "masterworks",
     "description": "Redmond Tech Orchestra presents Tchaikovsky's powerful Sixth Symphony, the Pathétique.",
     "program": [
-      { "composer": "Pyotr Ilyich Tchaikovsky", "pieces": ["Symphony No. 6 in B minor, Op. 74, \"Pathétique\""] }
+      { "composer": "Modest Mussorgsky / arr. Leopold Stokowski", "pieces": ["Night on Bald Mountain"] },
+      { "composer": "Edvard Grieg", "pieces": ["Morning Mood from Peer Gynt Suite No. 1"] },
+      { "composer": "Anna Clyne", "pieces": ["Masquerade"] },
+      { "composer": "Pyotr Ilyich Tchaikovsky", "pieces": ["Symphony No. 6"] }
     ]
   },
   {
