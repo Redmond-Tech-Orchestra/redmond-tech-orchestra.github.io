@@ -219,12 +219,25 @@ export function ConcertProgram({ program }: { program?: Concert["program"] }) {
 }
 
 function shortComposer(name: string): string {
-  const main = name.split("/")[0].trim();
-  if (main.includes(",")) return main;
+  return name.split("/").map(shortComposerCredit).join("/");
+}
+
+function shortComposerCredit(credit: string): string {
+  const trimmed = credit.trim();
+  const arranger = trimmed.match(/^(arr\.\s*)(.+)$/i);
+  if (arranger) return arranger[1] + shortComposerName(arranger[2]);
+  return shortComposerName(trimmed);
+}
+
+function shortComposerName(name: string): string {
+  if (name.includes("&")) {
+    return name.split("&").map((part) => shortComposerName(part.trim())).join(" & ");
+  }
+  if (name.includes(",")) return name;
   const knownTwoWord = ["Lloyd Webber", "Saint-Saëns"];
   for (const k of knownTwoWord) {
-    if (main.includes(k)) return k;
+    if (name.includes(k)) return k;
   }
-  const parts = main.split(" ");
+  const parts = name.split(" ");
   return parts[parts.length - 1];
 }
